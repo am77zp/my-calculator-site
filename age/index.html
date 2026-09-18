@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>만 나이 계산기 - 생년월일로 만 나이·연 나이·세는나이 확인</title>
+<meta name="description" content="생년월일을 입력하면 만 나이, 연 나이, 세는 나이를 한 번에 계산해 드립니다. 2023년 개정된 만 나이 기준을 정확히 반영했습니다.">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/age/">
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../">올인원 생활계산기</a></h1>
+  <p>가입 없이 바로 사용하는 무료 생활 계산기</p>
+</header>
+<nav class="main-nav"><a href="../" class="">홈</a><a href="../age/" class="active">만 나이</a><a href="../dday/" class="">D-Day</a><a href="../discount/" class="">할인율</a><a href="../unit/" class="">단위변환</a><a href="../bmi/" class="">BMI</a><a href="../about/" class="">소개</a></nav>
+<div class="breadcrumb"><a href="../">홈</a> &gt; 만 나이 계산기</div><div class="container">
+  <div class="ad-slot">광고 영역 (AdSense 승인 후 삽입 예정)</div>
+  <div class="card">
+    <h2>만 나이 계산기</h2>
+    <p class="desc">생년월일을 입력하면 오늘(또는 지정한 기준일) 기준 만 나이를 정확히 계산합니다.</p>
+    <div class="row">
+      <div class="field">
+        <label>생년월일</label>
+        <input type="date" id="age-birth">
+      </div>
+      <div class="field">
+        <label>기준일 (비워두면 오늘)</label>
+        <input type="date" id="age-ref">
+      </div>
+    </div>
+    <button onclick="calcAge()">계산하기</button>
+    <div class="result" id="age-result"></div>
+  </div>
+
+  <article class="content">
+    <h2>사용법</h2>
+    <ol>
+      <li>생년월일 칸에 태어난 날짜를 선택합니다.</li>
+      <li>특정 날짜 기준으로 나이를 알고 싶다면 기준일을 입력합니다. 비워두면 오늘 날짜로 계산합니다.</li>
+      <li>"계산하기"를 누르면 만 나이·연 나이·세는 나이가 한 번에 나옵니다.</li>
+    </ol>
+
+    <h2>계산 방식</h2>
+    <p>만 나이는 2023년 6월 28일부터 대한민국 공식 나이 기준으로 통일된 계산법입니다. 생일이 아직 지나지 않았다면 "올해 연도 − 태어난 연도 − 1"로, 생일이 지났다면 "올해 연도 − 태어난 연도"로 계산합니다.</p>
+    <p>연 나이는 현재 연도에서 출생 연도를 그냥 빼는 방식으로, 병역법·청소년보호법 등 일부 법령에서 사용합니다. 세는 나이는 태어난 순간 1살로 치고 매년 1월 1일마다 한 살씩 더하는 옛 한국식 나이입니다.</p>
+
+    <h2>예시</h2>
+    <div class="example"><b>예시 1</b> — 생년월일 2000년 5월 10일, 기준일 오늘(2026년 9월 19일)인 경우: 생일(5/10)이 이미 지났으므로 만 나이는 2026 − 2000 = 26세.</div>
+    <div class="example"><b>예시 2</b> — 생년월일 2000년 12월 25일, 기준일 오늘(2026년 9월 19일)인 경우: 생일(12/25)이 아직 안 지났으므로 만 나이는 2026 − 2000 − 1 = 25세.</div>
+    <div class="example"><b>예시 3</b> — 생년월일 2008년 3월 1일, 기준일 2026년 9월 19일인 경우: 만 나이 18세, 연 나이 18세, 세는 나이 19세로 세 나이 기준이 서로 다르게 나옵니다.</div>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <div class="faq-item"><div class="q">만 나이와 연 나이는 왜 다른가요?</div><p class="a">만 나이는 생일을 기준으로 하루 단위로 정확히 계산하고, 연 나이는 생일과 관계없이 연도만으로 계산하기 때문에 생일이 지나지 않은 기간(최대 1살)만큼 차이가 날 수 있습니다.</p></div>
+    <div class="faq-item"><div class="q">주민등록증이나 법적 문서에는 어떤 나이를 쓰나요?</div><p class="a">2023년 6월 28일 이후 대부분의 법령과 행정·민사 관계에서는 만 나이를 기준으로 통일되었습니다. 다만 병역법, 청소년보호법 등 일부 법령은 연 나이를 그대로 사용하니 정확한 법적 판단이 필요하면 해당 법령을 확인해야 합니다.</p></div>
+    <div class="faq-item"><div class="q">기준일을 비워두면 어떻게 되나요?</div><p class="a">기준일을 입력하지 않으면 계산기를 사용하는 바로 오늘 날짜를 기준으로 계산합니다.</p></div>
+
+    <h2>다른 계산기</h2>
+    <div class="related"><a href="../dday/">D-Day 계산기</a><a href="../discount/">할인율 계산기</a><a href="../unit/">단위변환 계산기</a><a href="../bmi/">BMI 계산기</a></div>
+  </article>
+</div>
+<footer>
+  이 사이트는 회원가입, 댓글, 채팅, 1:1 문의 없이 누구나 바로 사용할 수 있는 무료 생활 계산기 모음입니다.<br>
+  <a href="../about/">소개</a> · <a href="../privacy/">개인정보처리방침</a>
+</footer>
+<script src="../assets/calculators.js"></script>
+</body>
+</html>

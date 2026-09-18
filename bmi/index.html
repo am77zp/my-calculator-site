@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI 계산기 - 체질량지수와 체형 분류 확인</title>
+<meta name="description" content="키와 체중을 입력하면 체질량지수(BMI)와 아시아·한국 기준 체형 분류(저체중/정상/과체중/비만)를 계산합니다.">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/bmi/">
+<link rel="stylesheet" href="../assets/style.css">
+
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../">올인원 생활계산기</a></h1>
+  <p>가입 없이 바로 사용하는 무료 생활 계산기</p>
+</header>
+<nav class="main-nav"><a href="../" class="">홈</a><a href="../age/" class="">만 나이</a><a href="../dday/" class="">D-Day</a><a href="../discount/" class="">할인율</a><a href="../unit/" class="">단위변환</a><a href="../bmi/" class="active">BMI</a><a href="../about/" class="">소개</a></nav>
+<div class="breadcrumb"><a href="../">홈</a> &gt; BMI 계산기</div><div class="container">
+  <div class="ad-slot">광고 영역 (AdSense 승인 후 삽입 예정)</div>
+  <div class="card">
+    <h2>BMI 계산기</h2>
+    <p class="desc">키와 체중으로 체질량지수(BMI)를 계산합니다.</p>
+    <div class="row">
+      <div class="field">
+        <label>키 (cm)</label>
+        <input type="number" id="bmi-height" placeholder="예: 170">
+      </div>
+      <div class="field">
+        <label>체중 (kg)</label>
+        <input type="number" id="bmi-weight" placeholder="예: 65">
+      </div>
+    </div>
+    <button onclick="calcBmi()">계산하기</button>
+    <div class="result" id="bmi-result"></div>
+    <p class="disclaimer">참고용 계산 결과이며 의학적 진단을 대체하지 않습니다.</p>
+  </div>
+
+  <article class="content">
+    <h2>사용법</h2>
+    <ol>
+      <li>키(cm)와 체중(kg)을 입력합니다.</li>
+      <li>"계산하기"를 누르면 BMI 값과 아시아·한국 기준 체형 분류가 표시됩니다.</li>
+    </ol>
+
+    <h2>계산 방식</h2>
+    <p>BMI = 체중(kg) ÷ (키(m) × 키(m)). 아시아·한국 기준으로 18.5 미만은 저체중, 18.5~23 미만은 정상, 23~25 미만은 과체중, 25~30 미만은 비만, 30 이상은 고도비만으로 분류합니다.</p>
+
+    <h2>예시</h2>
+    <div class="example"><b>예시 1</b> — 키 170cm, 체중 65kg: BMI 22.5 (정상).</div>
+    <div class="example"><b>예시 2</b> — 키 160cm, 체중 70kg: BMI 27.3 (비만).</div>
+    <div class="example"><b>예시 3</b> — 키 180cm, 체중 58kg: BMI 17.9 (저체중).</div>
+
+    <h2>자주 묻는 질문 (FAQ)</h2>
+    <div class="faq-item"><div class="q">BMI 기준이 나라마다 다른가요?</div><p class="a">네. 이 계산기는 아시아·한국에서 흔히 쓰이는 기준(23부터 과체중)을 사용합니다. WHO 국제 기준은 25부터 과체중으로 다소 다릅니다.</p></div>
+    <div class="faq-item"><div class="q">근육량이 많은 사람도 정확한가요?</div><p class="a">BMI는 키와 체중만으로 계산하기 때문에 근육량이 많은 사람은 실제 체지방률보다 높게 나올 수 있습니다. 참고용 지표로만 활용하세요.</p></div>
+    <div class="faq-item"><div class="q">성장기 어린이·청소년도 이 기준을 적용할 수 있나요?</div><p class="a">아니요, 성장기에는 성인 기준이 아닌 별도의 소아·청소년 성장도표를 사용해야 합니다.</p></div>
+
+    <h2>다른 계산기</h2>
+    <div class="related"><a href="../age/">만 나이 계산기</a><a href="../dday/">D-Day 계산기</a><a href="../discount/">할인율 계산기</a><a href="../unit/">단위변환 계산기</a></div>
+  </article>
+</div>
+<footer>
+  이 사이트는 회원가입, 댓글, 채팅, 1:1 문의 없이 누구나 바로 사용할 수 있는 무료 생활 계산기 모음입니다.<br>
+  <a href="../about/">소개</a> · <a href="../privacy/">개인정보처리방침</a>
+</footer>
+<script src="../assets/calculators.js"></script>
+</body>
+</html>
