@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>年齢計算機 - 正確な年齢がすぐわかる</title>
+<meta name="description" content="生年月日を入力するだけで、今日時点の正確な年齢を計算します。">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/ja/age/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/age/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/age/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/age/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/age/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/age/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/age/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/age/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/age/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/age/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/age/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/age/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/age/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/age/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/age/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/age/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/age/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/age/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/age/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/age/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/age/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "生年月日を入力してください。", "dday_alert": "目標日を入力してください。", "discount_alert": "定価と割引率を両方入力してください。", "unit_alert": "変換する数値を入力してください。", "bmi_alert": "身長と体重を正しく入力してください。", "age_result_label": "年齢", "dday_today": "今日がD-Dayです", "dday_remaining_tpl": "目標日まであと{n}日です。", "dday_past_tpl": "目標日から{n}日が経過しました。", "discount_after_tpl": "割引後の価格(割引率{rate}%)", "discount_saved_label": "割引額", "bmi_cats": ["低体重", "普通体重", "肥満(前段階)", "肥満"], "bmi_result_prefix": "分類", "bmi_standard_note": "(WHO国際基準)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../ja/">オールインワン生活計算機</a></h1>
+  <p>登録不要ですぐ使える無料の計算ツール</p>
+</header>
+<nav class="main-nav"><a href="../../ja/" class="">ホーム</a><a href="../../ja/age/" class="active">年齢</a><a href="../../ja/dday/" class="">D-Day</a><a href="../../ja/discount/" class="">割引</a><a href="../../ja/unit/" class="">単位変換</a><a href="../../ja/bmi/" class="">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../age/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/age/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/age/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/age/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/age/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/age/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/age/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/age/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/age/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item current" href="../../ja/age/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/age/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/age/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/age/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/age/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/age/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/age/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/age/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/age/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/age/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/age/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/age/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../ja/">ホーム</a> &gt; 年齢計算機</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>年齢計算機</h2>
+    <p class="desc">生年月日を入力すると、現在の年齢を計算します。</p>
+    <div class="row">
+      <div class="field"><label>生年月日</label><input type="date" id="age-birth"></div>
+      <div class="field"><label>基準日(任意)</label><input type="date" id="age-ref" placeholder="空欄の場合は今日の日付を使用します"></div>
+    </div>
+    <button onclick="calcAgeGlobal()">計算する</button>
+    <div class="result" id="age-result"></div>
+  </div>
+  <article class="content">
+    <h2>使い方</h2><ol><li>生年月日を入力します。</li><li>特定の日付での年齢を知りたい場合は基準日を入力します。</li><li>「計算する」を押すと年齢が表示されます。</li></ol>
+    <h2>計算方法</h2><p>生年月日から基準日(未入力の場合は今日)までに満了した年数が年齢になります。</p>
+    <h2>計算例</h2><div class="example">生年月日2000年5月10日、基準日2026年9月19日の場合 &#8594; 今年の誕生日をすでに迎えているため、年齢は26歳です。</div><div class="example">生年月日2000年12月25日、基準日2026年9月19日の場合 &#8594; 今年の誕生日がまだのため、年齢は25歳です。</div>
+    <h2>よくある質問</h2><div class="faq-item"><div class="q">うるう年は考慮されますか?</div><p class="a">はい、実際のカレンダー日付で計算するため、うるう年も自動的に考慮されます。</p></div><div class="faq-item"><div class="q">過去や未来の日付での年齢も計算できますか?</div><p class="a">はい、基準日欄にその日付を入力してください。</p></div>
+    <h2>ほかの計算機</h2><div class="related"><a href="../../ja/dday/">D-Day</a><a href="../../ja/discount/">割引</a><a href="../../ja/unit/">単位変換</a><a href="../../ja/bmi/">BMI</a></div>
+  </article>
+</div>
+<footer>このサイトは会員登録・コメント・チャット・個別お問い合わせを行っていません。誰でもすぐに使える無料の計算ツール集です。</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

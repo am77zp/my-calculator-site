@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Конвертер Единиц - Длина, Вес, Объём</title>
+<meta name="description" content="Мгновенно переводите распространённые единицы длины, веса и объёма.">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/ru/unit/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/unit/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/unit/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/unit/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/unit/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/unit/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/unit/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/unit/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/unit/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/unit/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/unit/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/unit/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/unit/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/unit/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/unit/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/unit/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/unit/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/unit/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/unit/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/unit/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/unit/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "Пожалуйста, введите дату рождения.", "dday_alert": "Пожалуйста, введите целевую дату.", "discount_alert": "Пожалуйста, введите первоначальную цену и размер скидки.", "unit_alert": "Пожалуйста, введите значение для перевода.", "bmi_alert": "Пожалуйста, введите корректный рост и вес.", "age_result_label": "Возраст", "dday_today": "Сегодня — День Икс", "dday_remaining_tpl": "Осталось {n} дн.", "dday_past_tpl": "Прошло {n} дн.", "discount_after_tpl": "Цена со скидкой {rate}%", "discount_saved_label": "Вы экономите", "bmi_cats": ["Недостаточный вес", "Норма", "Избыточный вес", "Ожирение"], "bmi_result_prefix": "Категория", "bmi_standard_note": "(международный стандарт ВОЗ)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../ru/">Универсальные Бытовые Калькуляторы</a></h1>
+  <p>Бесплатные калькуляторы — без регистрации, сразу готовы к использованию</p>
+</header>
+<nav class="main-nav"><a href="../../ru/" class="">Главная</a><a href="../../ru/age/" class="">Возраст</a><a href="../../ru/dday/" class="">Обратный отсчёт</a><a href="../../ru/discount/" class="">Скидка</a><a href="../../ru/unit/" class="active">Единицы</a><a href="../../ru/bmi/" class="">ИМТ</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../unit/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/unit/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/unit/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/unit/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/unit/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/unit/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item current" href="../../ru/unit/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/unit/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/unit/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/unit/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/unit/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/unit/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/unit/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/unit/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/unit/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/unit/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/unit/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/unit/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/unit/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/unit/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/unit/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../ru/">Главная</a> &gt; Конвертер Единиц</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Конвертер Единиц</h2>
+    <p class="desc">Переводит между единицами длины, веса и объёма.</p>
+    <div class="row">
+      <div class="field"><label>Категория</label>
+        <select id="unit-type" onchange="fillUnitOptionsGlobal()"><option value="length">Длина</option><option value="weight">Вес</option><option value="volume">Объём</option></select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field"><label>Значение</label><input type="number" id="unit-value"></div>
+      <div class="field"><label>Из</label><select id="unit-from"></select></div>
+      <div class="field"><label>В</label><select id="unit-to"></select></div>
+    </div>
+    <button onclick="calcUnitGlobal()">Перевести</button>
+    <div class="result" id="unit-result"></div>
+  </div>
+  <article class="content">
+    <h2>Как пользоваться</h2><ol><li>Выберите категорию: длина, вес или объём.</li><li>Введите значение и выберите исходную и целевую единицы.</li><li>Нажмите «Перевести», чтобы увидеть результат.</li></ol>
+    <h2>Как это работает</h2><p>Каждая единица сначала переводится в общую базовую единицу (метр, килограмм, литр), а затем — в целевую единицу.</p>
+    <h2>Примеры</h2><div class="example">100 см &#8594; = 1 м</div><div class="example">10 фунтов &#8594; ≈ 4,53592 кг</div>
+    <h2>Частые вопросы</h2><div class="faq-item"><div class="q">Какие единицы поддерживаются?</div><p class="a">Длина: mm, cm, m, km, in, ft, mi. Вес: mg, g, kg, t, lb, oz. Объём: ml, l, gal, cup.</p></div><div class="faq-item"><div class="q">Насколько точны результаты?</div><p class="a">Результаты отображаются с точностью до 6 знаков после запятой.</p></div>
+    <h2>Другие калькуляторы</h2><div class="related"><a href="../../ru/age/">Возраст</a><a href="../../ru/dday/">Обратный отсчёт</a><a href="../../ru/discount/">Скидка</a><a href="../../ru/bmi/">ИМТ</a></div>
+  </article>
+</div>
+<footer>На этом сайте нет регистрации, комментариев, чата или персональной поддержки — только бесплатные калькуляторы, которыми может сразу воспользоваться любой.</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

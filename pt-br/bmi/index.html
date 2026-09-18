@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de IMC - Índice de Massa Corporal</title>
+<meta name="description" content="Digite sua altura e peso para calcular seu IMC e categoria.">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/pt-br/bmi/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/bmi/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/bmi/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/bmi/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/bmi/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/bmi/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/bmi/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/bmi/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/bmi/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/bmi/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/bmi/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/bmi/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/bmi/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/bmi/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/bmi/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/bmi/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/bmi/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/bmi/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/bmi/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/bmi/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/bmi/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "Por favor, digite uma data de nascimento.", "dday_alert": "Por favor, digite uma data alvo.", "discount_alert": "Por favor, digite o preço original e a taxa de desconto.", "unit_alert": "Por favor, digite um valor para converter.", "bmi_alert": "Por favor, digite uma altura e peso válidos.", "age_result_label": "Idade", "dday_today": "Hoje é o D-Day", "dday_remaining_tpl": "Faltam {n} dia(s).", "dday_past_tpl": "Já se passaram {n} dia(s).", "discount_after_tpl": "Preço com {rate}% de desconto", "discount_saved_label": "Você economiza", "bmi_cats": ["Abaixo do peso", "Normal", "Sobrepeso", "Obesidade"], "bmi_result_prefix": "Categoria", "bmi_standard_note": "(padrão internacional da OMS)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../pt-br/">Calculadoras do Dia a Dia Tudo em Um</a></h1>
+  <p>Calculadoras gratuitas, uso instantâneo — sem necessidade de cadastro</p>
+</header>
+<nav class="main-nav"><a href="../../pt-br/" class="">Início</a><a href="../../pt-br/age/" class="">Idade</a><a href="../../pt-br/dday/" class="">Contagem regressiva</a><a href="../../pt-br/discount/" class="">Desconto</a><a href="../../pt-br/unit/" class="">Unidades</a><a href="../../pt-br/bmi/" class="active">IMC</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../bmi/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/bmi/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/bmi/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/bmi/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/bmi/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item current" href="../../pt-br/bmi/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/bmi/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/bmi/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/bmi/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/bmi/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/bmi/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/bmi/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/bmi/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/bmi/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/bmi/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/bmi/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/bmi/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/bmi/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/bmi/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/bmi/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/bmi/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../pt-br/">Início</a> &gt; Calculadora de IMC</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Calculadora de IMC</h2>
+    <p class="desc">Digite sua altura e peso para calcular seu Índice de Massa Corporal (IMC).</p>
+    <div class="row">
+      <div class="field"><label>Altura (cm)</label><input type="number" id="bmi-height"></div>
+      <div class="field"><label>Peso (kg)</label><input type="number" id="bmi-weight"></div>
+    </div>
+    <button onclick="calcBmiGlobal()">Calcular</button>
+    <div class="result" id="bmi-result"></div>
+    <p class="disclaimer">Este resultado é apenas uma referência e não substitui um diagnóstico médico.</p>
+  </div>
+  <article class="content">
+    <h2>Como usar</h2><ol><li>Digite sua altura em centímetros.</li><li>Digite seu peso em quilogramas.</li><li>Clique em "Calcular" para ver seu IMC e categoria.</li></ol>
+    <h2>Como funciona</h2><p>IMC = peso (kg) ÷ (altura (m) × altura (m)). Esta calculadora usa a classificação internacional da OMS: abaixo de 18,5 é abaixo do peso, 18,5–25 é normal, 25–30 é sobrepeso, e 30 ou mais é obesidade.</p>
+    <h2>Exemplos</h2><div class="example">Altura 170 cm, peso 65 kg &#8594; IMC 22,5 (Normal)</div><div class="example">Altura 160 cm, peso 82 kg &#8594; IMC 32,0 (Obesidade)</div>
+    <h2>Perguntas frequentes</h2><div class="faq-item"><div class="q">O padrão de IMC é o mesmo no mundo todo?</div><p class="a">Esta calculadora usa o padrão internacional da OMS. Alguns países, incluindo a Coreia, usam limites um pouco diferentes.</p></div><div class="faq-item"><div class="q">O IMC é preciso para pessoas muito musculosas?</div><p class="a">Nem sempre — o IMC não distingue músculo de gordura, então pode superestimar a gordura corporal em pessoas musculosas.</p></div>
+    <h2>Outras calculadoras</h2><div class="related"><a href="../../pt-br/age/">Idade</a><a href="../../pt-br/dday/">Contagem regressiva</a><a href="../../pt-br/discount/">Desconto</a><a href="../../pt-br/unit/">Unidades</a></div>
+  </article>
+</div>
+<footer>Este site não possui cadastro de conta, comentários, chat ou suporte individual — apenas calculadoras gratuitas que qualquer pessoa pode usar na hora.</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

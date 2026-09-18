@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Cuenta Regresiva - Días hasta cualquier fecha</title>
+<meta name="description" content="Calcula los días restantes o transcurridos entre hoy y cualquier fecha objetivo.">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/es/dday/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/dday/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/dday/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/dday/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/dday/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/dday/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/dday/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/dday/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/dday/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/dday/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/dday/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/dday/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/dday/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/dday/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/dday/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/dday/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/dday/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/dday/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/dday/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/dday/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/dday/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "Por favor ingresa una fecha de nacimiento.", "dday_alert": "Por favor ingresa una fecha objetivo.", "discount_alert": "Por favor ingresa el precio original y el porcentaje de descuento.", "unit_alert": "Por favor ingresa un valor para convertir.", "bmi_alert": "Por favor ingresa una estatura y peso válidos.", "age_result_label": "Edad", "dday_today": "Hoy es el D-Day", "dday_remaining_tpl": "Quedan {n} día(s).", "dday_past_tpl": "Han pasado {n} día(s).", "discount_after_tpl": "Precio con {rate}% de descuento", "discount_saved_label": "Ahorras", "bmi_cats": ["Bajo peso", "Normal", "Sobrepeso", "Obesidad"], "bmi_result_prefix": "Categoría", "bmi_standard_note": "(estándar internacional de la OMS)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../es/">Calculadoras Cotidianas Todo en Uno</a></h1>
+  <p>Calculadoras gratuitas que puedes usar al instante, sin registro</p>
+</header>
+<nav class="main-nav"><a href="../../es/" class="">Inicio</a><a href="../../es/age/" class="">Edad</a><a href="../../es/dday/" class="active">Cuenta regresiva</a><a href="../../es/discount/" class="">Descuento</a><a href="../../es/unit/" class="">Unidades</a><a href="../../es/bmi/" class="">IMC</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../dday/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/dday/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/dday/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/dday/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/dday/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/dday/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/dday/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item current" href="../../es/dday/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/dday/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/dday/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/dday/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/dday/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/dday/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/dday/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/dday/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/dday/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/dday/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/dday/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../es/">Inicio</a> &gt; Calculadora de Cuenta Regresiva</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Calculadora de Cuenta Regresiva</h2>
+    <p class="desc">Calcula los días restantes (o transcurridos) entre una fecha inicial y una fecha objetivo.</p>
+    <div class="row">
+      <div class="field"><label>Fecha inicial (opcional)</label><input type="date" id="dday-from" placeholder="Déjalo en blanco para usar la fecha de hoy"></div>
+      <div class="field"><label>Fecha objetivo</label><input type="date" id="dday-to"></div>
+    </div>
+    <button onclick="calcDdayGlobal()">Calcular</button>
+    <div class="result" id="dday-result"></div>
+  </div>
+  <article class="content">
+    <h2>Cómo usarla</h2><ol><li>Ingresa una fecha inicial, o déjala en blanco para usar hoy.</li><li>Ingresa la fecha objetivo para la cuenta regresiva.</li><li>Haz clic en "Calcular" para ver el resultado.</li></ol>
+    <h2>Cómo funciona</h2><p>La calculadora obtiene la cantidad de días de calendario entre la fecha inicial y la fecha objetivo. Si el objetivo es futuro, verás una cuenta regresiva "D-"; si ya pasó, un conteo "D+".</p>
+    <h2>Ejemplos</h2><div class="example">Fecha inicial hoy, fecha objetivo en 10 días &#8594; Resultado: "D-10"</div><div class="example">Fecha inicial hoy, fecha objetivo hace 5 días &#8594; Resultado: "D+5"</div>
+    <h2>Preguntas frecuentes</h2><div class="faq-item"><div class="q">¿Qué pasa si la fecha inicial y la objetivo son iguales?</div><p class="a">Verás "Hoy es el D-Day".</p></div><div class="faq-item"><div class="q">¿Puedo usar una fecha objetivo pasada?</div><p class="a">Sí, la calculadora mostrará cuántos días han pasado desde esa fecha.</p></div>
+    <h2>Otras calculadoras</h2><div class="related"><a href="../../es/age/">Edad</a><a href="../../es/discount/">Descuento</a><a href="../../es/unit/">Unidades</a><a href="../../es/bmi/">IMC</a></div>
+  </article>
+</div>
+<footer>Este sitio no tiene registro de cuenta, comentarios, chat ni soporte 1 a 1 — solo calculadoras gratuitas que cualquiera puede usar de inmediato.</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

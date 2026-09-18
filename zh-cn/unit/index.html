@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>单位换算器 - 长度、重量、体积</title>
+<meta name="description" content="快速换算常用的长度、重量、体积单位。">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/zh-cn/unit/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/unit/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/unit/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/unit/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/unit/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/unit/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/unit/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/unit/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/unit/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/unit/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/unit/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/unit/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/unit/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/unit/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/unit/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/unit/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/unit/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/unit/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/unit/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/unit/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/unit/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "请输入出生日期。", "dday_alert": "请输入目标日期。", "discount_alert": "请输入原价和折扣率。", "unit_alert": "请输入要换算的数值。", "bmi_alert": "请输入有效的身高和体重。", "age_result_label": "年龄", "dday_today": "今天就是目标日", "dday_remaining_tpl": "距目标日还有{n}天。", "dday_past_tpl": "距目标日已过去{n}天。", "discount_after_tpl": "折扣后价格(折扣率{rate}%)", "discount_saved_label": "节省金额", "bmi_cats": ["偏瘦", "正常", "超重", "肥胖"], "bmi_result_prefix": "分类", "bmi_standard_note": "(WHO国际标准)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../zh-cn/">全能生活计算器</a></h1>
+  <p>无需注册,立即免费使用的计算工具</p>
+</header>
+<nav class="main-nav"><a href="../../zh-cn/" class="">首页</a><a href="../../zh-cn/age/" class="">年龄</a><a href="../../zh-cn/dday/" class="">倒数日</a><a href="../../zh-cn/discount/" class="">折扣</a><a href="../../zh-cn/unit/" class="active">单位换算</a><a href="../../zh-cn/bmi/" class="">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../unit/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item current" href="../../zh-cn/unit/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/unit/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/unit/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/unit/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/unit/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/unit/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/unit/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/unit/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/unit/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/unit/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/unit/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/unit/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/unit/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/unit/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/unit/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/unit/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/unit/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/unit/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/unit/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/unit/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../zh-cn/">首页</a> &gt; 单位换算器</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>单位换算器</h2>
+    <p class="desc">在长度、重量、体积单位之间互相换算。</p>
+    <div class="row">
+      <div class="field"><label>类型</label>
+        <select id="unit-type" onchange="fillUnitOptionsGlobal()"><option value="length">长度</option><option value="weight">重量</option><option value="volume">体积</option></select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="field"><label>数值</label><input type="number" id="unit-value"></div>
+      <div class="field"><label>原单位</label><select id="unit-from"></select></div>
+      <div class="field"><label>目标单位</label><select id="unit-to"></select></div>
+    </div>
+    <button onclick="calcUnitGlobal()">换算</button>
+    <div class="result" id="unit-result"></div>
+  </div>
+  <article class="content">
+    <h2>使用方法</h2><ol><li>选择类型:长度、重量或体积。</li><li>输入数值,并选择原单位和目标单位。</li><li>点击"换算"查看结果。</li></ol>
+    <h2>计算方式</h2><p>所有单位先换算为基准单位(长度为米,重量为千克,体积为升),再换算为目标单位。</p>
+    <h2>示例</h2><div class="example">100 cm &#8594; = 1 m</div><div class="example">10 lb &#8594; ≈ 4.53592 kg</div>
+    <h2>常见问题</h2><div class="faq-item"><div class="q">支持哪些单位?</div><p class="a">长度: mm、cm、m、km、in、ft、mi。重量: mg、g、kg、t、lb、oz。体积: ml、l、gal、cup。</p></div><div class="faq-item"><div class="q">结果精确到多少位?</div><p class="a">结果最多显示到小数点后6位。</p></div>
+    <h2>其他计算器</h2><div class="related"><a href="../../zh-cn/age/">年龄</a><a href="../../zh-cn/dday/">倒数日</a><a href="../../zh-cn/discount/">折扣</a><a href="../../zh-cn/bmi/">BMI</a></div>
+  </article>
+</div>
+<footer>本网站不提供账号注册、评论、聊天或人工客服,只是一组任何人都能立即使用的免费计算工具。</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="bn" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI ক্যালকুলেটর - বডি মাস ইনডেক্স</title>
+<meta name="description" content="উচ্চতা ও ওজন দিয়ে BMI ও শ্রেণি হিসাব করুন।">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/bn/bmi/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/bmi/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/bmi/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/bmi/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/bmi/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/bmi/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/bmi/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/bmi/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/bmi/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/bmi/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/bmi/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/bmi/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/bmi/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/bmi/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/bmi/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/bmi/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/bmi/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/bmi/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/bmi/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/bmi/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/bmi/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "অনুগ্রহ করে জন্ম তারিখ দিন।", "dday_alert": "অনুগ্রহ করে লক্ষ্য তারিখ দিন।", "discount_alert": "অনুগ্রহ করে আসল মূল্য ও ছাড়ের হার দিন।", "unit_alert": "অনুগ্রহ করে রূপান্তরের জন্য একটি মান দিন।", "bmi_alert": "অনুগ্রহ করে সঠিক উচ্চতা ও ওজন দিন।", "age_result_label": "বয়স", "dday_today": "আজই ডি-ডে", "dday_remaining_tpl": "আর {n} দিন বাকি।", "dday_past_tpl": "{n} দিন পার হয়েছে।", "discount_after_tpl": "{rate}% ছাড়ের পরে মূল্য", "discount_saved_label": "আপনার সঞ্চয়", "bmi_cats": ["কম ওজন", "স্বাভাবিক", "অতিরিক্ত ওজন", "স্থূলতা"], "bmi_result_prefix": "শ্রেণি", "bmi_standard_note": "(WHO আন্তর্জাতিক মান)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../bn/">অল-ইন-ওয়ান দৈনন্দিন ক্যালকুলেটর</a></h1>
+  <p>নিবন্ধন ছাড়াই তাৎক্ষণিক ব্যবহার করুন — বিনামূল্যে ক্যালকুলেটর</p>
+</header>
+<nav class="main-nav"><a href="../../bn/" class="">হোম</a><a href="../../bn/age/" class="">বয়স</a><a href="../../bn/dday/" class="">ডি-ডে</a><a href="../../bn/discount/" class="">ছাড়</a><a href="../../bn/unit/" class="">একক</a><a href="../../bn/bmi/" class="active">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../bmi/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/bmi/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/bmi/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/bmi/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/bmi/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/bmi/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/bmi/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/bmi/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/bmi/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/bmi/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/bmi/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/bmi/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/bmi/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/bmi/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/bmi/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item current" href="../../bn/bmi/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/bmi/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/bmi/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/bmi/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/bmi/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/bmi/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../bn/">হোম</a> &gt; BMI ক্যালকুলেটর</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>BMI ক্যালকুলেটর</h2>
+    <p class="desc">আপনার উচ্চতা ও ওজন দিয়ে বডি মাস ইনডেক্স (BMI) হিসাব করুন।</p>
+    <div class="row">
+      <div class="field"><label>উচ্চতা (cm)</label><input type="number" id="bmi-height"></div>
+      <div class="field"><label>ওজন (kg)</label><input type="number" id="bmi-weight"></div>
+    </div>
+    <button onclick="calcBmiGlobal()">হিসাব করুন</button>
+    <div class="result" id="bmi-result"></div>
+    <p class="disclaimer">এই ফলাফল শুধুমাত্র তথ্যের জন্য, চিকিৎসাগত নির্ণয় নয়।</p>
+  </div>
+  <article class="content">
+    <h2>ব্যবহার পদ্ধতি</h2><ol><li>সেন্টিমিটারে আপনার উচ্চতা দিন।</li><li>কিলোগ্রামে আপনার ওজন দিন।</li><li>BMI ও শ্রেণি দেখতে "হিসাব করুন" চাপুন।</li></ol>
+    <h2>কীভাবে কাজ করে</h2><p>BMI = ওজন (kg) ÷ (উচ্চতা (m) × উচ্চতা (m))। এই ক্যালকুলেটর WHO-এর আন্তর্জাতিক শ্রেণিবিন্যাস ব্যবহার করে: ১৮.৫-এর নিচে কম ওজন, ১৮.৫–২৫ স্বাভাবিক, ২৫–৩০ অতিরিক্ত ওজন, এবং ৩০ বা তার বেশি স্থূলতা।</p>
+    <h2>উদাহরণ</h2><div class="example">উচ্চতা ১৭০ cm, ওজন ৬৫ kg &#8594; BMI ২২.৫ (স্বাভাবিক)</div><div class="example">উচ্চতা ১৬০ cm, ওজন ৮২ kg &#8594; BMI ৩২.০ (স্থূলতা)</div>
+    <h2>সাধারণ প্রশ্ন</h2><div class="faq-item"><div class="q">BMI মান কি সারা বিশ্বে একই?</div><p class="a">এই ক্যালকুলেটর WHO-এর আন্তর্জাতিক মান ব্যবহার করে। কোরিয়াসহ কিছু দেশ কিছুটা ভিন্ন সীমা ব্যবহার করে।</p></div><div class="faq-item"><div class="q">বেশি পেশিবহুল মানুষের জন্য কি BMI সঠিক?</div><p class="a">সবসময় নয় — BMI পেশি ও চর্বির মধ্যে পার্থক্য করে না, তাই পেশিবহুল মানুষের ক্ষেত্রে এটি বেশি দেখাতে পারে।</p></div>
+    <h2>অন্যান্য ক্যালকুলেটর</h2><div class="related"><a href="../../bn/age/">বয়স</a><a href="../../bn/dday/">ডি-ডে</a><a href="../../bn/discount/">ছাড়</a><a href="../../bn/unit/">একক</a></div>
+  </article>
+</div>
+<footer>এই ওয়েবসাইটে কোনো অ্যাকাউন্ট নিবন্ধন, মন্তব্য, চ্যাট বা ব্যক্তিগত সহায়তা নেই — শুধু বিনামূল্যে ক্যালকুলেটর যা যে কেউ তাৎক্ষণিকভাবে ব্যবহার করতে পারে।</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Hitung Mundur - Hari menuju tanggal mana pun</title>
+<meta name="description" content="Hitung jumlah hari tersisa atau yang sudah berlalu antara hari ini dan tanggal target.">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/id/dday/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/dday/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/dday/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/dday/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/dday/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/dday/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/dday/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/dday/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/dday/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/dday/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/dday/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/dday/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/dday/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/dday/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/dday/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/dday/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/dday/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/dday/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/dday/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/dday/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/dday/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "Silakan masukkan tanggal lahir.", "dday_alert": "Silakan masukkan tanggal target.", "discount_alert": "Silakan masukkan harga asli dan persentase diskon.", "unit_alert": "Silakan masukkan nilai yang ingin dikonversi.", "bmi_alert": "Silakan masukkan tinggi dan berat badan yang valid.", "age_result_label": "Usia", "dday_today": "Hari ini adalah D-Day", "dday_remaining_tpl": "Tersisa {n} hari.", "dday_past_tpl": "Sudah berlalu {n} hari.", "discount_after_tpl": "Harga setelah diskon {rate}%", "discount_saved_label": "Anda hemat", "bmi_cats": ["Berat badan kurang", "Normal", "Kelebihan berat badan", "Obesitas"], "bmi_result_prefix": "Kategori", "bmi_standard_note": "(standar internasional WHO)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../id/">Kalkulator Serbaguna Sehari-hari</a></h1>
+  <p>Kalkulator gratis, langsung pakai — tanpa perlu daftar</p>
+</header>
+<nav class="main-nav"><a href="../../id/" class="">Beranda</a><a href="../../id/age/" class="">Usia</a><a href="../../id/dday/" class="active">Hitung Mundur</a><a href="../../id/discount/" class="">Diskon</a><a href="../../id/unit/" class="">Satuan</a><a href="../../id/bmi/" class="">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../dday/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/dday/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/dday/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item current" href="../../id/dday/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/dday/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/dday/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/dday/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/dday/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/dday/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/dday/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/dday/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/dday/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/dday/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/dday/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/dday/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/dday/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/dday/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/dday/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../id/">Beranda</a> &gt; Kalkulator Hitung Mundur</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Kalkulator Hitung Mundur</h2>
+    <p class="desc">Menghitung hari tersisa (atau yang sudah berlalu) antara tanggal mulai dan tanggal target.</p>
+    <div class="row">
+      <div class="field"><label>Tanggal mulai (opsional)</label><input type="date" id="dday-from" placeholder="Kosongkan untuk memakai tanggal hari ini"></div>
+      <div class="field"><label>Tanggal target</label><input type="date" id="dday-to"></div>
+    </div>
+    <button onclick="calcDdayGlobal()">Hitung</button>
+    <div class="result" id="dday-result"></div>
+  </div>
+  <article class="content">
+    <h2>Cara pakai</h2><ol><li>Masukkan tanggal mulai, atau kosongkan untuk memakai hari ini.</li><li>Masukkan tanggal target yang ingin dihitung mundur.</li><li>Klik "Hitung" untuk melihat hasilnya.</li></ol>
+    <h2>Cara kerjanya</h2><p>Kalkulator menghitung jumlah hari kalender antara tanggal mulai dan tanggal target. Jika target di masa depan, hasilnya "D-"; jika sudah lewat, hasilnya "D+".</p>
+    <h2>Contoh</h2><div class="example">Tanggal mulai hari ini, target 10 hari lagi &#8594; Hasil: "D-10"</div><div class="example">Tanggal mulai hari ini, target 5 hari lalu &#8594; Hasil: "D+5"</div>
+    <h2>Pertanyaan umum</h2><div class="faq-item"><div class="q">Bagaimana jika tanggal mulai dan target sama?</div><p class="a">Akan muncul "Hari ini adalah D-Day".</p></div><div class="faq-item"><div class="q">Bisakah memakai tanggal target yang sudah lewat?</div><p class="a">Bisa, kalkulator akan menampilkan berapa hari sudah berlalu sejak tanggal itu.</p></div>
+    <h2>Kalkulator lainnya</h2><div class="related"><a href="../../id/age/">Usia</a><a href="../../id/discount/">Diskon</a><a href="../../id/unit/">Satuan</a><a href="../../id/bmi/">BMI</a></div>
+  </article>
+</div>
+<footer>Situs ini tidak memiliki pendaftaran akun, kolom komentar, chat, atau dukungan pribadi — hanya kalkulator gratis yang bisa langsung digunakan siapa saja.</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

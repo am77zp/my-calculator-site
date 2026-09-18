@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>全能生活计算器 - 年龄、倒数日、折扣、单位换算、BMI</title>
+<meta name="description" content="免费在线计算年龄、倒数日、折扣价格、单位换算和BMI。无需注册,立即可用。">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/zh-cn/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/">
+<link rel="stylesheet" href="../assets/style.css">
+<script>window.I18N = {"age_alert": "请输入出生日期。", "dday_alert": "请输入目标日期。", "discount_alert": "请输入原价和折扣率。", "unit_alert": "请输入要换算的数值。", "bmi_alert": "请输入有效的身高和体重。", "age_result_label": "年龄", "dday_today": "今天就是目标日", "dday_remaining_tpl": "距目标日还有{n}天。", "dday_past_tpl": "距目标日已过去{n}天。", "discount_after_tpl": "折扣后价格(折扣率{rate}%)", "discount_saved_label": "节省金额", "bmi_cats": ["偏瘦", "正常", "超重", "肥胖"], "bmi_result_prefix": "分类", "bmi_standard_note": "(WHO国际标准)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../zh-cn/">全能生活计算器</a></h1>
+  <p>无需注册,立即免费使用的计算工具</p>
+</header>
+<nav class="main-nav"><a href="../zh-cn/" class="active">首页</a><a href="../zh-cn/age/" class="">年龄</a><a href="../zh-cn/dday/" class="">倒数日</a><a href="../zh-cn/discount/" class="">折扣</a><a href="../zh-cn/unit/" class="">单位换算</a><a href="../zh-cn/bmi/" class="">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item current" href="../zh-cn/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../hi/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../en/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../id/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../pt-br/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../ru/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../ur/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../es/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../ja/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../en/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../tl/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../ar/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../vi/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../de/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../bn/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../tr/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../fa/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../en/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../th/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../fr/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="container wide">
+  <div class="ad-slot">Ad space</div>
+  <div class="home-grid"><a class="tool-card" href="../zh-cn/age/"><div class="t">年龄</div><div class="d">根据出生日期计算精确年龄</div></a><a class="tool-card" href="../zh-cn/dday/"><div class="t">倒数日</div><div class="d">倒数计算距离重要日期还有多少天</div></a><a class="tool-card" href="../zh-cn/discount/"><div class="t">折扣</div><div class="d">计算折扣后价格和节省金额</div></a><a class="tool-card" href="../zh-cn/unit/"><div class="t">单位换算</div><div class="d">长度、重量、体积单位互相换算</div></a><a class="tool-card" href="../zh-cn/bmi/"><div class="t">BMI</div><div class="d">查看BMI(身体质量指数)及分类</div></a></div>
+  <article class="content">
+    <h2>关于本网站</h2>
+    <p>无需安装应用或注册账号,直接在浏览器中使用的免费生活计算工具集合。您输入的内容不会发送到服务器,所有计算都在您自己的设备上完成。</p>
+    <h2>常用计算器</h2>
+    <ul><li><a href="../zh-cn/age/">年龄</a> &#8212; 根据出生日期计算精确年龄</li><li><a href="../zh-cn/dday/">倒数日</a> &#8212; 倒数计算距离重要日期还有多少天</li><li><a href="../zh-cn/discount/">折扣</a> &#8212; 计算折扣后价格和节省金额</li><li><a href="../zh-cn/unit/">单位换算</a> &#8212; 长度、重量、体积单位互相换算</li><li><a href="../zh-cn/bmi/">BMI</a> &#8212; 查看BMI(身体质量指数)及分类</li></ul>
+  </article>
+</div>
+<footer>本网站不提供账号注册、评论、聊天或人工客服,只是一组任何人都能立即使用的免费计算工具。</footer>
+<script src="../assets/calculators.js"></script>
+<script src="../assets/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI कैलकुलेटर - बॉडी मास इंडेक्स</title>
+<meta name="description" content="अपनी लंबाई और वज़न डालकर BMI और श्रेणी जानें।">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/hi/bmi/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/bmi/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/bmi/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/bmi/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/bmi/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/bmi/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/bmi/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/bmi/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/bmi/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/bmi/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/bmi/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/bmi/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/bmi/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/bmi/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/bmi/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/bmi/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/bmi/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/bmi/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/bmi/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/bmi/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/bmi/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "कृपया जन्मतिथि डालें।", "dday_alert": "कृपया लक्ष्य तारीख डालें।", "discount_alert": "कृपया मूल कीमत और छूट दोनों डालें।", "unit_alert": "कृपया बदलने के लिए एक मान डालें।", "bmi_alert": "कृपया सही लंबाई और वज़न डालें।", "age_result_label": "उम्र", "dday_today": "आज ही डी-डे है", "dday_remaining_tpl": "{n} दिन बचे हैं।", "dday_past_tpl": "{n} दिन बीत चुके हैं।", "discount_after_tpl": "{rate}% छूट के बाद कीमत", "discount_saved_label": "आपकी बचत", "bmi_cats": ["कम वज़न", "सामान्य", "ज़्यादा वज़न", "मोटापा"], "bmi_result_prefix": "श्रेणी", "bmi_standard_note": "(WHO अंतरराष्ट्रीय मानक)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../hi/">ऑल-इन-वन डेली कैलकुलेटर</a></h1>
+  <p>बिना साइन-अप के तुरंत इस्तेमाल करें — मुफ्त कैलकुलेटर</p>
+</header>
+<nav class="main-nav"><a href="../../hi/" class="">होम</a><a href="../../hi/age/" class="">उम्र</a><a href="../../hi/dday/" class="">डी-डे</a><a href="../../hi/discount/" class="">छूट</a><a href="../../hi/unit/" class="">यूनिट</a><a href="../../hi/bmi/" class="active">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../bmi/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/bmi/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item current" href="../../hi/bmi/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/bmi/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/bmi/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/bmi/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/bmi/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/bmi/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/bmi/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/bmi/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/bmi/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/bmi/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/bmi/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/bmi/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/bmi/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/bmi/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/bmi/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/bmi/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/bmi/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/bmi/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/bmi/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../hi/">होम</a> &gt; BMI कैलकुलेटर</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>BMI कैलकुलेटर</h2>
+    <p class="desc">अपनी लंबाई और वज़न डालकर अपना BMI (बॉडी मास इंडेक्स) जानें।</p>
+    <div class="row">
+      <div class="field"><label>लंबाई (cm)</label><input type="number" id="bmi-height"></div>
+      <div class="field"><label>वज़न (kg)</label><input type="number" id="bmi-weight"></div>
+    </div>
+    <button onclick="calcBmiGlobal()">गणना करें</button>
+    <div class="result" id="bmi-result"></div>
+    <p class="disclaimer">यह नतीजा केवल जानकारी के लिए है, मेडिकल जांच का विकल्प नहीं है।</p>
+  </div>
+  <article class="content">
+    <h2>इस्तेमाल कैसे करें</h2><ol><li>अपनी लंबाई सेंटीमीटर में डालें।</li><li>अपना वज़न किलोग्राम में डालें।</li><li>BMI और श्रेणी देखने के लिए "गणना करें" दबाएं।</li></ol>
+    <h2>यह कैसे काम करता है</h2><p>BMI = वज़न (kg) ÷ (लंबाई (m) × लंबाई (m))। यह कैलकुलेटर WHO के अंतरराष्ट्रीय मानक का इस्तेमाल करता है: 18.5 से कम कम वज़न, 18.5–25 सामान्य, 25–30 ज़्यादा वज़न, और 30 या ज़्यादा मोटापा।</p>
+    <h2>उदाहरण</h2><div class="example">लंबाई 170 cm, वज़न 65 kg &#8594; BMI 22.5 (सामान्य)</div><div class="example">लंबाई 160 cm, वज़न 82 kg &#8594; BMI 32.0 (मोटापा)</div>
+    <h2>अक्सर पूछे जाने वाले सवाल</h2><div class="faq-item"><div class="q">क्या BMI मानक पूरी दुनिया में एक जैसा है?</div><p class="a">यह कैलकुलेटर WHO का अंतरराष्ट्रीय मानक इस्तेमाल करता है। कोरिया सहित कुछ देशों में थोड़े अलग मानक इस्तेमाल होते हैं।</p></div><div class="faq-item"><div class="q">क्या ज़्यादा मसल वालों के लिए BMI सही होता है?</div><p class="a">हमेशा नहीं — BMI मसल और फैट में फर्क नहीं करता, इसलिए मसल वाले लोगों में यह ज़्यादा दिख सकता है।</p></div>
+    <h2>अन्य कैलकुलेटर</h2><div class="related"><a href="../../hi/age/">उम्र</a><a href="../../hi/dday/">डी-डे</a><a href="../../hi/discount/">छूट</a><a href="../../hi/unit/">यूनिट</a></div>
+  </article>
+</div>
+<footer>इस वेबसाइट पर कोई अकाउंट साइन-अप, कमेंट, चैट या पर्सनल सपोर्ट नहीं है — बस मुफ्त कैलकुलेटर जिन्हें कोई भी तुरंत इस्तेमाल कर सकता है।</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

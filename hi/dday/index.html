@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hi" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>डी-डे कैलकुलेटर - किसी भी तारीख तक के दिन गिनें</title>
+<meta name="description" content="आज से किसी भी तय तारीख तक बचे या बीते दिनों की गणना करें।">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/hi/dday/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/dday/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/dday/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/dday/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/dday/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/dday/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/dday/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/dday/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/dday/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/dday/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/dday/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/dday/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/dday/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/dday/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/dday/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/dday/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/dday/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/dday/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/dday/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/dday/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/dday/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "कृपया जन्मतिथि डालें।", "dday_alert": "कृपया लक्ष्य तारीख डालें।", "discount_alert": "कृपया मूल कीमत और छूट दोनों डालें।", "unit_alert": "कृपया बदलने के लिए एक मान डालें।", "bmi_alert": "कृपया सही लंबाई और वज़न डालें।", "age_result_label": "उम्र", "dday_today": "आज ही डी-डे है", "dday_remaining_tpl": "{n} दिन बचे हैं।", "dday_past_tpl": "{n} दिन बीत चुके हैं।", "discount_after_tpl": "{rate}% छूट के बाद कीमत", "discount_saved_label": "आपकी बचत", "bmi_cats": ["कम वज़न", "सामान्य", "ज़्यादा वज़न", "मोटापा"], "bmi_result_prefix": "श्रेणी", "bmi_standard_note": "(WHO अंतरराष्ट्रीय मानक)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../hi/">ऑल-इन-वन डेली कैलकुलेटर</a></h1>
+  <p>बिना साइन-अप के तुरंत इस्तेमाल करें — मुफ्त कैलकुलेटर</p>
+</header>
+<nav class="main-nav"><a href="../../hi/" class="">होम</a><a href="../../hi/age/" class="">उम्र</a><a href="../../hi/dday/" class="active">डी-डे</a><a href="../../hi/discount/" class="">छूट</a><a href="../../hi/unit/" class="">यूनिट</a><a href="../../hi/bmi/" class="">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../dday/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/dday/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item current" href="../../hi/dday/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/dday/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/dday/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/dday/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/dday/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/dday/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/dday/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/dday/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/dday/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/dday/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/dday/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/dday/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/dday/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/dday/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/dday/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/dday/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../hi/">होम</a> &gt; डी-डे कैलकुलेटर</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>डी-डे कैलकुलेटर</h2>
+    <p class="desc">शुरुआती तारीख से लक्ष्य तारीख तक बचे (या बीते) दिनों की गणना करें।</p>
+    <div class="row">
+      <div class="field"><label>शुरुआती तारीख (वैकल्पिक)</label><input type="date" id="dday-from" placeholder="खाली छोड़ने पर आज की तारीख इस्तेमाल होगी"></div>
+      <div class="field"><label>लक्ष्य तारीख</label><input type="date" id="dday-to"></div>
+    </div>
+    <button onclick="calcDdayGlobal()">गणना करें</button>
+    <div class="result" id="dday-result"></div>
+  </div>
+  <article class="content">
+    <h2>इस्तेमाल कैसे करें</h2><ol><li>शुरुआती तारीख डालें, या खाली छोड़कर आज की तारीख इस्तेमाल करें।</li><li>जिस तारीख तक गिनती करनी है वह लक्ष्य तारीख डालें।</li><li>नतीजा देखने के लिए "गणना करें" दबाएं।</li></ol>
+    <h2>यह कैसे काम करता है</h2><p>कैलकुलेटर शुरुआती तारीख और लक्ष्य तारीख के बीच के कैलेंडर दिनों की गिनती करता है। भविष्य की तारीख के लिए "D-" और बीती तारीख के लिए "D+" दिखता है।</p>
+    <h2>उदाहरण</h2><div class="example">शुरुआती तारीख आज, लक्ष्य तारीख 10 दिन बाद &#8594; नतीजा: "D-10"</div><div class="example">शुरुआती तारीख आज, लक्ष्य तारीख 5 दिन पहले &#8594; नतीजा: "D+5"</div>
+    <h2>अक्सर पूछे जाने वाले सवाल</h2><div class="faq-item"><div class="q">अगर शुरुआती और लक्ष्य तारीख एक ही हो तो?</div><p class="a">"आज ही डी-डे है" दिखाई देगा।</p></div><div class="faq-item"><div class="q">क्या मैं बीती हुई लक्ष्य तारीख डाल सकता हूं?</div><p class="a">हां, तब उस तारीख से कितने दिन बीत चुके हैं यह दिखेगा।</p></div>
+    <h2>अन्य कैलकुलेटर</h2><div class="related"><a href="../../hi/age/">उम्र</a><a href="../../hi/discount/">छूट</a><a href="../../hi/unit/">यूनिट</a><a href="../../hi/bmi/">BMI</a></div>
+  </article>
+</div>
+<footer>इस वेबसाइट पर कोई अकाउंट साइन-अप, कमेंट, चैट या पर्सनल सपोर्ट नहीं है — बस मुफ्त कैलकुलेटर जिन्हें कोई भी तुरंत इस्तेमाल कर सकता है।</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

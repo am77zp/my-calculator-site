@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="th" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เครื่องคำนวณอเนกประสงค์ในชีวิตประจำวัน - อายุ, นับถอยหลัง, ส่วนลด, หน่วย, BMI</title>
+<meta name="description" content="เครื่องคำนวณออนไลน์ฟรีสำหรับอายุ นับถอยหลัง ราคาหลังหักส่วนลด แปลงหน่วย และ BMI ไม่ต้องสมัครสมาชิก ใช้งานได้ทันที">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/th/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/">
+<link rel="stylesheet" href="../assets/style.css">
+<script>window.I18N = {"age_alert": "กรุณาป้อนวันเกิด", "dday_alert": "กรุณาป้อนวันเป้าหมาย", "discount_alert": "กรุณาป้อนราคาเต็มและเปอร์เซ็นต์ส่วนลด", "unit_alert": "กรุณาป้อนค่าที่ต้องการแปลง", "bmi_alert": "กรุณาป้อนส่วนสูงและน้ำหนักที่ถูกต้อง", "age_result_label": "อายุ", "dday_today": "วันนี้คือวัน D-Day", "dday_remaining_tpl": "เหลืออีก {n} วัน", "dday_past_tpl": "ผ่านไปแล้ว {n} วัน", "discount_after_tpl": "ราคาหลังหักส่วนลด {rate}%", "discount_saved_label": "คุณประหยัดได้", "bmi_cats": ["น้ำหนักต่ำกว่าเกณฑ์", "ปกติ", "น้ำหนักเกิน", "โรคอ้วน"], "bmi_result_prefix": "หมวดหมู่", "bmi_standard_note": "(มาตรฐานสากลของ WHO)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../th/">เครื่องคำนวณอเนกประสงค์ในชีวิตประจำวัน</a></h1>
+  <p>เครื่องคำนวณฟรี ใช้งานได้ทันที ไม่ต้องสมัครสมาชิก</p>
+</header>
+<nav class="main-nav"><a href="../th/" class="active">หน้าแรก</a><a href="../th/age/" class="">อายุ</a><a href="../th/dday/" class="">นับถอยหลัง</a><a href="../th/discount/" class="">ส่วนลด</a><a href="../th/unit/" class="">หน่วย</a><a href="../th/bmi/" class="">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../zh-cn/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../hi/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../en/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../id/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../pt-br/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../ru/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../ur/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../es/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../ja/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../en/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../tl/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../ar/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../vi/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../de/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../bn/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../tr/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../fa/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../en/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item current" href="../th/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../fr/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="container wide">
+  <div class="ad-slot">Ad space</div>
+  <div class="home-grid"><a class="tool-card" href="../th/age/"><div class="t">อายุ</div><div class="d">หาอายุที่แน่นอนจากวันเกิด</div></a><a class="tool-card" href="../th/dday/"><div class="t">นับถอยหลัง</div><div class="d">นับถอยหลังจำนวนวันจนถึงวันสำคัญ</div></a><a class="tool-card" href="../th/discount/"><div class="t">ส่วนลด</div><div class="d">คำนวณราคาหลังหักส่วนลดและจำนวนเงินที่ประหยัดได้</div></a><a class="tool-card" href="../th/unit/"><div class="t">หน่วย</div><div class="d">แปลงหน่วยความยาว น้ำหนัก และปริมาตร</div></a><a class="tool-card" href="../th/bmi/"><div class="t">BMI</div><div class="d">ตรวจสอบค่า BMI (ดัชนีมวลกาย) และหมวดหมู่ของคุณ</div></a></div>
+  <article class="content">
+    <h2>เกี่ยวกับเว็บไซต์นี้</h2>
+    <p>ชุดเครื่องคำนวณในชีวิตประจำวันฟรี ที่ใช้งานได้โดยตรงในเบราว์เซอร์ ไม่ต้องติดตั้งแอป ไม่ต้องสร้างบัญชี ข้อมูลที่คุณป้อนจะไม่ถูกส่งไปยังเซิร์ฟเวอร์ การคำนวณทั้งหมดเกิดขึ้นบนอุปกรณ์ของคุณเอง</p>
+    <h2>เครื่องคำนวณยอดนิยม</h2>
+    <ul><li><a href="../th/age/">อายุ</a> &#8212; หาอายุที่แน่นอนจากวันเกิด</li><li><a href="../th/dday/">นับถอยหลัง</a> &#8212; นับถอยหลังจำนวนวันจนถึงวันสำคัญ</li><li><a href="../th/discount/">ส่วนลด</a> &#8212; คำนวณราคาหลังหักส่วนลดและจำนวนเงินที่ประหยัดได้</li><li><a href="../th/unit/">หน่วย</a> &#8212; แปลงหน่วยความยาว น้ำหนัก และปริมาตร</li><li><a href="../th/bmi/">BMI</a> &#8212; ตรวจสอบค่า BMI (ดัชนีมวลกาย) และหมวดหมู่ของคุณ</li></ul>
+  </article>
+</div>
+<footer>เว็บไซต์นี้ไม่มีการสมัครสมาชิก ไม่มีคอมเมนต์ แชท หรือฝ่ายสนับสนุนรายบุคคล มีเพียงเครื่องคำนวณฟรีที่ทุกคนใช้งานได้ทันที</footer>
+<script src="../assets/calculators.js"></script>
+<script src="../assets/i18n.js"></script>
+</body>
+</html>

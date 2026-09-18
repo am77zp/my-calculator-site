@@ -106,3 +106,49 @@ article.content .example{
 
 footer{ text-align:center; color:var(--muted); font-size:12px; padding:24px 16px 40px; }
 footer a{ color:var(--muted); }
+
+/* ============ 언어 선택 패널 (Language Switcher) ============ */
+.lang-switch-wrap{ max-width:720px; margin:0 auto; padding:0 16px; }
+.lang-collapsed{
+  display:none; align-items:center; gap:8px; width:auto; margin:10px auto 0;
+  padding:8px 14px; border-radius:999px; border:1px solid var(--border);
+  background:var(--card); color:var(--text); font-size:13px; cursor:pointer;
+}
+.lang-collapsed.show{ display:inline-flex; }
+.lang-panel{
+  background:var(--card); border:1px solid var(--border); border-radius:16px;
+  padding:14px; margin:10px 0 4px;
+}
+.lang-panel.hide{ display:none; }
+.lang-panel .lp-title{ font-size:13px; font-weight:600; margin:0 0 10px; color:var(--text); }
+.lang-grid{
+  display:grid; grid-template-columns:repeat(2,1fr); gap:8px;
+  max-height:none; overflow:visible;
+}
+@media (min-width:640px){
+  .lang-grid{ grid-template-columns:repeat(3,1fr); }
+}
+.lang-item{
+  display:flex; align-items:center; gap:8px; padding:9px 10px; border-radius:10px;
+  border:1px solid var(--border); background:var(--bg); color:var(--text); font-size:13px;
+}
+.lang-item:hover{ border-color:var(--primary); text-decoration:none; }
+.lang-item.current{ border-color:var(--primary); background:var(--accent); }
+.lang-item .flag{ font-size:16px; line-height:1; }
+.lang-item .names{ display:flex; flex-direction:column; line-height:1.25; }
+.lang-item .country{ font-size:11px; color:var(--muted); }
+.lang-item .langname{ font-size:13px; }
+@media (max-width:480px){
+  .lang-panel{ max-height:70vh; overflow-y:auto; -webkit-overflow-scrolling:touch; }
+}
+
+/* ============ RTL(아랍어/페르시아어) 지원 ============ */
+html[dir="rtl"] body{ direction:rtl; }
+html[dir="rtl"] .tabs, html[dir="rtl"] nav.main-nav, html[dir="rtl"] .related, html[dir="rtl"] .row{
+  direction:rtl;
+}
+html[dir="rtl"] label{ text-align:right; }
+html[dir="rtl"] .breadcrumb{ text-align:right; }
+html[dir="rtl"] .lang-item{ flex-direction:row-reverse; text-align:right; }
+html[dir="rtl"] .lang-collapsed{ flex-direction:row-reverse; }
+html[dir="rtl"] article.content ul, html[dir="rtl"] article.content ol{ padding-right:20px; padding-left:0; }

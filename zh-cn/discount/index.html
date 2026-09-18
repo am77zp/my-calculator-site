@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>折扣计算器 - 快速算出折后价格</title>
+<meta name="description" content="输入原价和折扣率,立即计算折后价格和节省金额。">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/zh-cn/discount/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/discount/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/discount/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/discount/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/discount/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/discount/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/discount/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/discount/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/discount/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/discount/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/discount/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/discount/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/discount/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/discount/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/discount/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/discount/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/discount/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/discount/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/discount/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/discount/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/discount/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "请输入出生日期。", "dday_alert": "请输入目标日期。", "discount_alert": "请输入原价和折扣率。", "unit_alert": "请输入要换算的数值。", "bmi_alert": "请输入有效的身高和体重。", "age_result_label": "年龄", "dday_today": "今天就是目标日", "dday_remaining_tpl": "距目标日还有{n}天。", "dday_past_tpl": "距目标日已过去{n}天。", "discount_after_tpl": "折扣后价格(折扣率{rate}%)", "discount_saved_label": "节省金额", "bmi_cats": ["偏瘦", "正常", "超重", "肥胖"], "bmi_result_prefix": "分类", "bmi_standard_note": "(WHO国际标准)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../zh-cn/">全能生活计算器</a></h1>
+  <p>无需注册,立即免费使用的计算工具</p>
+</header>
+<nav class="main-nav"><a href="../../zh-cn/" class="">首页</a><a href="../../zh-cn/age/" class="">年龄</a><a href="../../zh-cn/dday/" class="">倒数日</a><a href="../../zh-cn/discount/" class="active">折扣</a><a href="../../zh-cn/unit/" class="">单位换算</a><a href="../../zh-cn/bmi/" class="">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../discount/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item current" href="../../zh-cn/discount/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/discount/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/discount/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/discount/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/discount/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/discount/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/discount/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/discount/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/discount/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/discount/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/discount/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/discount/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/discount/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/discount/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/discount/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/discount/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/discount/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/discount/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/discount/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/discount/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../zh-cn/">首页</a> &gt; 折扣计算器</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>折扣计算器</h2>
+    <p class="desc">输入原价和折扣率即可计算折后价格。</p>
+    <div class="row">
+      <div class="field"><label>原价</label><input type="number" id="disc-original"></div>
+      <div class="field"><label>折扣率(%)</label><input type="number" id="disc-rate"></div>
+    </div>
+    <button onclick="calcDiscountGlobal()">计算</button>
+    <div class="result" id="discount-result"></div>
+  </div>
+  <article class="content">
+    <h2>使用方法</h2><ol><li>输入折扣前的原价。</li><li>输入折扣率(%)。</li><li>点击"计算"查看折后价格和节省金额。</li></ol>
+    <h2>计算方式</h2><p>折后价格 = 原价 ×(1 − 折扣率 ÷ 100)。节省金额为原价减去折后价格。</p>
+    <h2>示例</h2><div class="example">原价50,000,折扣率20% &#8594; 折后价格40,000,节省10,000。</div><div class="example">原价129,000,折扣率30% &#8594; 折后价格90,300,节省38,700。</div>
+    <h2>常见问题</h2><div class="faq-item"><div class="q">可以反过来从价格算出折扣率吗?</div><p class="a">目前只支持由原价和折扣率计算折后价格,反向计算功能将在后续版本中添加。</p></div><div class="faq-item"><div class="q">计算是否包含税费?</div><p class="a">不包含,计算器只对您输入的价格直接应用折扣率。</p></div>
+    <h2>其他计算器</h2><div class="related"><a href="../../zh-cn/age/">年龄</a><a href="../../zh-cn/dday/">倒数日</a><a href="../../zh-cn/unit/">单位换算</a><a href="../../zh-cn/bmi/">BMI</a></div>
+  </article>
+</div>
+<footer>本网站不提供账号注册、评论、聊天或人工客服,只是一组任何人都能立即使用的免费计算工具。</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

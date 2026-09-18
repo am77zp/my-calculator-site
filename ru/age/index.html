@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор Возраста - Узнайте точный возраст</title>
+<meta name="description" content="Введите дату рождения, чтобы мгновенно узнать точный возраст.">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/ru/age/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/age/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/age/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/age/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/age/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/age/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/age/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/age/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/age/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/age/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/age/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/age/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/age/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/age/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/age/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/age/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/age/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/age/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/age/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/age/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/age/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "Пожалуйста, введите дату рождения.", "dday_alert": "Пожалуйста, введите целевую дату.", "discount_alert": "Пожалуйста, введите первоначальную цену и размер скидки.", "unit_alert": "Пожалуйста, введите значение для перевода.", "bmi_alert": "Пожалуйста, введите корректный рост и вес.", "age_result_label": "Возраст", "dday_today": "Сегодня — День Икс", "dday_remaining_tpl": "Осталось {n} дн.", "dday_past_tpl": "Прошло {n} дн.", "discount_after_tpl": "Цена со скидкой {rate}%", "discount_saved_label": "Вы экономите", "bmi_cats": ["Недостаточный вес", "Норма", "Избыточный вес", "Ожирение"], "bmi_result_prefix": "Категория", "bmi_standard_note": "(международный стандарт ВОЗ)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../ru/">Универсальные Бытовые Калькуляторы</a></h1>
+  <p>Бесплатные калькуляторы — без регистрации, сразу готовы к использованию</p>
+</header>
+<nav class="main-nav"><a href="../../ru/" class="">Главная</a><a href="../../ru/age/" class="active">Возраст</a><a href="../../ru/dday/" class="">Обратный отсчёт</a><a href="../../ru/discount/" class="">Скидка</a><a href="../../ru/unit/" class="">Единицы</a><a href="../../ru/bmi/" class="">ИМТ</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../age/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/age/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/age/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/age/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/age/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/age/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item current" href="../../ru/age/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/age/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/age/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/age/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/age/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/age/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/age/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/age/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/age/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/age/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/age/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/age/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/age/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/age/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/age/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../ru/">Главная</a> &gt; Калькулятор Возраста</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Калькулятор Возраста</h2>
+    <p class="desc">Введите дату рождения, чтобы рассчитать текущий возраст.</p>
+    <div class="row">
+      <div class="field"><label>Дата рождения</label><input type="date" id="age-birth"></div>
+      <div class="field"><label>Дата отсчёта (необязательно)</label><input type="date" id="age-ref" placeholder="Оставьте пустым, чтобы использовать сегодняшнюю дату"></div>
+    </div>
+    <button onclick="calcAgeGlobal()">Рассчитать</button>
+    <div class="result" id="age-result"></div>
+  </div>
+  <article class="content">
+    <h2>Как пользоваться</h2><ol><li>Введите дату рождения.</li><li>При желании укажите дату отсчёта, чтобы узнать возраст на конкретный день.</li><li>Нажмите «Рассчитать», чтобы увидеть возраст.</li></ol>
+    <h2>Как это работает</h2><p>Возраст — это количество полных лет, прошедших с даты рождения до даты отсчёта (или сегодняшнего дня, если поле пустое).</p>
+    <h2>Примеры</h2><div class="example">Дата рождения 10 мая 2000 года, сегодня 19 сентября 2026 года &#8594; День рождения в этом году уже прошёл, поэтому возраст — 26 лет.</div><div class="example">Дата рождения 25 декабря 2000 года, сегодня 19 сентября 2026 года &#8594; День рождения в этом году ещё не наступил, поэтому возраст — 25 лет.</div>
+    <h2>Частые вопросы</h2><div class="faq-item"><div class="q">Учитываются ли високосные годы?</div><p class="a">Да, расчёт основан на реальных календарных датах, поэтому високосные годы учитываются автоматически.</p></div><div class="faq-item"><div class="q">Можно ли рассчитать возраст на прошлую или будущую дату?</div><p class="a">Да, просто введите эту дату в поле даты отсчёта.</p></div>
+    <h2>Другие калькуляторы</h2><div class="related"><a href="../../ru/dday/">Обратный отсчёт</a><a href="../../ru/discount/">Скидка</a><a href="../../ru/unit/">Единицы</a><a href="../../ru/bmi/">ИМТ</a></div>
+  </article>
+</div>
+<footer>На этом сайте нет регистрации, комментариев, чата или персональной поддержки — только бесплатные калькуляторы, которыми может сразу воспользоваться любой.</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>
