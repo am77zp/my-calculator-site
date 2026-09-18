@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bộ Công Cụ Tính Toán Hằng Ngày - Tuổi, Đếm Ngược, Giảm Giá, Đổi Đơn Vị, BMI</title>
+<meta name="description" content="Công cụ tính tuổi, đếm ngược D-Day, giá giảm, đổi đơn vị và BMI miễn phí. Không cần đăng ký, dùng ngay.">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/vi/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/">
+<link rel="stylesheet" href="../assets/style.css">
+<script>window.I18N = {"age_alert": "Vui lòng nhập ngày sinh.", "dday_alert": "Vui lòng nhập ngày mục tiêu.", "discount_alert": "Vui lòng nhập giá gốc và tỷ lệ giảm giá.", "unit_alert": "Vui lòng nhập giá trị cần đổi.", "bmi_alert": "Vui lòng nhập chiều cao và cân nặng hợp lệ.", "age_result_label": "Tuổi", "dday_today": "Hôm nay là D-Day", "dday_remaining_tpl": "Còn {n} ngày.", "dday_past_tpl": "Đã qua {n} ngày.", "discount_after_tpl": "Giá sau khi giảm {rate}%", "discount_saved_label": "Bạn tiết kiệm được", "bmi_cats": ["Thiếu cân", "Bình thường", "Thừa cân", "Béo phì"], "bmi_result_prefix": "Phân loại", "bmi_standard_note": "(tiêu chuẩn quốc tế WHO)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../vi/">Bộ Công Cụ Tính Toán Hằng Ngày</a></h1>
+  <p>Máy tính miễn phí, dùng ngay — không cần đăng ký</p>
+</header>
+<nav class="main-nav"><a href="../vi/" class="active">Trang chủ</a><a href="../vi/age/" class="">Tuổi</a><a href="../vi/dday/" class="">Đếm ngược</a><a href="../vi/discount/" class="">Giảm giá</a><a href="../vi/unit/" class="">Đổi đơn vị</a><a href="../vi/bmi/" class="">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../zh-cn/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../hi/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../en/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../id/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../pt-br/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../ru/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../ur/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../es/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../ja/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../en/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../tl/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../ar/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item current" href="../vi/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../de/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../bn/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../tr/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../fa/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../en/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../th/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../fr/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="container wide">
+  <div class="ad-slot">Ad space</div>
+  <div class="home-grid"><a class="tool-card" href="../vi/age/"><div class="t">Tuổi</div><div class="d">Tính tuổi chính xác từ ngày sinh</div></a><a class="tool-card" href="../vi/dday/"><div class="t">Đếm ngược</div><div class="d">Đếm ngược số ngày đến một mốc quan trọng</div></a><a class="tool-card" href="../vi/discount/"><div class="t">Giảm giá</div><div class="d">Tính giá sau giảm và số tiền tiết kiệm</div></a><a class="tool-card" href="../vi/unit/"><div class="t">Đổi đơn vị</div><div class="d">Đổi đơn vị chiều dài, khối lượng, thể tích</div></a><a class="tool-card" href="../vi/bmi/"><div class="t">BMI</div><div class="d">Kiểm tra chỉ số BMI và phân loại</div></a></div>
+  <article class="content">
+    <h2>Về trang web này</h2>
+    <p>Bộ công cụ tính toán hằng ngày miễn phí, dùng trực tiếp trên trình duyệt — không cần cài đặt ứng dụng, không cần tạo tài khoản. Dữ liệu bạn nhập không bao giờ được gửi lên máy chủ; mọi phép tính đều thực hiện ngay trên thiết bị của bạn.</p>
+    <h2>Công cụ phổ biến</h2>
+    <ul><li><a href="../vi/age/">Tuổi</a> &#8212; Tính tuổi chính xác từ ngày sinh</li><li><a href="../vi/dday/">Đếm ngược</a> &#8212; Đếm ngược số ngày đến một mốc quan trọng</li><li><a href="../vi/discount/">Giảm giá</a> &#8212; Tính giá sau giảm và số tiền tiết kiệm</li><li><a href="../vi/unit/">Đổi đơn vị</a> &#8212; Đổi đơn vị chiều dài, khối lượng, thể tích</li><li><a href="../vi/bmi/">BMI</a> &#8212; Kiểm tra chỉ số BMI và phân loại</li></ul>
+  </article>
+</div>
+<footer>Trang web này không có đăng ký tài khoản, bình luận, trò chuyện hay hỗ trợ cá nhân — chỉ có các công cụ tính toán miễn phí mà ai cũng có thể dùng ngay.</footer>
+<script src="../assets/calculators.js"></script>
+<script src="../assets/i18n.js"></script>
+</body>
+</html>

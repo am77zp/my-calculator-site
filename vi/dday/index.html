@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="vi" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Máy Tính Đếm Ngược - Số Ngày Đến Bất Kỳ Mốc Nào</title>
+<meta name="description" content="Tính số ngày còn lại hoặc đã trôi qua giữa hôm nay và một ngày mục tiêu.">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/vi/dday/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/dday/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/dday/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/dday/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/dday/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/dday/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/dday/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/dday/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/dday/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/dday/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/dday/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/dday/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/dday/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/dday/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/dday/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/dday/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/dday/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/dday/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/dday/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/dday/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/dday/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "Vui lòng nhập ngày sinh.", "dday_alert": "Vui lòng nhập ngày mục tiêu.", "discount_alert": "Vui lòng nhập giá gốc và tỷ lệ giảm giá.", "unit_alert": "Vui lòng nhập giá trị cần đổi.", "bmi_alert": "Vui lòng nhập chiều cao và cân nặng hợp lệ.", "age_result_label": "Tuổi", "dday_today": "Hôm nay là D-Day", "dday_remaining_tpl": "Còn {n} ngày.", "dday_past_tpl": "Đã qua {n} ngày.", "discount_after_tpl": "Giá sau khi giảm {rate}%", "discount_saved_label": "Bạn tiết kiệm được", "bmi_cats": ["Thiếu cân", "Bình thường", "Thừa cân", "Béo phì"], "bmi_result_prefix": "Phân loại", "bmi_standard_note": "(tiêu chuẩn quốc tế WHO)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../vi/">Bộ Công Cụ Tính Toán Hằng Ngày</a></h1>
+  <p>Máy tính miễn phí, dùng ngay — không cần đăng ký</p>
+</header>
+<nav class="main-nav"><a href="../../vi/" class="">Trang chủ</a><a href="../../vi/age/" class="">Tuổi</a><a href="../../vi/dday/" class="active">Đếm ngược</a><a href="../../vi/discount/" class="">Giảm giá</a><a href="../../vi/unit/" class="">Đổi đơn vị</a><a href="../../vi/bmi/" class="">BMI</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../dday/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/dday/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/dday/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/dday/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/dday/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/dday/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/dday/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/dday/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/dday/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/dday/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/dday/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item current" href="../../vi/dday/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/dday/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/dday/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/dday/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/dday/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/dday/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/dday/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/dday/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../vi/">Trang chủ</a> &gt; Máy Tính Đếm Ngược</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Máy Tính Đếm Ngược</h2>
+    <p class="desc">Tính số ngày còn lại (hoặc đã qua) giữa ngày bắt đầu và ngày mục tiêu.</p>
+    <div class="row">
+      <div class="field"><label>Ngày bắt đầu (không bắt buộc)</label><input type="date" id="dday-from" placeholder="Để trống sẽ dùng ngày hôm nay"></div>
+      <div class="field"><label>Ngày mục tiêu</label><input type="date" id="dday-to"></div>
+    </div>
+    <button onclick="calcDdayGlobal()">Tính</button>
+    <div class="result" id="dday-result"></div>
+  </div>
+  <article class="content">
+    <h2>Cách sử dụng</h2><ol><li>Nhập ngày bắt đầu, hoặc để trống để dùng hôm nay.</li><li>Nhập ngày mục tiêu bạn muốn đếm ngược.</li><li>Nhấn "Tính" để xem kết quả.</li></ol>
+    <h2>Cách tính</h2><p>Công cụ tính số ngày theo lịch giữa ngày bắt đầu và ngày mục tiêu. Nếu mục tiêu ở tương lai sẽ hiện "D-", nếu đã qua sẽ hiện "D+".</p>
+    <h2>Ví dụ</h2><div class="example">Ngày bắt đầu là hôm nay, ngày mục tiêu sau 10 ngày &#8594; Kết quả: "D-10"</div><div class="example">Ngày bắt đầu là hôm nay, ngày mục tiêu 5 ngày trước &#8594; Kết quả: "D+5"</div>
+    <h2>Câu hỏi thường gặp</h2><div class="faq-item"><div class="q">Nếu ngày bắt đầu và ngày mục tiêu trùng nhau thì sao?</div><p class="a">Sẽ hiện "Hôm nay là D-Day".</p></div><div class="faq-item"><div class="q">Tôi có thể dùng ngày mục tiêu trong quá khứ không?</div><p class="a">Được, công cụ sẽ hiện số ngày đã trôi qua kể từ ngày đó.</p></div>
+    <h2>Công cụ khác</h2><div class="related"><a href="../../vi/age/">Tuổi</a><a href="../../vi/discount/">Giảm giá</a><a href="../../vi/unit/">Đổi đơn vị</a><a href="../../vi/bmi/">BMI</a></div>
+  </article>
+</div>
+<footer>Trang web này không có đăng ký tài khoản, bình luận, trò chuyện hay hỗ trợ cá nhân — chỉ có các công cụ tính toán miễn phí mà ai cũng có thể dùng ngay.</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>İndirim Hesaplayıcı - İndirimli Fiyatı Bulun</title>
+<meta name="description" content="Orijinal fiyatı ve indirim oranını girin, indirimli fiyatı ve tasarrufu anında hesaplayın.">
+<link rel="canonical" href="https://am77zp.github.io/my-calculator-site/tr/discount/">
+<link rel="alternate" hreflang="ko" href="https://am77zp.github.io/my-calculator-site/discount/">
+<link rel="alternate" hreflang="ar" href="https://am77zp.github.io/my-calculator-site/ar/discount/">
+<link rel="alternate" hreflang="bn" href="https://am77zp.github.io/my-calculator-site/bn/discount/">
+<link rel="alternate" hreflang="de" href="https://am77zp.github.io/my-calculator-site/de/discount/">
+<link rel="alternate" hreflang="en" href="https://am77zp.github.io/my-calculator-site/en/discount/">
+<link rel="alternate" hreflang="es" href="https://am77zp.github.io/my-calculator-site/es/discount/">
+<link rel="alternate" hreflang="fa" href="https://am77zp.github.io/my-calculator-site/fa/discount/">
+<link rel="alternate" hreflang="fr" href="https://am77zp.github.io/my-calculator-site/fr/discount/">
+<link rel="alternate" hreflang="hi" href="https://am77zp.github.io/my-calculator-site/hi/discount/">
+<link rel="alternate" hreflang="id" href="https://am77zp.github.io/my-calculator-site/id/discount/">
+<link rel="alternate" hreflang="ja" href="https://am77zp.github.io/my-calculator-site/ja/discount/">
+<link rel="alternate" hreflang="pt-BR" href="https://am77zp.github.io/my-calculator-site/pt-br/discount/">
+<link rel="alternate" hreflang="ru" href="https://am77zp.github.io/my-calculator-site/ru/discount/">
+<link rel="alternate" hreflang="th" href="https://am77zp.github.io/my-calculator-site/th/discount/">
+<link rel="alternate" hreflang="tl" href="https://am77zp.github.io/my-calculator-site/tl/discount/">
+<link rel="alternate" hreflang="tr" href="https://am77zp.github.io/my-calculator-site/tr/discount/">
+<link rel="alternate" hreflang="ur" href="https://am77zp.github.io/my-calculator-site/ur/discount/">
+<link rel="alternate" hreflang="vi" href="https://am77zp.github.io/my-calculator-site/vi/discount/">
+<link rel="alternate" hreflang="zh-CN" href="https://am77zp.github.io/my-calculator-site/zh-cn/discount/">
+<link rel="alternate" hreflang="x-default" href="https://am77zp.github.io/my-calculator-site/en/discount/">
+<link rel="stylesheet" href="../../assets/style.css">
+<script>window.I18N = {"age_alert": "Lütfen bir doğum tarihi girin.", "dday_alert": "Lütfen bir hedef tarih girin.", "discount_alert": "Lütfen orijinal fiyatı ve indirim oranını girin.", "unit_alert": "Lütfen dönüştürülecek bir değer girin.", "bmi_alert": "Lütfen geçerli bir boy ve kilo girin.", "age_result_label": "Yaş", "dday_today": "Bugün D-Day", "dday_remaining_tpl": "{n} gün kaldı.", "dday_past_tpl": "{n} gün geçti.", "discount_after_tpl": "%{rate} indirimden sonraki fiyat", "discount_saved_label": "Tasarrufunuz", "bmi_cats": ["Zayıf", "Normal", "Fazla kilolu", "Obez"], "bmi_result_prefix": "Kategori", "bmi_standard_note": "(DSÖ uluslararası standardı)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../tr/">Hepsi Bir Arada Günlük Hesaplayıcılar</a></h1>
+  <p>Ücretsiz, anında kullanılabilir hesaplayıcılar — kayıt gerekmez</p>
+</header>
+<nav class="main-nav"><a href="../../tr/" class="">Ana Sayfa</a><a href="../../tr/age/" class="">Yaş</a><a href="../../tr/dday/" class="">Geri Sayım</a><a href="../../tr/discount/" class="active">İndirim</a><a href="../../tr/unit/" class="">Birim</a><a href="../../tr/bmi/" class="">VKİ</a></nav>
+<div class="lang-switch-wrap"><button type="button" id="lang-collapsed-btn" class="lang-collapsed">🌐 <span>Language / 언어</span></button><div id="lang-panel" class="lang-panel"><p class="lp-title">🌐 Choose your language / 언어를 선택하세요</p><div class="lang-grid"><a class="lang-item" href="../../discount/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/discount/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/discount/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/discount/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/discount/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/discount/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/discount/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/discount/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/discount/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/discount/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/discount/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/discount/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/discount/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/discount/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/discount/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/discount/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item current" href="../../tr/discount/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/discount/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/discount/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/discount/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/discount/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div></div></div>
+<div class="breadcrumb"><a href="../../tr/">Ana Sayfa</a> &gt; İndirim Hesaplayıcı</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>İndirim Hesaplayıcı</h2>
+    <p class="desc">Orijinal fiyatı ve indirim oranını girerek indirimli fiyatı hesaplayın.</p>
+    <div class="row">
+      <div class="field"><label>Orijinal fiyat</label><input type="number" id="disc-original"></div>
+      <div class="field"><label>İndirim oranı (%)</label><input type="number" id="disc-rate"></div>
+    </div>
+    <button onclick="calcDiscountGlobal()">Hesapla</button>
+    <div class="result" id="discount-result"></div>
+  </div>
+  <article class="content">
+    <h2>Nasıl kullanılır</h2><ol><li>İndirimden önceki orijinal fiyatı girin.</li><li>İndirim oranını yüzde olarak girin.</li><li>İndirimli fiyatı ve tasarrufu görmek için "Hesapla"ya tıklayın.</li></ol>
+    <h2>Nasıl çalışır</h2><p>İndirimli fiyat = orijinal fiyat × (1 − indirim oranı ÷ 100). Tasarruf tutarı, orijinal fiyattan indirimli fiyatın çıkarılmasıyla bulunur.</p>
+    <h2>Örnekler</h2><div class="example">Orijinal fiyat 50.000, indirim %20 &#8594; İndirimli fiyat 40.000, tasarruf 10.000.</div><div class="example">Orijinal fiyat 129.000, indirim %30 &#8594; İndirimli fiyat 90.300, tasarruf 38.700.</div>
+    <h2>Sıkça sorulan sorular</h2><div class="faq-item"><div class="q">İki fiyattan indirim oranını hesaplayabilir miyim?</div><p class="a">Bu hesaplayıcı fiyat ve orandan indirimli fiyata gider; ters hesaplama daha sonra eklenebilir.</p></div><div class="faq-item"><div class="q">Vergi dahil mi?</div><p class="a">Hayır — indirim, girdiğiniz fiyata doğrudan uygulanır, vergi eklenmez veya çıkarılmaz.</p></div>
+    <h2>Diğer hesaplayıcılar</h2><div class="related"><a href="../../tr/age/">Yaş</a><a href="../../tr/dday/">Geri Sayım</a><a href="../../tr/unit/">Birim</a><a href="../../tr/bmi/">VKİ</a></div>
+  </article>
+</div>
+<footer>Bu sitede hesap kaydı, yorum, sohbet veya birebir destek bulunmuyor — sadece herkesin hemen kullanabileceği ücretsiz hesaplayıcılar var.</footer>
+<script src="../../assets/calculators.js"></script>
+<script src="../../assets/i18n.js"></script>
+</body>
+</html>
