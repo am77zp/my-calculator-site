@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://am77zp.github.io/my-calculator-site/sitemap.xml
+Sitemap: https://my-calculator-site-6l0.pages.dev/sitemap.xml
