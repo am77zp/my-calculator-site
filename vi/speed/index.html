@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Máy Tính Tốc Độ, Quãng Đường, Thời Gian - Giải v = d / t</title>
+<meta name="description" content="Biết quãng đường và thời gian, tìm tốc độ. Biết tốc độ và thời gian, tìm quãng đường. Biết quãng đường và tốc độ, tìm thời gian cần thiết.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/vi/speed/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/speed/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/speed/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/speed/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/speed/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/speed/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/speed/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/speed/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/speed/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/speed/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/speed/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/speed/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/speed/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/speed/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/speed/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/speed/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/speed/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/speed/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/speed/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/speed/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/speed/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"speed_alert": "Vui lòng nhập chính xác cả hai giá trị cần thiết.", "speed_result_tpl": ["Tốc độ là {result} km/h.", "Quãng đường là {result} km.", "Thời gian cần thiết là {result} giờ ({hm})."]};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../vi/">Bộ Công Cụ Tính Toán Hằng Ngày</a></h1>
+  <p>Máy tính miễn phí, dùng ngay — không cần đăng ký</p>
+</header>
+<nav class="main-nav"><a href="../../vi/" class="">Trang chủ</a><a href="../../vi/age/" class="">Tuổi</a><a href="../../vi/dday/" class="">Đếm ngược</a><a href="../../vi/discount/" class="">Giảm giá</a><a href="../../vi/unit/" class="">Đổi đơn vị</a><a href="../../vi/bmi/" class="">BMI</a><a href="../../vi/percent/" class="">Phần trăm</a><a href="../../vi/percentchange/" class="">Tỷ Lệ Thay Đổi</a><a href="../../vi/datediff/" class="">Khoảng Cách Ngày</a><a href="../../vi/time/" class="">Máy Tính Thời Gian</a><a href="../../vi/speed/" class="active">Tốc Độ/Quãng Đường/Thời Gian</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../speed/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/speed/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/speed/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/speed/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/speed/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/speed/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/speed/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/speed/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/speed/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/speed/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/speed/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item current" href="../../vi/speed/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/speed/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/speed/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/speed/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/speed/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/speed/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/speed/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../vi/">Trang chủ</a> &gt; Máy Tính Tốc Độ, Quãng Đường, Thời Gian</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Máy Tính Tốc Độ, Quãng Đường, Thời Gian</h2>
+    <p class="desc">Chọn giá trị cần tìm và nhập hai giá trị còn lại để có kết quả ngay lập tức.</p>
+    <div class="row"><div class="field"><label>Chế độ tính</label><select id="sp-mode" onchange="spToggleMode()"><option value="speed">Tìm tốc độ (quãng đường ÷ thời gian)</option><option value="distance">Tìm quãng đường (tốc độ × thời gian)</option><option value="time">Tìm thời gian (quãng đường ÷ tốc độ)</option></select></div></div><div class="row"><div class="field" id="sp-field-distance"><label>Quãng đường (km)</label><input type="number" id="sp-distance"></div><div class="field" id="sp-field-time"><label>Thời gian (giờ, có thể thập phân)</label><input type="text" id="sp-time"></div><div class="field" id="sp-field-speed" hidden><label>Tốc độ (km/h)</label><input type="number" id="sp-speed"></div></div>
+    <button onclick="calcSpeedGlobal()">Tính</button>
+    <div class="result" id="sp-result"></div>
+  </div>
+  <article class="content">
+    <h2>Cách sử dụng</h2><ol><li>Chọn giá trị cần tìm (tốc độ / quãng đường / thời gian).</li><li>Nhập hai giá trị còn lại (quãng đường tính bằng km, thời gian tính bằng giờ (có thể là số thập phân) hoặc giờ:phút, tốc độ tính bằng km/h).</li><li>Nhấn "Tính" để xem kết quả ngay lập tức.</li></ol>
+    <h2>Cách tính</h2><p>Ba giá trị liên hệ theo công thức tốc độ = quãng đường ÷ thời gian (v = d/t). Tìm tốc độ: quãng đường ÷ thời gian. Tìm quãng đường: tốc độ × thời gian. Tìm thời gian: quãng đường ÷ tốc độ.</p>
+    <h2>Ví dụ</h2><div class="example">Ví dụ 1 — Ở chế độ "tìm tốc độ", quãng đường=150 km, thời gian=2,5 giờ (2h30), tốc độ là 60 km/h.</div><div class="example">Ví dụ 2 — Ở chế độ "tìm thời gian", quãng đường=100 km, tốc độ=40 km/h, thời gian cần là 2,5 giờ (2h30).</div>
+    <h2>Câu hỏi thường gặp</h2><div class="faq-item"><div class="q">Có thể nhập thời gian dạng giờ:phút thay vì số thập phân không?</div><p class="a">Có, cả hai định dạng đều được hỗ trợ — giờ thập phân và giờ:phút. Ví dụ 2 giờ 30 phút bằng 2,5 giờ.</p></div><div class="faq-item"><div class="q">Có thể dùng mph thay vì km/h không?</div><p class="a">Máy tính này không tự quy đổi đơn vị — nó dùng bất kỳ hệ đơn vị quãng đường/tốc độ nào bạn nhập một cách nhất quán. Để tính bằng mph, hãy nhập quãng đường theo dặm và tốc độ theo mph.</p></div>
+    <h2>Công cụ khác</h2><div class="related"><a href="../../vi/age/">Tuổi</a><a href="../../vi/dday/">Đếm ngược</a><a href="../../vi/discount/">Giảm giá</a><a href="../../vi/unit/">Đổi đơn vị</a><a href="../../vi/bmi/">BMI</a><a href="../../vi/percent/">Phần trăm</a><a href="../../vi/percentchange/">Tỷ Lệ Thay Đổi</a><a href="../../vi/datediff/">Khoảng Cách Ngày</a><a href="../../vi/time/">Máy Tính Thời Gian</a></div>
+  </article>
+</div>
+<footer>
+  Trang web này không có đăng ký tài khoản, bình luận, trò chuyện hay hỗ trợ cá nhân — chỉ có các công cụ tính toán miễn phí mà ai cũng có thể dùng ngay.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

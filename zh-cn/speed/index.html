@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>速度·距离·时间计算器 - 用公式 v=d/t 求解</title>
+<meta name="description" content="已知距离和时间可求速度,已知速度和时间可求距离,已知距离和速度可求所需时间。">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/zh-cn/speed/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/speed/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/speed/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/speed/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/speed/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/speed/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/speed/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/speed/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/speed/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/speed/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/speed/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/speed/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/speed/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/speed/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/speed/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/speed/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/speed/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/speed/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/speed/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/speed/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/speed/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"speed_alert": "请正确输入所需的两个数值。", "speed_result_tpl": ["速度为{result} km/h。", "距离为{result} km。", "所需时间为{result}小时({hm})。"]};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../zh-cn/">全能生活计算器</a></h1>
+  <p>无需注册,立即免费使用的计算工具</p>
+</header>
+<nav class="main-nav"><a href="../../zh-cn/" class="">首页</a><a href="../../zh-cn/age/" class="">年龄</a><a href="../../zh-cn/dday/" class="">倒数日</a><a href="../../zh-cn/discount/" class="">折扣</a><a href="../../zh-cn/unit/" class="">单位换算</a><a href="../../zh-cn/bmi/" class="">BMI</a><a href="../../zh-cn/percent/" class="">百分比</a><a href="../../zh-cn/percentchange/" class="">增减率</a><a href="../../zh-cn/datediff/" class="">日期差</a><a href="../../zh-cn/time/" class="">时间计算</a><a href="../../zh-cn/speed/" class="active">速度距离时间</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../speed/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item current" href="../../zh-cn/speed/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/speed/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/speed/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/speed/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/speed/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/speed/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/speed/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/speed/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/speed/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/speed/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/speed/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/speed/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/speed/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/speed/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/speed/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/speed/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/speed/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../zh-cn/">首页</a> &gt; 速度·距离·时间计算器</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>速度·距离·时间计算器</h2>
+    <p class="desc">选择要求解的值,输入另外两个值即可立即得到结果。</p>
+    <div class="row"><div class="field"><label>计算方式</label><select id="sp-mode" onchange="spToggleMode()"><option value="speed">求速度(距离÷时间)</option><option value="distance">求距离(速度×时间)</option><option value="time">求时间(距离÷速度)</option></select></div></div><div class="row"><div class="field" id="sp-field-distance"><label>距离 (km)</label><input type="number" id="sp-distance"></div><div class="field" id="sp-field-time"><label>时间 (小时,可为小数)</label><input type="text" id="sp-time"></div><div class="field" id="sp-field-speed" hidden><label>速度 (km/h)</label><input type="number" id="sp-speed"></div></div>
+    <button onclick="calcSpeedGlobal()">计算</button>
+    <div class="result" id="sp-result"></div>
+  </div>
+  <article class="content">
+    <h2>使用方法</h2><ol><li>选择要求解的值(速度 / 距离 / 时间)。</li><li>输入另外两个值(距离单位为km,时间单位为小时(可为小数)或时:分,速度单位为km/h)。</li><li>点击“计算”即可立即显示结果。</li></ol>
+    <h2>计算方式</h2><p>三者关系为 速度 = 距离 ÷ 时间(v=d/t)。求速度时用距离÷时间,求距离时用速度×时间,求时间时用距离÷速度。</p>
+    <h2>示例</h2><div class="example">示例1 — 在“求速度”模式下,距离150km,时间2.5小时(2小时30分),速度为60km/h。</div><div class="example">示例2 — 在“求时间”模式下,距离100km,速度40km/h,所需时间为2.5小时(2小时30分)。</div>
+    <h2>常见问题</h2><div class="faq-item"><div class="q">可以用时:分而不是小数小时输入时间吗?</div><p class="a">可以,同时支持小数小时和时:分两种输入方式。例如2小时30分等于2.5小时。</p></div><div class="faq-item"><div class="q">可以用mph等其他单位而不是km/h吗?</div><p class="a">本计算器本身不做单位换算,只是按你输入的距离/速度单位体系原样计算。如需用mph计算,请将距离统一输入为英里,速度输入为mph。</p></div>
+    <h2>其他计算器</h2><div class="related"><a href="../../zh-cn/age/">年龄</a><a href="../../zh-cn/dday/">倒数日</a><a href="../../zh-cn/discount/">折扣</a><a href="../../zh-cn/unit/">单位换算</a><a href="../../zh-cn/bmi/">BMI</a><a href="../../zh-cn/percent/">百分比</a><a href="../../zh-cn/percentchange/">增减率</a><a href="../../zh-cn/datediff/">日期差</a><a href="../../zh-cn/time/">时间计算</a></div>
+  </article>
+</div>
+<footer>
+  本网站不提供账号注册、评论、聊天或人工客服,只是一组任何人都能立即使用的免费计算工具。
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

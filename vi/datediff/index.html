@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Máy Tính Khoảng Cách Ngày - Số Ngày, Tuần và Tháng Giữa Hai Ngày</title>
+<meta name="description" content="Nhập ngày bắt đầu và ngày kết thúc để tính tổng số ngày, số tuần, và khoảng cách theo năm/tháng/ngày giữa hai mốc đó.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/vi/datediff/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/datediff/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/datediff/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/datediff/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/datediff/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/datediff/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/datediff/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/datediff/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/datediff/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/datediff/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/datediff/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/datediff/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/datediff/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/datediff/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/datediff/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/datediff/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/datediff/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/datediff/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/datediff/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/datediff/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/datediff/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"datediff_alert": "Vui lòng nhập cả ngày bắt đầu và ngày kết thúc.", "datediff_days_tpl": "Tổng cộng {days} ngày", "datediff_weeks_tpl": "{weeks} tuần {restdays} ngày", "datediff_ymd_tpl": "{y} năm {m} tháng {d} ngày", "datediff_same": "Hai ngày giống nhau (0 ngày)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../vi/">Bộ Công Cụ Tính Toán Hằng Ngày</a></h1>
+  <p>Máy tính miễn phí, dùng ngay — không cần đăng ký</p>
+</header>
+<nav class="main-nav"><a href="../../vi/" class="">Trang chủ</a><a href="../../vi/age/" class="">Tuổi</a><a href="../../vi/dday/" class="">Đếm ngược</a><a href="../../vi/discount/" class="">Giảm giá</a><a href="../../vi/unit/" class="">Đổi đơn vị</a><a href="../../vi/bmi/" class="">BMI</a><a href="../../vi/percent/" class="">Phần trăm</a><a href="../../vi/percentchange/" class="">Tỷ Lệ Thay Đổi</a><a href="../../vi/datediff/" class="active">Khoảng Cách Ngày</a><a href="../../vi/time/" class="">Máy Tính Thời Gian</a><a href="../../vi/speed/" class="">Tốc Độ/Quãng Đường/Thời Gian</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../datediff/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/datediff/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/datediff/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/datediff/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/datediff/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/datediff/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/datediff/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/datediff/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/datediff/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/datediff/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/datediff/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/datediff/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/datediff/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item current" href="../../vi/datediff/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/datediff/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/datediff/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/datediff/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/datediff/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/datediff/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/datediff/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/datediff/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../vi/">Trang chủ</a> &gt; Máy Tính Khoảng Cách Ngày</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Máy Tính Khoảng Cách Ngày</h2>
+    <p class="desc">Nhập ngày bắt đầu và ngày kết thúc để tính ngay khoảng cách giữa hai ngày.</p>
+    <div class="row"><div class="field"><label>Ngày bắt đầu</label><input type="date" id="dd-start"></div><div class="field"><label>Ngày kết thúc</label><input type="date" id="dd-end"></div></div>
+    <button onclick="calcDateDiffGlobal()">Tính</button>
+    <div class="result" id="dd-result"></div>
+  </div>
+  <article class="content">
+    <h2>Cách sử dụng</h2><ol><li>Chọn ngày bắt đầu.</li><li>Chọn ngày kết thúc (có thể sớm hơn ngày bắt đầu cũng được).</li><li>Nhấn "Tính" để xem ngay tổng số ngày và khoảng cách theo năm/tháng/ngày.</li></ol>
+    <h2>Cách tính</h2><p>Tổng số ngày là khoảng cách chính xác giữa hai ngày tính theo ngày. Khoảng cách theo lịch được tính bằng cách trừ riêng năm, tháng, ngày; mượn một tháng nếu thiếu ngày và mượn một năm nếu thiếu tháng.</p>
+    <h2>Ví dụ</h2><div class="example">Ví dụ 1 — Bắt đầu 2024-01-01, kết thúc 2024-12-31 cho tổng 365 ngày, khoảng cách theo lịch là 0 năm 11 tháng 30 ngày.</div><div class="example">Ví dụ 2 — Bắt đầu 2025-03-10, kết thúc 2026-09-19 cho tổng 558 ngày (79 tuần 5 ngày), khoảng cách theo lịch là 1 năm 6 tháng 9 ngày.</div>
+    <h2>Câu hỏi thường gặp</h2><div class="faq-item"><div class="q">Nếu ngày bắt đầu sau ngày kết thúc thì có tính được không?</div><p class="a">Có, máy tính tự động nhận biết ngày nào sớm hơn và luôn hiển thị khoảng cách dương.</p></div><div class="faq-item"><div class="q">Vì sao tổng số ngày và khoảng cách năm/tháng/ngày lại khác nhau?</div><p class="a">Tổng số ngày đếm chính xác từng ngày một, còn khoảng cách năm/tháng/ngày theo lịch nên có thể khác nhau tùy theo độ dài mỗi tháng (28 đến 31 ngày).</p></div>
+    <h2>Công cụ khác</h2><div class="related"><a href="../../vi/age/">Tuổi</a><a href="../../vi/dday/">Đếm ngược</a><a href="../../vi/discount/">Giảm giá</a><a href="../../vi/unit/">Đổi đơn vị</a><a href="../../vi/bmi/">BMI</a><a href="../../vi/percent/">Phần trăm</a><a href="../../vi/percentchange/">Tỷ Lệ Thay Đổi</a><a href="../../vi/time/">Máy Tính Thời Gian</a><a href="../../vi/speed/">Tốc Độ/Quãng Đường/Thời Gian</a></div>
+  </article>
+</div>
+<footer>
+  Trang web này không có đăng ký tài khoản, bình luận, trò chuyện hay hỗ trợ cá nhân — chỉ có các công cụ tính toán miễn phí mà ai cũng có thể dùng ngay.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

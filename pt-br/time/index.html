@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Tempo - Tempo Decorrido e Soma/Subtração de Horas</title>
+<meta name="description" content="Calcule o tempo decorrido entre dois horários, ou some ou subtraia uma duração de um horário para obter o resultado na hora.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/time/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/time/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/time/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/time/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/time/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/time/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/time/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/time/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"time_alert": "Informe todos os valores necessários.", "time_elapsed_tpl": "Tempo decorrido: {h}h {m}min", "time_elapsed_next_tpl": "Tempo decorrido: {h}h {m}min (passa da meia-noite)", "time_addsub_tpl": "Horário resultante: {time}", "time_addsub_next_tpl": "Horário resultante: {time} (dia seguinte)", "time_addsub_prev_tpl": "Horário resultante: {time} (dia anterior)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../pt-br/">Calculadoras do Dia a Dia Tudo em Um</a></h1>
+  <p>Calculadoras gratuitas, uso instantâneo — sem necessidade de cadastro</p>
+</header>
+<nav class="main-nav"><a href="../../pt-br/" class="">Início</a><a href="../../pt-br/age/" class="">Idade</a><a href="../../pt-br/dday/" class="">Contagem regressiva</a><a href="../../pt-br/discount/" class="">Desconto</a><a href="../../pt-br/unit/" class="">Unidades</a><a href="../../pt-br/bmi/" class="">IMC</a><a href="../../pt-br/percent/" class="">Porcentagem</a><a href="../../pt-br/percentchange/" class="">Variação %</a><a href="../../pt-br/datediff/" class="">Diferença de Datas</a><a href="../../pt-br/time/" class="active">Calculadora de Tempo</a><a href="../../pt-br/speed/" class="">Velocidade/Distância/Tempo</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../time/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/time/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/time/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/time/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item current" href="../../pt-br/time/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/time/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/time/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/time/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/time/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/time/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/time/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/time/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/time/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/time/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/time/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/time/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/time/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/time/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../pt-br/">Início</a> &gt; Calculadora de Tempo</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Calculadora de Tempo</h2>
+    <p class="desc">Escolha o modo e informe os horários para obter o tempo decorrido ou o horário resultante na hora.</p>
+    <div class="row"><div class="field"><label>Modo de cálculo</label><select id="tm-mode" onchange="timeToggleMode()"><option value="elapsed">Encontrar tempo decorrido (início → fim)</option><option value="addsub">Somar/subtrair tempo (base + duração)</option></select></div></div><div class="row" id="tm-group-elapsed"><div class="field"><label>Horário inicial</label><input type="time" id="tm-start"></div><div class="field"><label>Horário final</label><input type="time" id="tm-end"></div></div><div class="row" id="tm-group-addsub" hidden><div class="field"><label>Horário base</label><input type="time" id="tm-base"></div><div class="field"><label>Duração (h:min)</label><input type="number" id="tm-dur-h" min="0" style="width:47%;display:inline-block"> : <input type="number" id="tm-dur-m" min="0" max="59" style="width:47%;display:inline-block"></div><div class="field"><label>Operação</label><select id="tm-op"><option value="add">Somar</option><option value="sub">Subtrair</option></select></div></div>
+    <button onclick="calcTimeGlobal()">Calcular</button>
+    <div class="result" id="tm-result"></div>
+  </div>
+  <article class="content">
+    <h2>Como usar</h2><ol><li>Escolha o modo (encontrar tempo decorrido ou somar/subtrair tempo).</li><li>Em "tempo decorrido", informe o horário inicial e final. Em "somar/subtrair", informe o horário base, a duração (horas:minutos) e se é soma ou subtração.</li><li>Clique em "Calcular" para ver o resultado na hora.</li></ol>
+    <h2>Como funciona</h2><p>O tempo decorrido é o horário final menos o inicial; se o horário final for mais cedo, considera-se que passou da meia-noite e soma-se 24 horas. Somar/subtrair converte a duração em minutos, soma ou subtrai do horário base, e ajusta o resultado dentro de um ciclo de 24 horas (1440 minutos).</p>
+    <h2>Exemplos</h2><div class="example">Exemplo 1 — No modo "tempo decorrido", início=09:15 e fim=17:45 resultam em 8 horas e 30 minutos decorridos.</div><div class="example">Exemplo 2 — No modo "somar/subtrair", somar 2 horas e 30 minutos a um horário base de 23:10 resulta em 01:40 do dia seguinte.</div>
+    <h2>Perguntas frequentes</h2><div class="faq-item"><div class="q">Ele lida com horários que passam da meia-noite?</div><p class="a">Sim — no modo tempo decorrido, se o horário final for anterior ao inicial, considera-se automaticamente o dia seguinte. No modo somar/subtrair, ultrapassar 24:00 ou ficar antes de 00:00 é marcado como dia seguinte ou anterior.</p></div><div class="faq-item"><div class="q">Ele calcula em segundos?</div><p class="a">Esta calculadora trabalha em horas e minutos. Para precisão em segundos, converta separadamente.</p></div>
+    <h2>Outras calculadoras</h2><div class="related"><a href="../../pt-br/age/">Idade</a><a href="../../pt-br/dday/">Contagem regressiva</a><a href="../../pt-br/discount/">Desconto</a><a href="../../pt-br/unit/">Unidades</a><a href="../../pt-br/bmi/">IMC</a><a href="../../pt-br/percent/">Porcentagem</a><a href="../../pt-br/percentchange/">Variação %</a><a href="../../pt-br/datediff/">Diferença de Datas</a><a href="../../pt-br/speed/">Velocidade/Distância/Tempo</a></div>
+  </article>
+</div>
+<footer>
+  Este site não possui cadastro de conta, comentários, chat ou suporte individual — apenas calculadoras gratuitas que qualquer pessoa pode usar na hora.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

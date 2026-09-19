@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เครื่องคำนวณเวลา - เวลาที่ผ่านไปและการบวก/ลบเวลา</title>
+<meta name="description" content="คำนวณเวลาที่ผ่านไประหว่างสองเวลา หรือบวก/ลบระยะเวลาให้กับเวลาหนึ่งเพื่อดูผลลัพธ์ทันที">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/time/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/time/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/time/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/time/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/time/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/time/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/time/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/time/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"time_alert": "กรุณากรอกค่าที่จำเป็นทั้งหมด", "time_elapsed_tpl": "เวลาที่ผ่านไป: {h} ชั่วโมง {m} นาที", "time_elapsed_next_tpl": "เวลาที่ผ่านไป: {h} ชั่วโมง {m} นาที (ข้ามเที่ยงคืน)", "time_addsub_tpl": "เวลาผลลัพธ์: {time}", "time_addsub_next_tpl": "เวลาผลลัพธ์: {time} (วันถัดไป)", "time_addsub_prev_tpl": "เวลาผลลัพธ์: {time} (วันก่อนหน้า)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../th/">เครื่องคำนวณอเนกประสงค์ในชีวิตประจำวัน</a></h1>
+  <p>เครื่องคำนวณฟรี ใช้งานได้ทันที ไม่ต้องสมัครสมาชิก</p>
+</header>
+<nav class="main-nav"><a href="../../th/" class="">หน้าแรก</a><a href="../../th/age/" class="">อายุ</a><a href="../../th/dday/" class="">นับถอยหลัง</a><a href="../../th/discount/" class="">ส่วนลด</a><a href="../../th/unit/" class="">หน่วย</a><a href="../../th/bmi/" class="">BMI</a><a href="../../th/percent/" class="">เปอร์เซ็นต์</a><a href="../../th/percentchange/" class="">อัตราเปลี่ยนแปลง %</a><a href="../../th/datediff/" class="">ส่วนต่างวันที่</a><a href="../../th/time/" class="active">เครื่องคำนวณเวลา</a><a href="../../th/speed/" class="">ความเร็ว/ระยะทาง/เวลา</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../time/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/time/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/time/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/time/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/time/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/time/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/time/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/time/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/time/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/time/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/time/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/time/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/time/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/time/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/time/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/time/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item current" href="../../th/time/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/time/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../th/">หน้าแรก</a> &gt; เครื่องคำนวณเวลา</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>เครื่องคำนวณเวลา</h2>
+    <p class="desc">เลือกโหมดและกรอกเวลาเพื่อดูเวลาที่ผ่านไปหรือเวลาผลลัพธ์ทันที</p>
+    <div class="row"><div class="field"><label>โหมดการคำนวณ</label><select id="tm-mode" onchange="timeToggleMode()"><option value="elapsed">หาเวลาที่ผ่านไป (เริ่มต้น → สิ้นสุด)</option><option value="addsub">บวก/ลบเวลา (เริ่มต้น + ระยะเวลา)</option></select></div></div><div class="row" id="tm-group-elapsed"><div class="field"><label>เวลาเริ่มต้น</label><input type="time" id="tm-start"></div><div class="field"><label>เวลาสิ้นสุด</label><input type="time" id="tm-end"></div></div><div class="row" id="tm-group-addsub" hidden><div class="field"><label>เวลาเริ่มต้น (ฐาน)</label><input type="time" id="tm-base"></div><div class="field"><label>ระยะเวลา (ชม:นาที)</label><input type="number" id="tm-dur-h" min="0" style="width:47%;display:inline-block"> : <input type="number" id="tm-dur-m" min="0" max="59" style="width:47%;display:inline-block"></div><div class="field"><label>การดำเนินการ</label><select id="tm-op"><option value="add">บวก</option><option value="sub">ลบ</option></select></div></div>
+    <button onclick="calcTimeGlobal()">คำนวณ</button>
+    <div class="result" id="tm-result"></div>
+  </div>
+  <article class="content">
+    <h2>วิธีใช้งาน</h2><ol><li>เลือกโหมด (หาเวลาที่ผ่านไป หรือ บวก/ลบเวลา)</li><li>ในโหมด "เวลาที่ผ่านไป" กรอกเวลาเริ่มต้นและสิ้นสุด ในโหมด "บวก/ลบเวลา" กรอกเวลาเริ่มต้น ระยะเวลา (ชั่วโมง:นาที) และเลือกบวกหรือลบ</li><li>กด "คำนวณ" เพื่อดูผลลัพธ์ทันที</li></ol>
+    <h2>วิธีการคำนวณ</h2><p>เวลาที่ผ่านไป = เวลาสิ้นสุด − เวลาเริ่มต้น หากเวลาสิ้นสุดเร็วกว่า จะถือว่าข้ามเที่ยงคืนและบวกเพิ่ม 24 ชั่วโมง การบวก/ลบเวลาจะแปลงระยะเวลาเป็นนาที บวกหรือลบจากเวลาเริ่มต้น แล้วปรับให้อยู่ในรอบ 24 ชั่วโมง (1440 นาที)</p>
+    <h2>ตัวอย่าง</h2><div class="example">ตัวอย่างที่ 1 — โหมด "เวลาที่ผ่านไป" เริ่ม=09:15, สิ้นสุด=17:45 ผลลัพธ์คือ 8 ชั่วโมง 30 นาที</div><div class="example">ตัวอย่างที่ 2 — โหมด "บวก/ลบเวลา" บวก 2 ชั่วโมง 30 นาทีให้เวลาเริ่มต้น 23:10 ผลลัพธ์คือ 01:40 ของวันถัดไป</div>
+    <h2>คำถามที่พบบ่อย</h2><div class="faq-item"><div class="q">คำนวณเวลาที่ข้ามเที่ยงคืนได้ไหม?</div><p class="a">ได้ — ในโหมดเวลาที่ผ่านไป หากเวลาสิ้นสุดเร็วกว่าเวลาเริ่มต้น จะถือว่าเป็นวันถัดไปโดยอัตโนมัติ ในโหมดบวก/ลบ หากเกิน 24:00 หรือต่ำกว่า 00:00 จะระบุว่าเป็นวันถัดไปหรือวันก่อนหน้า</p></div><div class="faq-item"><div class="q">คำนวณละเอียดถึงวินาทีได้ไหม?</div><p class="a">เครื่องคำนวณนี้ทำงานในหน่วยชั่วโมงและนาที หากต้องการความละเอียดระดับวินาที กรุณาแปลงแยกต่างหาก</p></div>
+    <h2>เครื่องคำนวณอื่นๆ</h2><div class="related"><a href="../../th/age/">อายุ</a><a href="../../th/dday/">นับถอยหลัง</a><a href="../../th/discount/">ส่วนลด</a><a href="../../th/unit/">หน่วย</a><a href="../../th/bmi/">BMI</a><a href="../../th/percent/">เปอร์เซ็นต์</a><a href="../../th/percentchange/">อัตราเปลี่ยนแปลง %</a><a href="../../th/datediff/">ส่วนต่างวันที่</a><a href="../../th/speed/">ความเร็ว/ระยะทาง/เวลา</a></div>
+  </article>
+</div>
+<footer>
+  เว็บไซต์นี้ไม่มีการสมัครสมาชิก ไม่มีคอมเมนต์ แชท หรือฝ่ายสนับสนุนรายบุคคล มีเพียงเครื่องคำนวณฟรีที่ทุกคนใช้งานได้ทันที
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

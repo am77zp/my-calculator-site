@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>وقت کیلکولیٹر - گزرا ہوا وقت اور وقت جمع/تفریق</title>
+<meta name="description" content="دو اوقات کے درمیان گزرا ہوا وقت نکالیں، یا کسی وقت میں مدت جمع یا تفریق کرکے نتیجہ فوراً حاصل کریں۔">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/time/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/time/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/time/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/time/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/time/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/time/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/time/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/time/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"time_alert": "براہ کرم تمام مطلوبہ قدریں درج کریں۔", "time_elapsed_tpl": "گزرا وقت: {h} گھنٹے {m} منٹ", "time_elapsed_next_tpl": "گزرا وقت: {h} گھنٹے {m} منٹ (آدھی رات پار)", "time_addsub_tpl": "نتیجہ وقت: {time}", "time_addsub_next_tpl": "نتیجہ وقت: {time} (اگلا دن)", "time_addsub_prev_tpl": "نتیجہ وقت: {time} (پچھلا دن)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../ur/">آل اِن ون روزمرہ کیلکولیٹر</a></h1>
+  <p>رجسٹریشن کے بغیر فوراً استعمال کریں — مفت کیلکولیٹر</p>
+</header>
+<nav class="main-nav"><a href="../../ur/" class="">ہوم</a><a href="../../ur/age/" class="">عمر</a><a href="../../ur/dday/" class="">ڈی-ڈے</a><a href="../../ur/discount/" class="">رعایت</a><a href="../../ur/unit/" class="">یونٹ</a><a href="../../ur/bmi/" class="">BMI</a><a href="../../ur/percent/" class="">فیصد</a><a href="../../ur/percentchange/" class="">فیصد تبدیلی</a><a href="../../ur/datediff/" class="">تاریخ کا فرق</a><a href="../../ur/time/" class="active">وقت کیلکولیٹر</a><a href="../../ur/speed/" class="">رفتار·فاصلہ·وقت</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../time/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/time/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/time/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/time/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/time/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/time/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item current" href="../../ur/time/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/time/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/time/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/time/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/time/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/time/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/time/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/time/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/time/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/time/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/time/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/time/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../ur/">ہوم</a> &gt; وقت کیلکولیٹر</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>وقت کیلکولیٹر</h2>
+    <p class="desc">طریقہ منتخب کریں اور اوقات درج کریں، گزرا ہوا وقت یا نتیجہ فوراً مل جائے گا۔</p>
+    <div class="row"><div class="field"><label>حساب کا طریقہ</label><select id="tm-mode" onchange="timeToggleMode()"><option value="elapsed">گزرا وقت نکالیں (شروع → اختتام)</option><option value="addsub">وقت جمع/تفریق (بنیادی + مدت)</option></select></div></div><div class="row" id="tm-group-elapsed"><div class="field"><label>شروع وقت</label><input type="time" id="tm-start"></div><div class="field"><label>اختتامی وقت</label><input type="time" id="tm-end"></div></div><div class="row" id="tm-group-addsub" hidden><div class="field"><label>بنیادی وقت</label><input type="time" id="tm-base"></div><div class="field"><label>مدت (گھ:من)</label><input type="number" id="tm-dur-h" min="0" style="width:47%;display:inline-block"> : <input type="number" id="tm-dur-m" min="0" max="59" style="width:47%;display:inline-block"></div><div class="field"><label>عمل</label><select id="tm-op"><option value="add">جمع</option><option value="sub">تفریق</option></select></div></div>
+    <button onclick="calcTimeGlobal()">حساب کریں</button>
+    <div class="result" id="tm-result"></div>
+  </div>
+  <article class="content">
+    <h2>استعمال کا طریقہ</h2><ol><li>طریقہ منتخب کریں (گزرا وقت نکالیں / وقت جمع/تفریق کریں)۔</li><li>"گزرا وقت نکالیں" میں شروع اور اختتامی وقت درج کریں؛ "وقت جمع/تفریق" میں بنیادی وقت، مدت (گھنٹے:منٹ) اور جمع یا تفریق منتخب کریں۔</li><li>"حساب کریں" دبانے پر نتیجہ فوراً ظاہر ہوگا۔</li></ol>
+    <h2>یہ کیسے کام کرتا ہے</h2><p>گزرا وقت = اختتامی وقت − شروع وقت؛ اگر اختتامی وقت پہلے کا ہو تو آدھی رات پار کرنا سمجھا جاتا ہے اور 24 گھنٹے جمع کیے جاتے ہیں۔ جمع/تفریق مدت کو منٹ میں بدل کر بنیادی وقت میں جمع یا تفریق کرتا ہے اور 24 گھنٹے (1440 منٹ) کے حساب سے واپس گھنٹے:منٹ میں بدلتا ہے۔</p>
+    <h2>مثالیں</h2><div class="example">مثال 1 — "گزرا وقت نکالیں" موڈ میں شروع 09:15، اختتام 17:45 پر گزرا وقت 8 گھنٹے 30 منٹ ہے۔</div><div class="example">مثال 2 — "وقت جمع/تفریق" موڈ میں بنیادی وقت 23:10 میں 2 گھنٹے 30 منٹ جمع کرنے پر اگلے دن 01:40 بنتا ہے۔</div>
+    <h2>اکثر پوچھے گئے سوالات</h2><div class="faq-item"><div class="q">کیا آدھی رات پار کرنے والا حساب ہوتا ہے؟</div><p class="a">جی ہاں، گزرا وقت موڈ میں اگر اختتامی وقت شروع وقت سے پہلے ہو تو اگلے دن کا حساب خودکار ہوتا ہے، اور جمع/تفریق موڈ میں بھی 24:00 پار کرنے یا 00:00 سے پہلے جانے پر اگلا/پچھلا دن دکھایا جاتا ہے۔</p></div><div class="faq-item"><div class="q">کیا سیکنڈ تک حساب ہو سکتا ہے؟</div><p class="a">یہ کیلکولیٹر گھنٹے:منٹ میں حساب کرتا ہے۔ سیکنڈ کی درستگی کے لیے الگ سے تبدیل کریں۔</p></div>
+    <h2>دیگر کیلکولیٹر</h2><div class="related"><a href="../../ur/age/">عمر</a><a href="../../ur/dday/">ڈی-ڈے</a><a href="../../ur/discount/">رعایت</a><a href="../../ur/unit/">یونٹ</a><a href="../../ur/bmi/">BMI</a><a href="../../ur/percent/">فیصد</a><a href="../../ur/percentchange/">فیصد تبدیلی</a><a href="../../ur/datediff/">تاریخ کا فرق</a><a href="../../ur/speed/">رفتار·فاصلہ·وقت</a></div>
+  </article>
+</div>
+<footer>
+  اس ویب سائٹ پر کوئی اکاؤنٹ رجسٹریشن، تبصرے، چیٹ یا انفرادی سپورٹ نہیں ہے — صرف مفت کیلکولیٹر جنہیں کوئی بھی فوراً استعمال کر سکتا ہے۔
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

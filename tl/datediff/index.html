@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator ng Pagkakaiba ng Petsa - Araw, Linggo, at Buwan</title>
+<meta name="description" content="Ilagay ang petsa ng simula at petsa ng katapusan para makalkula ang kabuuang araw, linggo, at pagkakaiba sa taon/buwan/araw sa pagitan nila.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/tl/datediff/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/datediff/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/datediff/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/datediff/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/datediff/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/datediff/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/datediff/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/datediff/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/datediff/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/datediff/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/datediff/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/datediff/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/datediff/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/datediff/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/datediff/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/datediff/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/datediff/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/datediff/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/datediff/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/datediff/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/datediff/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"datediff_alert": "Pakilagay ang petsa ng simula at ng katapusan.", "datediff_days_tpl": "{days} araw sa kabuuan", "datediff_weeks_tpl": "{weeks} linggo {restdays} araw", "datediff_ymd_tpl": "{y} taon {m} buwan {d} araw", "datediff_same": "Magkatulad ang dalawang petsa (0 araw)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../tl/">All-in-One na Pang-araw-araw na Calculator</a></h1>
+  <p>Libreng calculator na agad magagamit — walang kailangang mag-sign up</p>
+</header>
+<nav class="main-nav"><a href="../../tl/" class="">Home</a><a href="../../tl/age/" class="">Edad</a><a href="../../tl/dday/" class="">D-Day</a><a href="../../tl/discount/" class="">Diskwento</a><a href="../../tl/unit/" class="">Unit</a><a href="../../tl/bmi/" class="">BMI</a><a href="../../tl/percent/" class="">Porsyento</a><a href="../../tl/percentchange/" class="">Pagbabago %</a><a href="../../tl/datediff/" class="active">Pagkakaiba ng Petsa</a><a href="../../tl/time/" class="">Kalkulator ng Oras</a><a href="../../tl/speed/" class="">Bilis/Distansya/Oras</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../datediff/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/datediff/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/datediff/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/datediff/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/datediff/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/datediff/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/datediff/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/datediff/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/datediff/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/datediff/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/datediff/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item current" href="../../tl/datediff/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/datediff/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/datediff/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/datediff/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/datediff/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/datediff/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/datediff/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/datediff/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/datediff/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/datediff/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../tl/">Home</a> &gt; Kalkulator ng Pagkakaiba ng Petsa</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Kalkulator ng Pagkakaiba ng Petsa</h2>
+    <p class="desc">Ilagay ang petsa ng simula at petsa ng katapusan para makalkula agad ang pagkakaiba sa pagitan nila.</p>
+    <div class="row"><div class="field"><label>Petsa ng simula</label><input type="date" id="dd-start"></div><div class="field"><label>Petsa ng katapusan</label><input type="date" id="dd-end"></div></div>
+    <button onclick="calcDateDiffGlobal()">Kalkulahin</button>
+    <div class="result" id="dd-result"></div>
+  </div>
+  <article class="content">
+    <h2>Paano gamitin</h2><ol><li>Piliin ang petsa ng simula.</li><li>Piliin ang petsa ng katapusan (maaari rin itong mas maaga kaysa petsa ng simula).</li><li>I-click ang "Kalkulahin" para makita agad ang kabuuang araw at ang detalyeng taon/buwan/araw.</li></ol>
+    <h2>Paano ito gumagana</h2><p>Ang kabuuang araw ay ang eksaktong pagitan ng dalawang petsa sa araw. Ang detalyeng kalendaryo ay ibinabawas ang taon, buwan, at araw nang hiwalay, humihiram ng isang buwan kung kulang ang araw at isang taon kung kulang ang buwan.</p>
+    <h2>Mga halimbawa</h2><div class="example">Halimbawa 1 — Simula 2024-01-01, katapusan 2024-12-31 ay nagbibigay ng 365 araw sa kabuuan, na may detalyeng 0 taon 11 buwan 30 araw.</div><div class="example">Halimbawa 2 — Simula 2025-03-10, katapusan 2026-09-19 ay nagbibigay ng 558 araw sa kabuuan (79 linggo 5 araw), na may detalyeng 1 taon 6 buwan 9 araw.</div>
+    <h2>Mga madalas itanong</h2><div class="faq-item"><div class="q">Gagana ba kung ang petsa ng simula ay pagkatapos ng petsa ng katapusan?</div><p class="a">Oo, awtomatikong tinutukoy ng kalkulator kung aling petsa ang mas maaga at palaging nagpapakita ng positibong pagkakaiba.</p></div><div class="faq-item"><div class="q">Bakit magkaiba ang pakiramdam ng kabuuang araw at ng detalyeng taon/buwan/araw?</div><p class="a">Ang kabuuang araw ay binibilang ang eksaktong pagitan araw-araw, habang ang detalye ay sumusunod sa kalendaryo, kaya maaaring magkaiba depende sa haba ng bawat buwan (28 hanggang 31 araw).</p></div>
+    <h2>Iba pang calculator</h2><div class="related"><a href="../../tl/age/">Edad</a><a href="../../tl/dday/">D-Day</a><a href="../../tl/discount/">Diskwento</a><a href="../../tl/unit/">Unit</a><a href="../../tl/bmi/">BMI</a><a href="../../tl/percent/">Porsyento</a><a href="../../tl/percentchange/">Pagbabago %</a><a href="../../tl/time/">Kalkulator ng Oras</a><a href="../../tl/speed/">Bilis/Distansya/Oras</a></div>
+  </article>
+</div>
+<footer>
+  Ang site na ito ay walang account sign-up, comments, chat, o 1:1 na suporta — mga libreng calculator lang na agad magagamit ng kahit sino.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

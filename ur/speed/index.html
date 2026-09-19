@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رفتار، فاصلہ، وقت کیلکولیٹر - فارمولا v=d/t سے حل کریں</title>
+<meta name="description" content="فاصلہ اور وقت معلوم ہونے پر رفتار نکالیں، رفتار اور وقت معلوم ہونے پر فاصلہ نکالیں، فاصلہ اور رفتار معلوم ہونے پر لگنے والا وقت نکالیں۔">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/ur/speed/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/speed/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/speed/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/speed/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/speed/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/speed/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/speed/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/speed/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/speed/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/speed/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/speed/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/speed/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/speed/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/speed/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/speed/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/speed/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/speed/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/speed/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/speed/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/speed/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/speed/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"speed_alert": "براہ کرم دونوں مطلوبہ قدریں درست درج کریں۔", "speed_result_tpl": ["رفتار {result} km/h ہے۔", "فاصلہ {result} km ہے۔", "لگنے والا وقت {result} گھنٹے ({hm}) ہے۔"]};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../ur/">آل اِن ون روزمرہ کیلکولیٹر</a></h1>
+  <p>رجسٹریشن کے بغیر فوراً استعمال کریں — مفت کیلکولیٹر</p>
+</header>
+<nav class="main-nav"><a href="../../ur/" class="">ہوم</a><a href="../../ur/age/" class="">عمر</a><a href="../../ur/dday/" class="">ڈی-ڈے</a><a href="../../ur/discount/" class="">رعایت</a><a href="../../ur/unit/" class="">یونٹ</a><a href="../../ur/bmi/" class="">BMI</a><a href="../../ur/percent/" class="">فیصد</a><a href="../../ur/percentchange/" class="">فیصد تبدیلی</a><a href="../../ur/datediff/" class="">تاریخ کا فرق</a><a href="../../ur/time/" class="">وقت کیلکولیٹر</a><a href="../../ur/speed/" class="active">رفتار·فاصلہ·وقت</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../speed/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/speed/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/speed/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/speed/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/speed/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/speed/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item current" href="../../ur/speed/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/speed/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/speed/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/speed/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/speed/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/speed/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/speed/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/speed/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/speed/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/speed/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/speed/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/speed/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../ur/">ہوم</a> &gt; رفتار، فاصلہ، وقت کیلکولیٹر</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>رفتار، فاصلہ، وقت کیلکولیٹر</h2>
+    <p class="desc">کیا نکالنا ہے منتخب کریں اور باقی دو قدریں درج کریں، نتیجہ فوراً مل جائے گا۔</p>
+    <div class="row"><div class="field"><label>حساب کا طریقہ</label><select id="sp-mode" onchange="spToggleMode()"><option value="speed">رفتار نکالیں (فاصلہ ÷ وقت)</option><option value="distance">فاصلہ نکالیں (رفتار × وقت)</option><option value="time">وقت نکالیں (فاصلہ ÷ رفتار)</option></select></div></div><div class="row"><div class="field" id="sp-field-distance"><label>فاصلہ (km)</label><input type="number" id="sp-distance"></div><div class="field" id="sp-field-time"><label>وقت (گھنٹے، اعشاریہ قابل قبول)</label><input type="text" id="sp-time"></div><div class="field" id="sp-field-speed" hidden><label>رفتار (km/h)</label><input type="number" id="sp-speed"></div></div>
+    <button onclick="calcSpeedGlobal()">حساب کریں</button>
+    <div class="result" id="sp-result"></div>
+  </div>
+  <article class="content">
+    <h2>استعمال کا طریقہ</h2><ol><li>کیا نکالنا ہے منتخب کریں (رفتار / فاصلہ / وقت)۔</li><li>باقی دو قدریں درج کریں (فاصلہ km میں، وقت گھنٹوں میں (اعشاریہ قابل قبول) یا گھ:من میں، رفتار km/h میں)۔</li><li>"حساب کریں" دبانے پر نتیجہ فوراً ظاہر ہوگا۔</li></ol>
+    <h2>یہ کیسے کام کرتا ہے</h2><p>تینوں قدروں کا تعلق رفتار = فاصلہ ÷ وقت (v=d/t) ہے۔ رفتار نکالنے کے لیے فاصلہ÷وقت، فاصلہ نکالنے کے لیے رفتار×وقت، اور وقت نکالنے کے لیے فاصلہ÷رفتار استعمال ہوتا ہے۔</p>
+    <h2>مثالیں</h2><div class="example">مثال 1 — "رفتار نکالیں" موڈ میں فاصلہ 150km، وقت 2.5 گھنٹے (2 گھنٹے 30 منٹ) پر رفتار 60km/h ہے۔</div><div class="example">مثال 2 — "وقت نکالیں" موڈ میں فاصلہ 100km، رفتار 40km/h پر لگنے والا وقت 2.5 گھنٹے (2 گھنٹے 30 منٹ) ہے۔</div>
+    <h2>اکثر پوچھے گئے سوالات</h2><div class="faq-item"><div class="q">کیا وقت گھ:من میں بھی درج کر سکتے ہیں؟</div><p class="a">جی ہاں، اعشاریہ گھنٹے اور گھ:من دونوں طریقے سے وقت درج کیا جا سکتا ہے۔ مثلاً 2 گھنٹے 30 منٹ برابر 2.5 گھنٹے۔</p></div><div class="faq-item"><div class="q">km/h کی بجائے mph جیسی دوسری اکائی استعمال کر سکتے ہیں؟</div><p class="a">یہ کیلکولیٹر خود اکائی تبدیل نہیں کرتا، یہ آپ کے درج کردہ فاصلہ/رفتار کی اکائی کو جوں کا توں استعمال کرتا ہے۔ mph میں حساب کے لیے فاصلہ میل میں اور رفتار mph میں درج کریں۔</p></div>
+    <h2>دیگر کیلکولیٹر</h2><div class="related"><a href="../../ur/age/">عمر</a><a href="../../ur/dday/">ڈی-ڈے</a><a href="../../ur/discount/">رعایت</a><a href="../../ur/unit/">یونٹ</a><a href="../../ur/bmi/">BMI</a><a href="../../ur/percent/">فیصد</a><a href="../../ur/percentchange/">فیصد تبدیلی</a><a href="../../ur/datediff/">تاریخ کا فرق</a><a href="../../ur/time/">وقت کیلکولیٹر</a></div>
+  </article>
+</div>
+<footer>
+  اس ویب سائٹ پر کوئی اکاؤنٹ رجسٹریشن، تبصرے، چیٹ یا انفرادی سپورٹ نہیں ہے — صرف مفت کیلکولیٹر جنہیں کوئی بھی فوراً استعمال کر سکتا ہے۔
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

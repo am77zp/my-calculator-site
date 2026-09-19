@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>속도·거리·시간 계산기 - 공식 v=d/t로 셋 중 하나 계산</title>
+<meta name="description" content="거리와 시간을 알면 속도를, 속도와 시간을 알면 거리를, 거리와 속도를 알면 걸리는 시간을 바로 계산합니다.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/speed/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/speed/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/speed/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/speed/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/speed/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/speed/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/speed/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/speed/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/speed/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/speed/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/speed/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/speed/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/speed/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/speed/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/speed/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/speed/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/speed/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/speed/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/speed/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/speed/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/speed/">
+<link rel="stylesheet" href="../assets/style.css?v=20260919-2">
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../">올인원 생활계산기</a></h1>
+  <p>가입 없이 바로 사용하는 무료 생활 계산기</p>
+</header>
+<nav class="main-nav"><a href="../" class="">홈</a><a href="../age/" class="">만 나이</a><a href="../dday/" class="">D-Day</a><a href="../discount/" class="">할인율</a><a href="../unit/" class="">단위변환</a><a href="../bmi/" class="">BMI</a><a href="../percent/" class="">퍼센트</a><a href="../percentchange/" class="">증감율</a><a href="../datediff/" class="">날짜 차이</a><a href="../time/" class="">시간 계산</a><a href="../speed/" class="active">속도·거리·시간</a><a href="../about/" class="">소개</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item current" href="../speed/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../zh-cn/speed/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../hi/speed/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../en/speed/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../id/speed/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../pt-br/speed/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../ru/speed/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../ur/speed/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../es/speed/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../ja/speed/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../en/speed/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../tl/speed/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../ar/speed/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../vi/speed/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../de/speed/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../bn/speed/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../tr/speed/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../fa/speed/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../en/speed/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../th/speed/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../fr/speed/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../">홈</a> &gt; 속도·거리·시간 계산기</div><div class="container">
+  <div class="ad-slot">광고 영역 (AdSense 승인 후 삽입 예정)</div>
+  <div class="card">
+    <h2>속도·거리·시간 계산기</h2>
+    <p class="desc">무엇을 구할지 고르고 나머지 두 값을 입력하면 바로 계산합니다.</p>
+    <div class="row"><div class="field"><label>계산 방식</label><select id="sp-mode" onchange="spToggleMode()"><option value="speed">속도 구하기 (거리 ÷ 시간)</option><option value="distance">거리 구하기 (속도 × 시간)</option><option value="time">시간 구하기 (거리 ÷ 속도)</option></select></div></div><div class="row"><div class="field" id="sp-field-distance"><label>거리 (km)</label><input type="number" id="sp-distance"></div><div class="field" id="sp-field-time"><label>시간 (시간, 소수 가능)</label><input type="text" id="sp-time"></div><div class="field" id="sp-field-speed" hidden><label>속도 (km/h)</label><input type="number" id="sp-speed"></div></div>
+    <button onclick="calcSpeed()">계산하기</button>
+    <div class="result" id="sp-result"></div>
+  </div>
+  <article class="content">
+    <h2>사용법</h2><ol><li>구할 값을 선택합니다 (속도 / 거리 / 시간).</li><li>나머지 두 값을 입력합니다 (거리는 km, 시간은 시간(소수 가능) 또는 시:분, 속도는 km/h).</li><li>"계산하기"를 누르면 결과가 바로 표시됩니다.</li></ol>
+    <h2>계산 방식</h2><p>세 값은 속도 = 거리 ÷ 시간(v=d/t) 관계를 가집니다. 속도를 구할 때는 거리÷시간, 거리를 구할 때는 속도×시간, 시간을 구할 때는 거리÷속도로 계산합니다.</p>
+    <h2>예시</h2><div class="example">예시 1 — "속도 구하기" 모드에서 거리 150km, 시간 2시간 30분(2.5시간)이면 속도는 60km/h입니다.</div><div class="example">예시 2 — "시간 구하기" 모드에서 거리 100km, 속도 40km/h이면 걸리는 시간은 2.5시간(2시간 30분)입니다.</div>
+    <h2>자주 묻는 질문 (FAQ)</h2><div class="faq-item"><div class="q">시간을 시:분으로 입력해도 되나요?</div><p class="a">네, 시간(소수)과 시:분 두 가지 입력 방식을 모두 지원합니다. 예를 들어 2시간 30분은 2.5시간과 같습니다.</p></div><div class="faq-item"><div class="q">km/h가 아니라 mph 등 다른 단위를 쓰고 싶어요.</div><p class="a">이 계산기는 단위 자체를 변환하지 않고 입력한 거리·속도 단위 체계를 그대로 사용합니다. mph로 계산하려면 거리를 마일, 속도를 mph로 일관되게 입력하세요.</p></div>
+    <h2>다른 계산기</h2><div class="related"><a href="../age/">만 나이</a><a href="../dday/">D-Day</a><a href="../discount/">할인율</a><a href="../unit/">단위변환</a><a href="../bmi/">BMI</a><a href="../percent/">퍼센트</a><a href="../percentchange/">증감율</a><a href="../datediff/">날짜 차이</a><a href="../time/">시간 계산</a></div>
+  </article>
+</div>
+<footer>
+  이 사이트는 회원가입, 댓글, 채팅, 1:1 문의 없이 누구나 바로 사용할 수 있는 무료 생활 계산기 모음입니다.<br>
+  <a href="../about/">소개</a> · <a href="../privacy/">개인정보처리방침</a>
+</footer>
+<script src="../assets/calculators.js?v=20260919-2"></script>
+<script src="../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

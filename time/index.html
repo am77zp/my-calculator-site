@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>시간 계산기 - 경과 시간, 시간 더하기·빼기 계산</title>
+<meta name="description" content="두 시각 사이의 경과 시간을 계산하거나, 특정 시각에 시간을 더하거나 빼서 결과 시각을 바로 계산합니다.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/time/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/time/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/time/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/time/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/time/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/time/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/time/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/time/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="stylesheet" href="../assets/style.css?v=20260919-2">
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../">올인원 생활계산기</a></h1>
+  <p>가입 없이 바로 사용하는 무료 생활 계산기</p>
+</header>
+<nav class="main-nav"><a href="../" class="">홈</a><a href="../age/" class="">만 나이</a><a href="../dday/" class="">D-Day</a><a href="../discount/" class="">할인율</a><a href="../unit/" class="">단위변환</a><a href="../bmi/" class="">BMI</a><a href="../percent/" class="">퍼센트</a><a href="../percentchange/" class="">증감율</a><a href="../datediff/" class="">날짜 차이</a><a href="../time/" class="active">시간 계산</a><a href="../speed/" class="">속도·거리·시간</a><a href="../about/" class="">소개</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item current" href="../time/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../zh-cn/time/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../hi/time/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../en/time/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../id/time/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../pt-br/time/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../ru/time/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../ur/time/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../es/time/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../ja/time/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../en/time/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../tl/time/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../ar/time/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../vi/time/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../de/time/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../bn/time/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../tr/time/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../fa/time/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../en/time/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../th/time/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../fr/time/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../">홈</a> &gt; 시간 계산기</div><div class="container">
+  <div class="ad-slot">광고 영역 (AdSense 승인 후 삽입 예정)</div>
+  <div class="card">
+    <h2>시간 계산기</h2>
+    <p class="desc">계산 방식을 고르고 시간을 입력하면 경과 시간 또는 결과 시각을 바로 계산합니다.</p>
+    <div class="row"><div class="field"><label>계산 방식</label><select id="tm-mode" onchange="timeToggleMode()"><option value="elapsed">경과 시간 구하기 (시작 → 종료)</option><option value="addsub">시간 더하기·빼기 (기준 시각 + 시간)</option></select></div></div><div class="row" id="tm-group-elapsed"><div class="field"><label>시작 시각</label><input type="time" id="tm-start"></div><div class="field"><label>종료 시각</label><input type="time" id="tm-end"></div></div><div class="row" id="tm-group-addsub" hidden><div class="field"><label>기준 시각</label><input type="time" id="tm-base"></div><div class="field"><label>시간 (시:분)</label><input type="number" id="tm-dur-h" min="0" style="width:47%;display:inline-block"> : <input type="number" id="tm-dur-m" min="0" max="59" style="width:47%;display:inline-block"></div><div class="field"><label>연산</label><select id="tm-op"><option value="add">더하기</option><option value="sub">빼기</option></select></div></div>
+    <button onclick="calcTime()">계산하기</button>
+    <div class="result" id="tm-result"></div>
+  </div>
+  <article class="content">
+    <h2>사용법</h2><ol><li>계산 방식을 선택합니다 (경과 시간 구하기 / 시간 더하기·빼기).</li><li>"경과 시간 구하기"에서는 시작 시각과 종료 시각을, "시간 더하기·빼기"에서는 기준 시각과 더하거나 뺄 시간(시:분), 더하기/빼기 여부를 입력합니다.</li><li>"계산하기"를 누르면 결과가 바로 표시됩니다.</li></ol>
+    <h2>계산 방식</h2><p>경과 시간은 종료 시각에서 시작 시각을 빼서 계산하며, 종료 시각이 더 이르면 자정을 넘긴 것으로 보고 24시간을 더합니다. 시간 더하기·빼기는 기준 시각에 입력한 시간을 분 단위로 환산해 더하거나 뺀 뒤, 24시간(1440분) 기준으로 다시 시:분으로 변환합니다.</p>
+    <h2>예시</h2><div class="example">예시 1 — "경과 시간 구하기" 모드에서 시작 09:15, 종료 17:45이면 경과 시간은 8시간 30분입니다.</div><div class="example">예시 2 — "시간 더하기·빼기" 모드에서 기준 시각 23:10에 2시간 30분을 더하면 다음 날 01:40이 됩니다.</div>
+    <h2>자주 묻는 질문 (FAQ)</h2><div class="faq-item"><div class="q">자정을 넘어가는 계산도 되나요?</div><p class="a">네, 경과 시간 계산에서 종료 시각이 시작 시각보다 이르면 자동으로 다음 날로 넘어간 것으로 계산하고, 시간 더하기·빼기에서도 24시간을 넘거나 0시 이전으로 내려가면 날짜가 바뀐 것으로 표시합니다.</p></div><div class="faq-item"><div class="q">초 단위까지 계산할 수 있나요?</div><p class="a">이 계산기는 시:분 단위로 계산합니다. 초 단위 정밀도가 필요하면 별도로 환산해 주세요.</p></div>
+    <h2>다른 계산기</h2><div class="related"><a href="../age/">만 나이</a><a href="../dday/">D-Day</a><a href="../discount/">할인율</a><a href="../unit/">단위변환</a><a href="../bmi/">BMI</a><a href="../percent/">퍼센트</a><a href="../percentchange/">증감율</a><a href="../datediff/">날짜 차이</a><a href="../speed/">속도·거리·시간</a></div>
+  </article>
+</div>
+<footer>
+  이 사이트는 회원가입, 댓글, 채팅, 1:1 문의 없이 누구나 바로 사용할 수 있는 무료 생활 계산기 모음입니다.<br>
+  <a href="../about/">소개</a> · <a href="../privacy/">개인정보처리방침</a>
+</footer>
+<script src="../assets/calculators.js?v=20260919-2"></script>
+<script src="../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

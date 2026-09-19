@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zaman Hesaplayıcı - Geçen Süre ve Zaman Toplama/Çıkarma</title>
+<meta name="description" content="İki saat arasında geçen süreyi hesaplayın, ya da bir saate süre ekleyip çıkararak sonucu anında bulun.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/time/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/time/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/time/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/time/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/time/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/time/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/time/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/time/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"time_alert": "Lütfen gerekli tüm değerleri girin.", "time_elapsed_tpl": "Geçen süre: {h} sa {m} dk", "time_elapsed_next_tpl": "Geçen süre: {h} sa {m} dk (gece yarısını geçiyor)", "time_addsub_tpl": "Sonuç saat: {time}", "time_addsub_next_tpl": "Sonuç saat: {time} (ertesi gün)", "time_addsub_prev_tpl": "Sonuç saat: {time} (önceki gün)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../tr/">Hepsi Bir Arada Günlük Hesaplayıcılar</a></h1>
+  <p>Ücretsiz, anında kullanılabilir hesaplayıcılar — kayıt gerekmez</p>
+</header>
+<nav class="main-nav"><a href="../../tr/" class="">Ana Sayfa</a><a href="../../tr/age/" class="">Yaş</a><a href="../../tr/dday/" class="">Geri Sayım</a><a href="../../tr/discount/" class="">İndirim</a><a href="../../tr/unit/" class="">Birim</a><a href="../../tr/bmi/" class="">VKİ</a><a href="../../tr/percent/" class="">Yüzde</a><a href="../../tr/percentchange/" class="">Yüzde Değişim</a><a href="../../tr/datediff/" class="">Tarih Farkı</a><a href="../../tr/time/" class="active">Zaman Hesaplayıcı</a><a href="../../tr/speed/" class="">Hız/Mesafe/Zaman</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../time/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/time/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/time/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/time/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/time/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/time/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/time/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/time/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/time/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/time/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/time/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/time/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/time/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/time/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item current" href="../../tr/time/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/time/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/time/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/time/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../tr/">Ana Sayfa</a> &gt; Zaman Hesaplayıcı</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Zaman Hesaplayıcı</h2>
+    <p class="desc">Bir mod seçip saatleri girin, geçen süreyi veya sonuç saati anında görün.</p>
+    <div class="row"><div class="field"><label>Hesaplama yöntemi</label><select id="tm-mode" onchange="timeToggleMode()"><option value="elapsed">Geçen süreyi bul (başlangıç → bitiş)</option><option value="addsub">Zaman ekle/çıkar (temel + süre)</option></select></div></div><div class="row" id="tm-group-elapsed"><div class="field"><label>Başlangıç saati</label><input type="time" id="tm-start"></div><div class="field"><label>Bitiş saati</label><input type="time" id="tm-end"></div></div><div class="row" id="tm-group-addsub" hidden><div class="field"><label>Temel saat</label><input type="time" id="tm-base"></div><div class="field"><label>Süre (saat:dakika)</label><input type="number" id="tm-dur-h" min="0" style="width:47%;display:inline-block"> : <input type="number" id="tm-dur-m" min="0" max="59" style="width:47%;display:inline-block"></div><div class="field"><label>İşlem</label><select id="tm-op"><option value="add">Ekle</option><option value="sub">Çıkar</option></select></div></div>
+    <button onclick="calcTimeGlobal()">Hesapla</button>
+    <div class="result" id="tm-result"></div>
+  </div>
+  <article class="content">
+    <h2>Nasıl kullanılır</h2><ol><li>Bir mod seçin (geçen süreyi bulma veya zaman ekleme/çıkarma).</li><li>"Geçen süre"de başlangıç ve bitiş saatini, "ekleme/çıkarma"da temel saati, süreyi (saat:dakika) ve işlemi girin.</li><li>Sonucu anında görmek için "Hesapla"ya tıklayın.</li></ol>
+    <h2>Nasıl çalışır</h2><p>Geçen süre, bitiş saati eksi başlangıç saatidir; bitiş saati daha erkense gece yarısını geçtiği varsayılır ve 24 saat eklenir. Ekleme/çıkarma, süreyi dakikaya çevirip temel saate ekler veya çıkarır ve sonucu 24 saatlik (1440 dakika) döngüye göre düzenler.</p>
+    <h2>Örnekler</h2><div class="example">Örnek 1 — "Geçen süre" modunda başlangıç=09:15, bitiş=17:45 ise geçen süre 8 saat 30 dakikadır.</div><div class="example">Örnek 2 — "Ekleme/çıkarma" modunda 23:10 temel saatine 2 saat 30 dakika eklemek, ertesi gün 01:40 sonucunu verir.</div>
+    <h2>Sıkça sorulan sorular</h2><div class="faq-item"><div class="q">Gece yarısını geçen hesaplamalar da yapılabiliyor mu?</div><p class="a">Evet — geçen süre modunda bitiş saati başlangıçtan erkense otomatik olarak ertesi gün sayılır. Ekleme/çıkarma modunda 24:00'ı geçmek veya 00:00'dan önceye düşmek ertesi veya önceki gün olarak işaretlenir.</p></div><div class="faq-item"><div class="q">Saniyeye kadar hesaplayabilir mi?</div><p class="a">Bu hesaplayıcı saat ve dakika cinsinden çalışır. Saniye hassasiyeti için ayrıca dönüştürün.</p></div>
+    <h2>Diğer hesaplayıcılar</h2><div class="related"><a href="../../tr/age/">Yaş</a><a href="../../tr/dday/">Geri Sayım</a><a href="../../tr/discount/">İndirim</a><a href="../../tr/unit/">Birim</a><a href="../../tr/bmi/">VKİ</a><a href="../../tr/percent/">Yüzde</a><a href="../../tr/percentchange/">Yüzde Değişim</a><a href="../../tr/datediff/">Tarih Farkı</a><a href="../../tr/speed/">Hız/Mesafe/Zaman</a></div>
+  </article>
+</div>
+<footer>
+  Bu sitede hesap kaydı, yorum, sohbet veya birebir destek bulunmuyor — sadece herkesin hemen kullanabileceği ücretsiz hesaplayıcılar var.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>
