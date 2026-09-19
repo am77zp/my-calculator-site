@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hesap Bölüştürme Hesaplayıcı - Hesabı Herkese Eşit Bölün</title>
+<meta name="description" content="Toplam tutarı, kişi sayısını ve varsa ekstra ücret ya da indirimi girerek her kişinin ne kadar ödeyeceğini tam olarak öğrenin.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/tr/splitbill/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/splitbill/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/splitbill/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/splitbill/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/splitbill/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/splitbill/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/splitbill/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/splitbill/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/splitbill/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/splitbill/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/splitbill/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/splitbill/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/splitbill/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/splitbill/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/splitbill/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/splitbill/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/splitbill/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/splitbill/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/splitbill/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"splitbill_alert":"Lütfen toplamı ve kişi sayısını doğru girin (en az 1 kişi); ekstra ücret ve indirim 0 veya daha büyük olmalıdır.","splitbill_per_tpl":"Kişi başı ({people} kişi)","splitbill_total_tpl":"Bölünecek tutar: {adjusted}","splitbill_detail_tpl":"({total} toplam + {extra} ekstra − {discount} indirim)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../tr/">Hepsi Bir Arada Günlük Hesaplayıcılar</a></h1>
+  <p>Ücretsiz, anında kullanılabilir hesaplayıcılar — kayıt gerekmez</p>
+</header>
+<nav class="main-nav"><a href="../../tr/" class="">Ana Sayfa</a><a href="../../tr/age/" class="">Yaş</a><a href="../../tr/dday/" class="">Geri Sayım</a><a href="../../tr/discount/" class="">İndirim</a><a href="../../tr/unit/" class="">Birim</a><a href="../../tr/bmi/" class="">VKİ</a><a href="../../tr/percent/" class="">Yüzde</a><a href="../../tr/percentchange/" class="">Yüzde Değişim</a><a href="../../tr/datediff/" class="">Tarih Farkı</a><a href="../../tr/time/" class="">Zaman Hesaplayıcı</a><a href="../../tr/speed/" class="">Hız/Mesafe/Zaman</a><a href="../../tr/tip/" class="">Bahşiş Hesaplayıcı</a><a href="../../tr/splitbill/" class="active">Hesap Bölüştür</a><a href="../../tr/fuel/" class="">Yakıt Verimliliği</a><a href="../../tr/agediff/" class="">Yaş Farkı</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../splitbill/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/splitbill/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/splitbill/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/splitbill/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/splitbill/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/splitbill/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/splitbill/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/splitbill/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/splitbill/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/splitbill/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/splitbill/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/splitbill/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/splitbill/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/splitbill/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item current" href="../../tr/splitbill/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/splitbill/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/splitbill/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/splitbill/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../tr/">Ana Sayfa</a> &gt; Hesap Bölüştürme Hesaplayıcı</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Hesap Bölüştürme Hesaplayıcı</h2>
+    <p class="desc">Toplam tutarı ve kişi sayısını girin. Ekstra ücret veya indirim isteğe bağlıdır.</p>
+    <div class="row"><div class="field"><label>Toplam tutar</label><input type="number" id="split-total" min="0"></div><div class="field"><label>Kişi sayısı</label><input type="number" id="split-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>Ekstra ücret (isteğe bağlı)</label><input type="number" id="split-extra" min="0"></div><div class="field"><label>İndirim (isteğe bağlı)</label><input type="number" id="split-discount" min="0"></div></div>
+    <button onclick="calcSplitBillGlobal()">Hesapla</button>
+    <div class="result" id="split-result"></div>
+  </div>
+  <article class="content">
+    <h2>Nasıl kullanılır</h2><ol><li>Ödenecek toplam tutarı girin.</li><li>Hesabı paylaşan kişi sayısını girin.</li><li>Varsa servis ücreti gibi bir ekstra ücret veya indirim girin, ardından "Hesapla"ya tıklayın.</li></ol>
+    <h2>Nasıl çalışır</h2><p>Bölünecek tutar, toplam hesaba ekstra ücret eklenip indirim çıkarılarak bulunur. Bu düzeltilmiş tutar, kişi sayısına eşit olarak bölünür.</p>
+    <h2>Örnekler</h2><div class="example">Örnek 1 — Toplam 120, 3 kişiye bölünürse, ekstra ücret veya indirim yoksa: kişi başı 40 öder.</div><div class="example">Örnek 2 — Toplam 200'e 10 servis ücreti eklenip 20 indirim uygulanır ve 5 kişiye bölünürse: düzeltilmiş tutar 190 olur, kişi başı 38 öder.</div>
+    <h2>Sıkça sorulan sorular</h2><div class="faq-item"><div class="q">"Ekstra ücret" olarak ne sayılır?</div><p class="a">Teslimat ücreti veya servis ücreti gibi hesaba eklenen her şey. Yoksa boş bırakın veya 0 girin.</p></div><div class="faq-item"><div class="q">Hesaptan büyük bir indirim girebilir miyim?</div><p class="a">Hayır — düzeltilmiş tutar 0'ın altına inemez, bu yüzden hesap artı ekstra ücretten büyük bir indirim 0 ile sınırlandırılır.</p></div><div class="faq-item"><div class="q">Birinin daha fazla sipariş vermesi gibi eşit olmayan bölüşümü destekler mi?</div><p class="a">Hayır, bu hesaplayıcı her zaman eşit böler. Kişi başına farklı tutarlar için her kişinin siparişini ayrı ayrı toplayın.</p></div>
+    <h2>Diğer hesaplayıcılar</h2><div class="related"><a href="../../tr/age/">Yaş</a><a href="../../tr/dday/">Geri Sayım</a><a href="../../tr/discount/">İndirim</a><a href="../../tr/unit/">Birim</a><a href="../../tr/bmi/">VKİ</a><a href="../../tr/percent/">Yüzde</a><a href="../../tr/percentchange/">Yüzde Değişim</a><a href="../../tr/datediff/">Tarih Farkı</a><a href="../../tr/time/">Zaman Hesaplayıcı</a><a href="../../tr/speed/">Hız/Mesafe/Zaman</a><a href="../../tr/tip/">Bahşiş Hesaplayıcı</a><a href="../../tr/fuel/">Yakıt Verimliliği</a><a href="../../tr/agediff/">Yaş Farkı</a></div>
+  </article>
+</div>
+<footer>
+  Bu sitede hesap kaydı, yorum, sohbet veya birebir destek bulunmuyor — sadece herkesin hemen kullanabileceği ücretsiz hesaplayıcılar var.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

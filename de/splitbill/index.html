@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rechnungsteiler - Rechnung gleichmäßig unter allen aufteilen</title>
+<meta name="description" content="Gesamtbetrag, Personenzahl sowie eventuelle Zusatzkosten oder Rabatte eingeben, um genau zu sehen, wie viel jede Person zahlen muss.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/de/splitbill/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/splitbill/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/splitbill/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/splitbill/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/splitbill/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/splitbill/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/splitbill/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/splitbill/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/splitbill/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/splitbill/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/splitbill/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/splitbill/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/splitbill/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/splitbill/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/splitbill/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/splitbill/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/splitbill/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/splitbill/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/splitbill/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"splitbill_alert":"Bitte Gesamtbetrag und Personenzahl korrekt eingeben (mindestens 1 Person); Zusatzkosten und Rabatt müssen 0 oder mehr sein.","splitbill_per_tpl":"Pro Person ({people} Personen)","splitbill_total_tpl":"Aufzuteilender Betrag: {adjusted}","splitbill_detail_tpl":"({total} gesamt + {extra} zusätzlich − {discount} Rabatt)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../de/">Alltagsrechner</a></h1>
+  <p>Kostenlose Rechner, sofort nutzbar — keine Anmeldung nötig</p>
+</header>
+<nav class="main-nav"><a href="../../de/" class="">Start</a><a href="../../de/age/" class="">Alter</a><a href="../../de/dday/" class="">Countdown</a><a href="../../de/discount/" class="">Rabatt</a><a href="../../de/unit/" class="">Einheiten</a><a href="../../de/bmi/" class="">BMI</a><a href="../../de/percent/" class="">Prozent</a><a href="../../de/percentchange/" class="">Prozentuale Änderung</a><a href="../../de/datediff/" class="">Datumsdifferenz</a><a href="../../de/time/" class="">Zeitrechner</a><a href="../../de/speed/" class="">Geschwindigkeit/Strecke/Zeit</a><a href="../../de/tip/" class="">Trinkgeldrechner</a><a href="../../de/splitbill/" class="active">Rechnung teilen</a><a href="../../de/fuel/" class="">Kraftstoffverbrauch</a><a href="../../de/agediff/" class="">Altersunterschied</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../splitbill/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/splitbill/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/splitbill/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/splitbill/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/splitbill/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/splitbill/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/splitbill/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/splitbill/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/splitbill/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/splitbill/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/splitbill/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/splitbill/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item current" href="../../de/splitbill/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/splitbill/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/splitbill/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/splitbill/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/splitbill/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/splitbill/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../de/">Start</a> &gt; Rechnungsteiler</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Rechnungsteiler</h2>
+    <p class="desc">Gesamtbetrag und Personenzahl eingeben. Zusatzkosten oder Rabatt sind optional.</p>
+    <div class="row"><div class="field"><label>Gesamtbetrag</label><input type="number" id="split-total" min="0"></div><div class="field"><label>Anzahl der Personen</label><input type="number" id="split-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>Zusatzkosten (optional)</label><input type="number" id="split-extra" min="0"></div><div class="field"><label>Rabatt (optional)</label><input type="number" id="split-discount" min="0"></div></div>
+    <button onclick="calcSplitBillGlobal()">Berechnen</button>
+    <div class="result" id="split-result"></div>
+  </div>
+  <article class="content">
+    <h2>So funktioniert es</h2><ol><li>Gesamtbetrag der Rechnung eingeben.</li><li>Anzahl der Personen eingeben, die sich die Rechnung teilen.</li><li>Optional Zusatzkosten (z. B. Servicegebühr) oder einen Rabatt eingeben, dann auf "Berechnen" klicken.</li></ol>
+    <h2>Berechnungsmethode</h2><p>Der aufzuteilende Betrag ist die Gesamtrechnung plus eventuelle Zusatzkosten, minus eines eventuellen Rabatts. Dieser angepasste Betrag wird dann gleichmäßig durch die Personenzahl geteilt.</p>
+    <h2>Beispiele</h2><div class="example">Beispiel 1 — Gesamtbetrag 120, aufgeteilt auf 3 Personen ohne Zusatzkosten oder Rabatt: jede Person zahlt 40.</div><div class="example">Beispiel 2 — Gesamtbetrag 200 mit 10 Servicegebühr und 20 Rabatt, aufgeteilt auf 5 Personen: der angepasste Betrag ist 190, also zahlt jede Person 38.</div>
+    <h2>Häufige Fragen</h2><div class="faq-item"><div class="q">Was zählt als "Zusatzkosten"?</div><p class="a">Alles, was zusätzlich zur Rechnung anfällt, etwa eine Liefer- oder Servicegebühr. Leer lassen oder 0 eingeben, wenn es keine gibt.</p></div><div class="faq-item"><div class="q">Kann ich einen Rabatt eingeben, der größer als die Rechnung ist?</div><p class="a">Nein — der angepasste Betrag kann nicht unter 0 fallen, daher wird ein Rabatt, der größer als Rechnung plus Zusatzkosten ist, auf 0 begrenzt.</p></div><div class="faq-item"><div class="q">Werden ungleiche Aufteilungen berücksichtigt, wenn jemand mehr bestellt hat?</div><p class="a">Nein, dieser Rechner teilt immer gleichmäßig auf. Bei unterschiedlichen Beträgen pro Person addieren Sie die Bestellungen jeder Person separat.</p></div>
+    <h2>Weitere Rechner</h2><div class="related"><a href="../../de/age/">Alter</a><a href="../../de/dday/">Countdown</a><a href="../../de/discount/">Rabatt</a><a href="../../de/unit/">Einheiten</a><a href="../../de/bmi/">BMI</a><a href="../../de/percent/">Prozent</a><a href="../../de/percentchange/">Prozentuale Änderung</a><a href="../../de/datediff/">Datumsdifferenz</a><a href="../../de/time/">Zeitrechner</a><a href="../../de/speed/">Geschwindigkeit/Strecke/Zeit</a><a href="../../de/tip/">Trinkgeldrechner</a><a href="../../de/fuel/">Kraftstoffverbrauch</a><a href="../../de/agediff/">Altersunterschied</a></div>
+  </article>
+</div>
+<footer>
+  Diese Website bietet keine Kontoerstellung, Kommentare, Chat oder persönlichen Support — nur kostenlose Rechner, die jeder sofort nutzen kann.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

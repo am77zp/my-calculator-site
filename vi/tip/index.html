@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Máy Tính Tiền Tip - Tính Số Tiền Tip và Phần Mỗi Người Trả</title>
+<meta name="description" content="Nhập số tiền hóa đơn, phần trăm tip và số người để tính ngay số tiền tip, tổng cộng và phần mỗi người phải trả.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/vi/tip/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/tip/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/tip/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/tip/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/tip/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/tip/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/tip/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/tip/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/tip/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/tip/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/tip/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/tip/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/tip/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/tip/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/tip/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/tip/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/tip/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/tip/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/tip/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"tip_alert":"Vui lòng nhập đúng số tiền hóa đơn, phần trăm tip và số người (ít nhất 1 người).","tip_per_tpl":"Mỗi người ({people} người)","tip_tip_tpl":"Số tiền tip: {tip} (tip {percent}%)","tip_total_tpl":"Tổng cộng kèm tip: {total}"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../vi/">Bộ Công Cụ Tính Toán Hằng Ngày</a></h1>
+  <p>Máy tính miễn phí, dùng ngay — không cần đăng ký</p>
+</header>
+<nav class="main-nav"><a href="../../vi/" class="">Trang chủ</a><a href="../../vi/age/" class="">Tuổi</a><a href="../../vi/dday/" class="">Đếm ngược</a><a href="../../vi/discount/" class="">Giảm giá</a><a href="../../vi/unit/" class="">Đổi đơn vị</a><a href="../../vi/bmi/" class="">BMI</a><a href="../../vi/percent/" class="">Phần trăm</a><a href="../../vi/percentchange/" class="">Tỷ Lệ Thay Đổi</a><a href="../../vi/datediff/" class="">Khoảng Cách Ngày</a><a href="../../vi/time/" class="">Máy Tính Thời Gian</a><a href="../../vi/speed/" class="">Tốc Độ/Quãng Đường/Thời Gian</a><a href="../../vi/tip/" class="active">Tính Tiền Tip</a><a href="../../vi/splitbill/" class="">Chia Hóa Đơn</a><a href="../../vi/fuel/" class="">Mức Tiêu Hao Nhiên Liệu</a><a href="../../vi/agediff/" class="">Chênh Lệch Tuổi</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../tip/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/tip/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/tip/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/tip/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/tip/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/tip/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/tip/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/tip/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/tip/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/tip/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/tip/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item current" href="../../vi/tip/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/tip/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/tip/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/tip/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/tip/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/tip/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/tip/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../vi/">Trang chủ</a> &gt; Máy Tính Tiền Tip</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Máy Tính Tiền Tip</h2>
+    <p class="desc">Nhập số tiền hóa đơn, chọn hoặc tự nhập phần trăm tip, rồi nhập số người để tính ngay.</p>
+    <div class="row"><div class="field"><label>Số tiền hóa đơn</label><input type="number" id="tip-bill" min="0"></div><div class="field"><label>Số người</label><input type="number" id="tip-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>Phần trăm tip (%)</label><input type="number" id="tip-percent" min="0" step="0.1"></div></div><div class="row"><div class="field"><label>Chọn nhanh</label><div class="preset-row"><button type="button" class="preset-btn" onclick="tipSetPreset(10)">10%</button><button type="button" class="preset-btn" onclick="tipSetPreset(15)">15%</button><button type="button" class="preset-btn" onclick="tipSetPreset(18)">18%</button><button type="button" class="preset-btn" onclick="tipSetPreset(20)">20%</button></div></div></div>
+    <button onclick="calcTipGlobal()">Tính</button>
+    <div class="result" id="tip-result"></div>
+  </div>
+  <article class="content">
+    <h2>Cách sử dụng</h2><ol><li>Nhập số tiền hóa đơn trước khi tính tip.</li><li>Nhập phần trăm tip hoặc bấm nút chọn nhanh (10%, 15%, 18%, 20%).</li><li>Nhập số người chia hóa đơn rồi bấm "Tính".</li></ol>
+    <h2>Cách tính</h2><p>Số tiền tip bằng hóa đơn nhân với phần trăm tip. Tổng cộng là hóa đơn cộng tiền tip, và phần mỗi người là tổng đó chia đều cho số người.</p>
+    <h2>Ví dụ</h2><div class="example">Ví dụ 1 — Hóa đơn 80, tip 18%, 1 người: tiền tip là 14,4 và tổng cộng là 94,4.</div><div class="example">Ví dụ 2 — Hóa đơn 150, tip 20%, chia cho 4 người: tiền tip là 30, tổng cộng là 180, mỗi người trả 45.</div>
+    <h2>Câu hỏi thường gặp</h2><div class="faq-item"><div class="q">Nếu phần trăm tôi muốn không có trong các nút chọn nhanh thì sao?</div><p class="a">Bạn có thể nhập trực tiếp bất kỳ số nào vào ô phần trăm tip — các nút chỉ là lối tắt cho các mức phổ biến.</p></div><div class="faq-item"><div class="q">Mỗi người gọi món khác nhau thì tiền tip có chia đều không?</div><p class="a">Máy tính này luôn chia đều tổng số tiền cho tất cả mọi người. Nếu muốn tính riêng theo món của từng người, hãy dùng riêng cho mỗi người.</p></div><div class="faq-item"><div class="q">Nếu để số người là 1 thì sao?</div><p class="a">Khi chỉ có 1 người, phần mỗi người sẽ bằng tổng cộng đã gồm tiền tip — hữu ích khi bạn tự thanh toán và muốn biết số tiền cuối cùng.</p></div>
+    <h2>Công cụ khác</h2><div class="related"><a href="../../vi/age/">Tuổi</a><a href="../../vi/dday/">Đếm ngược</a><a href="../../vi/discount/">Giảm giá</a><a href="../../vi/unit/">Đổi đơn vị</a><a href="../../vi/bmi/">BMI</a><a href="../../vi/percent/">Phần trăm</a><a href="../../vi/percentchange/">Tỷ Lệ Thay Đổi</a><a href="../../vi/datediff/">Khoảng Cách Ngày</a><a href="../../vi/time/">Máy Tính Thời Gian</a><a href="../../vi/speed/">Tốc Độ/Quãng Đường/Thời Gian</a><a href="../../vi/splitbill/">Chia Hóa Đơn</a><a href="../../vi/fuel/">Mức Tiêu Hao Nhiên Liệu</a><a href="../../vi/agediff/">Chênh Lệch Tuổi</a></div>
+  </article>
+</div>
+<footer>
+  Trang web này không có đăng ký tài khoản, bình luận, trò chuyện hay hỗ trợ cá nhân — chỉ có các công cụ tính toán miễn phí mà ai cũng có thể dùng ngay.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kraftstoffverbrauchsrechner - km/L, L/100km, US mpg, UK mpg umrechnen</title>
+<meta name="description" content="Wert in km/L, L/100km, US mpg oder UK mpg eingeben und sofort in alle vier Einheiten umgerechnet sehen.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/de/fuel/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/fuel/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/fuel/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/fuel/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/fuel/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/fuel/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/fuel/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/fuel/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/fuel/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/fuel/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/fuel/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/fuel/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/fuel/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/fuel/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/fuel/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/fuel/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/fuel/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/fuel/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/fuel/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/fuel/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/fuel/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"fuel_alert":"Bitte einen Wert größer als 0 eingeben."};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../de/">Alltagsrechner</a></h1>
+  <p>Kostenlose Rechner, sofort nutzbar — keine Anmeldung nötig</p>
+</header>
+<nav class="main-nav"><a href="../../de/" class="">Start</a><a href="../../de/age/" class="">Alter</a><a href="../../de/dday/" class="">Countdown</a><a href="../../de/discount/" class="">Rabatt</a><a href="../../de/unit/" class="">Einheiten</a><a href="../../de/bmi/" class="">BMI</a><a href="../../de/percent/" class="">Prozent</a><a href="../../de/percentchange/" class="">Prozentuale Änderung</a><a href="../../de/datediff/" class="">Datumsdifferenz</a><a href="../../de/time/" class="">Zeitrechner</a><a href="../../de/speed/" class="">Geschwindigkeit/Strecke/Zeit</a><a href="../../de/tip/" class="">Trinkgeldrechner</a><a href="../../de/splitbill/" class="">Rechnung teilen</a><a href="../../de/fuel/" class="active">Kraftstoffverbrauch</a><a href="../../de/agediff/" class="">Altersunterschied</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../fuel/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/fuel/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/fuel/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/fuel/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/fuel/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/fuel/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/fuel/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/fuel/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/fuel/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/fuel/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/fuel/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/fuel/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/fuel/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/fuel/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item current" href="../../de/fuel/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/fuel/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/fuel/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/fuel/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/fuel/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/fuel/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/fuel/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../de/">Start</a> &gt; Kraftstoffverbrauchsrechner</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Kraftstoffverbrauchsrechner</h2>
+    <p class="desc">Einheit Ihres Werts wählen, Wert eingeben und sofort in die anderen drei Einheiten umgerechnet sehen.</p>
+    <div class="row"><div class="field"><label>Eingabeeinheit</label><select id="fuel-unit"><option value="kml">km/L</option><option value="l100km">L/100km</option><option value="mpgus">US mpg</option><option value="mpguk">UK mpg</option></select></div><div class="field"><label>Wert</label><input type="number" id="fuel-value" step="any"></div></div>
+    <button onclick="calcFuelGlobal()">Berechnen</button>
+    <div class="result" id="fuel-result"></div>
+  </div>
+  <article class="content">
+    <h2>So funktioniert es</h2><ol><li>Wählen Sie, in welcher Einheit Ihr Wert aktuell vorliegt (km/L, L/100km, US mpg oder UK mpg).</li><li>Wert eingeben.</li><li>Auf "Berechnen" klicken, um den Wert sofort in alle vier Einheiten umgerechnet zu sehen.</li></ol>
+    <h2>Berechnungsmethode</h2><p>Alle Werte werden über km/L als gemeinsame Basis umgerechnet. L/100km ist der Kehrwert von km/L, multipliziert mit 100. US mpg basiert auf 1 US-Gallone = 3,785411784 Liter und 1 Meile = 1,609344 km, während UK mpg die größere Imperial-Gallone (4,54609 Liter) verwendet, sodass derselbe km/L-Wert einen höheren UK-mpg- als US-mpg-Wert ergibt.</p>
+    <h2>Beispiele</h2><div class="example">Beispiel 1 — 15 km/L entsprechen etwa 6,67 L/100km, 35,28 US mpg und 42,37 UK mpg.</div><div class="example">Beispiel 2 — 8 L/100km (12,5 km/L) entsprechen etwa 29,40 US mpg und 35,31 UK mpg.</div>
+    <h2>Häufige Fragen</h2><div class="faq-item"><div class="q">Warum unterscheiden sich US mpg und UK mpg beim gleichen Auto?</div><p class="a">Eine US-Gallone (3,785 Liter) ist kleiner als eine britische Imperial-Gallone (4,546 Liter), daher ergibt derselbe Kraftstoffverbrauch in Großbritannien eine höhere mpg-Zahl als in den USA.</p></div><div class="faq-item"><div class="q">Warum bedeutet ein niedrigerer L/100km-Wert eine bessere Effizienz?</div><p class="a">L/100km misst, wie viele Liter für eine feste Strecke (100 km) verbraucht werden, daher bedeuten weniger Liter eine höhere Effizienz — anders als bei km/L, US mpg und UK mpg, wo höhere Zahlen eine bessere Effizienz bedeuten.</p></div><div class="faq-item"><div class="q">Welche Einheit sollte ich verwenden?</div><p class="a">Verwenden Sie die Einheit, die in Ihrem Land oder im Handbuch Ihres Autos üblich ist: km/L oder L/100km ist in den meisten Ländern gängig, während mpg in den USA und Großbritannien Standard ist (mit unterschiedlichen Gallonengrößen).</p></div>
+    <h2>Weitere Rechner</h2><div class="related"><a href="../../de/age/">Alter</a><a href="../../de/dday/">Countdown</a><a href="../../de/discount/">Rabatt</a><a href="../../de/unit/">Einheiten</a><a href="../../de/bmi/">BMI</a><a href="../../de/percent/">Prozent</a><a href="../../de/percentchange/">Prozentuale Änderung</a><a href="../../de/datediff/">Datumsdifferenz</a><a href="../../de/time/">Zeitrechner</a><a href="../../de/speed/">Geschwindigkeit/Strecke/Zeit</a><a href="../../de/tip/">Trinkgeldrechner</a><a href="../../de/splitbill/">Rechnung teilen</a><a href="../../de/agediff/">Altersunterschied</a></div>
+  </article>
+</div>
+<footer>
+  Diese Website bietet keine Kontoerstellung, Kommentare, Chat oder persönlichen Support — nur kostenlose Rechner, die jeder sofort nutzen kann.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

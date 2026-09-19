@@ -192,3 +192,15 @@ html[dir="rtl"] .lang-modal-head{ flex-direction:row-reverse; }
 html[dir="rtl"] .lang-modal-dontshow{ flex-direction:row-reverse; }
 html[dir="rtl"] .lang-fab{ flex-direction:row-reverse; }
 html[dir="rtl"] article.content ul, html[dir="rtl"] article.content ol{ padding-right:20px; padding-left:0; }
+
+/* ============ 신규 계산기(팁/더치페이/연비/나이차이) 전용 추가 스타일 ============ */
+/* 기존 button{} 규칙은 폭 100%의 메인 "계산하기" 버튼 전용이라, 팁 계산기의
+   빠른 선택(10/15/18/20%) 버튼은 별도 클래스로 작게 표시한다. */
+.preset-row{ display:flex; gap:8px; flex-wrap:wrap; }
+.preset-btn{
+  width:auto; flex:0 0 auto; margin:0; padding:8px 14px; font-size:13px; font-weight:600;
+  border-radius:999px; background:var(--accent); color:var(--primary); border:1px solid var(--border);
+  cursor:pointer;
+}
+.preset-btn:hover{ background:var(--primary); color:#fff; }
+html[dir="rtl"] .preset-row{ direction:rtl; }

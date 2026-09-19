@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Tip - Hitung Jumlah Tip dan Bagian per Orang</title>
+<meta name="description" content="Masukkan jumlah tagihan, persentase tip, dan jumlah orang untuk langsung menghitung jumlah tip, total dengan tip, dan bagian tiap orang.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/id/tip/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/tip/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/tip/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/tip/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/tip/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/tip/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/tip/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/tip/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/tip/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/tip/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/tip/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/tip/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/tip/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/tip/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/tip/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/tip/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/tip/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/tip/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/tip/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"tip_alert":"Masukkan jumlah tagihan, persentase tip, dan jumlah orang dengan benar (minimal 1 orang).","tip_per_tpl":"Per orang ({people} orang)","tip_tip_tpl":"Jumlah tip: {tip} (tip {percent}%)","tip_total_tpl":"Total dengan tip: {total}"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../id/">Kalkulator Serbaguna Sehari-hari</a></h1>
+  <p>Kalkulator gratis, langsung pakai — tanpa perlu daftar</p>
+</header>
+<nav class="main-nav"><a href="../../id/" class="">Beranda</a><a href="../../id/age/" class="">Usia</a><a href="../../id/dday/" class="">Hitung Mundur</a><a href="../../id/discount/" class="">Diskon</a><a href="../../id/unit/" class="">Satuan</a><a href="../../id/bmi/" class="">BMI</a><a href="../../id/percent/" class="">Persen</a><a href="../../id/percentchange/" class="">Persentase Perubahan</a><a href="../../id/datediff/" class="">Selisih Tanggal</a><a href="../../id/time/" class="">Kalkulator Waktu</a><a href="../../id/speed/" class="">Kecepatan/Jarak/Waktu</a><a href="../../id/tip/" class="active">Kalkulator Tip</a><a href="../../id/splitbill/" class="">Kalkulator Patungan</a><a href="../../id/fuel/" class="">Efisiensi Bahan Bakar</a><a href="../../id/agediff/" class="">Selisih Usia</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../tip/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/tip/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/tip/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item current" href="../../id/tip/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/tip/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/tip/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/tip/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/tip/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/tip/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/tip/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/tip/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/tip/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/tip/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/tip/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/tip/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/tip/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/tip/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/tip/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../id/">Beranda</a> &gt; Kalkulator Tip</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Kalkulator Tip</h2>
+    <p class="desc">Masukkan jumlah tagihan, pilih atau ketik persentase tip, lalu masukkan jumlah orang untuk menghitung langsung.</p>
+    <div class="row"><div class="field"><label>Jumlah tagihan</label><input type="number" id="tip-bill" min="0"></div><div class="field"><label>Jumlah orang</label><input type="number" id="tip-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>Persentase tip (%)</label><input type="number" id="tip-percent" min="0" step="0.1"></div></div><div class="row"><div class="field"><label>Pilihan cepat</label><div class="preset-row"><button type="button" class="preset-btn" onclick="tipSetPreset(10)">10%</button><button type="button" class="preset-btn" onclick="tipSetPreset(15)">15%</button><button type="button" class="preset-btn" onclick="tipSetPreset(18)">18%</button><button type="button" class="preset-btn" onclick="tipSetPreset(20)">20%</button></div></div></div>
+    <button onclick="calcTipGlobal()">Hitung</button>
+    <div class="result" id="tip-result"></div>
+  </div>
+  <article class="content">
+    <h2>Cara pakai</h2><ol><li>Masukkan jumlah tagihan sebelum tip.</li><li>Masukkan persentase tip, atau tekan tombol persentase umum (10%, 15%, 18%, 20%).</li><li>Masukkan jumlah orang yang berbagi tagihan, lalu klik "Hitung".</li></ol>
+    <h2>Cara kerjanya</h2><p>Jumlah tip adalah tagihan dikalikan persentase tip. Totalnya adalah tagihan ditambah tip, dan bagian per orang membagi total itu secara merata sesuai jumlah orang.</p>
+    <h2>Contoh</h2><div class="example">Contoh 1 — Tagihan 80, tip 18%, 1 orang: tip-nya 14,4 dan totalnya 94,4.</div><div class="example">Contoh 2 — Tagihan 150, tip 20%, dibagi 4 orang: tip-nya 30, totalnya 180, dan tiap orang membayar 45.</div>
+    <h2>Pertanyaan umum</h2><div class="faq-item"><div class="q">Bagaimana jika persentase yang saya mau tidak ada di tombol cepat?</div><p class="a">Anda bisa mengetik angka berapa pun langsung di kolom persentase tip — tombol cepat hanya jalan pintas untuk angka yang umum dipakai.</p></div><div class="faq-item"><div class="q">Apakah tip tetap dibagi rata walau porsi makanan tiap orang beda?</div><p class="a">Kalkulator ini membagi total secara merata ke semua orang. Untuk pembagian per item pesanan masing-masing, hitung terpisah untuk tiap orang.</p></div><div class="faq-item"><div class="q">Bagaimana jika jumlah orang diisi 1?</div><p class="a">Dengan 1 orang, jumlah per orang sama dengan total tagihan plus tip — berguna saat Anda membayar sendiri dan ingin tahu jumlah akhirnya.</p></div>
+    <h2>Kalkulator lainnya</h2><div class="related"><a href="../../id/age/">Usia</a><a href="../../id/dday/">Hitung Mundur</a><a href="../../id/discount/">Diskon</a><a href="../../id/unit/">Satuan</a><a href="../../id/bmi/">BMI</a><a href="../../id/percent/">Persen</a><a href="../../id/percentchange/">Persentase Perubahan</a><a href="../../id/datediff/">Selisih Tanggal</a><a href="../../id/time/">Kalkulator Waktu</a><a href="../../id/speed/">Kecepatan/Jarak/Waktu</a><a href="../../id/splitbill/">Kalkulator Patungan</a><a href="../../id/fuel/">Efisiensi Bahan Bakar</a><a href="../../id/agediff/">Selisih Usia</a></div>
+  </article>
+</div>
+<footer>
+  Situs ini tidak memiliki pendaftaran akun, kolom komentar, chat, atau dukungan pribadi — hanya kalkulator gratis yang bisa langsung digunakan siapa saja.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

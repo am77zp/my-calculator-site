@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>आयु अंतर कैलकुलेटर - दो लोगों की सटीक उम्र का अंतर साल/महीने/दिन में जानें</title>
+<meta name="description" content="दो लोगों की जन्मतिथि डालें और केवल जन्म वर्ष घटाने के बजाय वास्तविक तारीखों के आधार पर सटीक उम्र का अंतर साल, महीने और दिन में जानें।">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/hi/agediff/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/agediff/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/agediff/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/agediff/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/agediff/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/agediff/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/agediff/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/agediff/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/agediff/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/agediff/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/agediff/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/agediff/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/agediff/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/agediff/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/agediff/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/agediff/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/agediff/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/agediff/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/agediff/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/agediff/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/agediff/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"agediff_alert":"कृपया दोनों व्यक्तियों की जन्मतिथि डालें।","agediff_alert_future":"जन्मतिथि आज से आगे की नहीं हो सकती।","agediff_diff_tpl":"{y} साल {m} महीने {d} दिन का अंतर","agediff_a_older_tpl":"व्यक्ति A बड़ा है।","agediff_b_older_tpl":"व्यक्ति B बड़ा है।","agediff_same_tpl":"दोनों की जन्मतिथि एक जैसी है (कोई उम्र अंतर नहीं)।","agediff_total_days_tpl":"कुल {days} दिन का अंतर"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../hi/">ऑल-इन-वन डेली कैलकुलेटर</a></h1>
+  <p>बिना साइन-अप के तुरंत इस्तेमाल करें — मुफ्त कैलकुलेटर</p>
+</header>
+<nav class="main-nav"><a href="../../hi/" class="">होम</a><a href="../../hi/age/" class="">उम्र</a><a href="../../hi/dday/" class="">डी-डे</a><a href="../../hi/discount/" class="">छूट</a><a href="../../hi/unit/" class="">यूनिट</a><a href="../../hi/bmi/" class="">BMI</a><a href="../../hi/percent/" class="">प्रतिशत</a><a href="../../hi/percentchange/" class="">प्रतिशत परिवर्तन</a><a href="../../hi/datediff/" class="">दिनांक अंतर</a><a href="../../hi/time/" class="">समय कैलकुलेटर</a><a href="../../hi/speed/" class="">गति·दूरी·समय</a><a href="../../hi/tip/" class="">टिप कैलकुलेटर</a><a href="../../hi/splitbill/" class="">बिल बांटें</a><a href="../../hi/fuel/" class="">ईंधन दक्षता कनवर्टर</a><a href="../../hi/agediff/" class="active">आयु अंतर</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../agediff/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/agediff/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item current" href="../../hi/agediff/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/agediff/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/agediff/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/agediff/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/agediff/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/agediff/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/agediff/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/agediff/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/agediff/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/agediff/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/agediff/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/agediff/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/agediff/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/agediff/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/agediff/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/agediff/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/agediff/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/agediff/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/agediff/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../hi/">होम</a> &gt; आयु अंतर कैलकुलेटर</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>आयु अंतर कैलकुलेटर</h2>
+    <p class="desc">दोनों लोगों की जन्मतिथि डालें और जानें कौन कितना बड़ा है।</p>
+    <div class="row"><div class="field"><label>व्यक्ति A की जन्मतिथि</label><input type="date" id="ad-a"></div><div class="field"><label>व्यक्ति B की जन्मतिथि</label><input type="date" id="ad-b"></div></div>
+    <button onclick="calcAgeDiffGlobal()">गणना करें</button>
+    <div class="result" id="ad-result"></div>
+  </div>
+  <article class="content">
+    <h2>इस्तेमाल कैसे करें</h2><ol><li>व्यक्ति A की जन्मतिथि डालें।</li><li>व्यक्ति B की जन्मतिथि डालें।</li><li>"गणना करें" दबाते ही सटीक उम्र का अंतर साल/महीने/दिन में दिखेगा।</li></ol>
+    <h2>यह कैसे काम करता है</h2><p>पहले यह पता लगाया जाता है कि दोनों में से किसकी जन्मतिथि पहले है, फिर साल, महीना और दिन अलग-अलग घटाए जाते हैं। दिन कम पड़ने पर पिछले महीने से और महीना कम पड़ने पर पिछले साल से उधार लिया जाता है, इसलिए यह सिर्फ जन्म वर्ष घटाने से ज़्यादा सटीक है।</p>
+    <h2>उदाहरण</h2><div class="example">उदाहरण 1 — व्यक्ति A का जन्म 15 मार्च 1990, व्यक्ति B का जन्म 2 नवंबर 1993: व्यक्ति A, व्यक्ति B से 3 साल 7 महीने 18 दिन बड़ा है।</div><div class="example">उदाहरण 2 — व्यक्ति A का जन्म 1 जून 2010, व्यक्ति B का जन्म 20 जनवरी 2010: व्यक्ति B, व्यक्ति A से 4 महीने 12 दिन बड़ा है।</div>
+    <h2>अक्सर पूछे जाने वाले सवाल</h2><div class="faq-item"><div class="q">सिर्फ जन्म वर्ष घटाना गलत क्यों है?</div><p class="a">जन्मदिन गुज़र चुका है या नहीं, इसके आधार पर सिर्फ वर्षों का अंतर 1 साल तक गलत हो सकता है। यह कैलकुलेटर वास्तविक तारीखों के आधार पर सटीक गणना करता है।</p></div><div class="faq-item"><div class="q">भविष्य की तारीख डालने पर क्या होगा?</div><p class="a">जन्मतिथि आज से आगे की नहीं हो सकती, इसलिए भविष्य की तारीख डालने पर दोबारा सही तारीख डालने के लिए कहा जाएगा।</p></div><div class="faq-item"><div class="q">अगर दोनों की जन्मतिथि एक जैसी हो तो?</div><p class="a">परिणाम में दिखेगा कि दोनों की उम्र में कोई अंतर नहीं है।</p></div>
+    <h2>अन्य कैलकुलेटर</h2><div class="related"><a href="../../hi/age/">उम्र</a><a href="../../hi/dday/">डी-डे</a><a href="../../hi/discount/">छूट</a><a href="../../hi/unit/">यूनिट</a><a href="../../hi/bmi/">BMI</a><a href="../../hi/percent/">प्रतिशत</a><a href="../../hi/percentchange/">प्रतिशत परिवर्तन</a><a href="../../hi/datediff/">दिनांक अंतर</a><a href="../../hi/time/">समय कैलकुलेटर</a><a href="../../hi/speed/">गति·दूरी·समय</a><a href="../../hi/tip/">टिप कैलकुलेटर</a><a href="../../hi/splitbill/">बिल बांटें</a><a href="../../hi/fuel/">ईंधन दक्षता कनवर्टर</a></div>
+  </article>
+</div>
+<footer>
+  इस वेबसाइट पर कोई अकाउंट साइन-अप, कमेंट, चैट या पर्सनल सपोर्ट नहीं है — बस मुफ्त कैलकुलेटर जिन्हें कोई भी तुरंत इस्तेमाल कर सकता है।
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Калькулятор чаевых - расчёт суммы чаевых и доли на человека</title>
+<meta name="description" content="Введите сумму счёта, процент чаевых и количество человек, чтобы сразу узнать сумму чаевых, итог со счётом и долю на каждого.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/ru/tip/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/tip/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/tip/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/tip/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/tip/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/tip/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/tip/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/tip/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/tip/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/tip/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/tip/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/tip/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/tip/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/tip/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/tip/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/tip/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/tip/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/tip/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/tip/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"tip_alert":"Пожалуйста, корректно введите сумму счёта, процент чаевых и количество человек (не менее 1).","tip_per_tpl":"На человека ({people} чел.)","tip_tip_tpl":"Сумма чаевых: {tip} (чаевые {percent}%)","tip_total_tpl":"Итог со чаевыми: {total}"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../ru/">Универсальные Бытовые Калькуляторы</a></h1>
+  <p>Бесплатные калькуляторы — без регистрации, сразу готовы к использованию</p>
+</header>
+<nav class="main-nav"><a href="../../ru/" class="">Главная</a><a href="../../ru/age/" class="">Возраст</a><a href="../../ru/dday/" class="">Обратный отсчёт</a><a href="../../ru/discount/" class="">Скидка</a><a href="../../ru/unit/" class="">Единицы</a><a href="../../ru/bmi/" class="">ИМТ</a><a href="../../ru/percent/" class="">Проценты</a><a href="../../ru/percentchange/" class="">Изменение %</a><a href="../../ru/datediff/" class="">Разница дат</a><a href="../../ru/time/" class="">Калькулятор времени</a><a href="../../ru/speed/" class="">Скорость/Расстояние/Время</a><a href="../../ru/tip/" class="active">Чаевые</a><a href="../../ru/splitbill/" class="">Разделить счёт</a><a href="../../ru/fuel/" class="">Расход топлива</a><a href="../../ru/agediff/" class="">Разница в возрасте</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../tip/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/tip/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/tip/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/tip/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/tip/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item current" href="../../ru/tip/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/tip/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/tip/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/tip/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/tip/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/tip/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/tip/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/tip/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/tip/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/tip/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/tip/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/tip/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/tip/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../ru/">Главная</a> &gt; Калькулятор чаевых</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Калькулятор чаевых</h2>
+    <p class="desc">Введите сумму счёта, выберите или введите процент чаевых и укажите количество человек для мгновенного расчёта.</p>
+    <div class="row"><div class="field"><label>Сумма счёта</label><input type="number" id="tip-bill" min="0"></div><div class="field"><label>Количество человек</label><input type="number" id="tip-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>Процент чаевых (%)</label><input type="number" id="tip-percent" min="0" step="0.1"></div></div><div class="row"><div class="field"><label>Быстрый выбор</label><div class="preset-row"><button type="button" class="preset-btn" onclick="tipSetPreset(10)">10%</button><button type="button" class="preset-btn" onclick="tipSetPreset(15)">15%</button><button type="button" class="preset-btn" onclick="tipSetPreset(18)">18%</button><button type="button" class="preset-btn" onclick="tipSetPreset(20)">20%</button></div></div></div>
+    <button onclick="calcTipGlobal()">Рассчитать</button>
+    <div class="result" id="tip-result"></div>
+  </div>
+  <article class="content">
+    <h2>Как пользоваться</h2><ol><li>Введите сумму счёта без чаевых.</li><li>Введите процент чаевых или нажмите одну из кнопок (10%, 15%, 18%, 20%).</li><li>Введите количество человек, которые делят счёт, и нажмите «Рассчитать».</li></ol>
+    <h2>Как это работает</h2><p>Сумма чаевых — это счёт, умноженный на процент чаевых. Итог — это счёт плюс чаевые, а доля на человека — это итог, поделённый поровну на всех.</p>
+    <h2>Примеры</h2><div class="example">Пример 1 — счёт 80, чаевые 18%, 1 человек: чаевые составят 14,4, итог — 94,4.</div><div class="example">Пример 2 — счёт 150, чаевые 20%, делят 4 человека: чаевые 30, итог 180, с каждого по 45.</div>
+    <h2>Частые вопросы</h2><div class="faq-item"><div class="q">Что делать, если нужного процента нет среди кнопок?</div><p class="a">Можно ввести любое число прямо в поле процента чаевых — кнопки лишь быстро подставляют часто используемые значения.</p></div><div class="faq-item"><div class="q">Чаевые делятся поровну, даже если люди заказали по-разному?</div><p class="a">Этот калькулятор всегда делит итоговую сумму поровну между всеми. Для раздельного расчёта по каждому заказу используйте калькулятор отдельно для каждого человека.</p></div><div class="faq-item"><div class="q">Что если оставить количество человек равным 1?</div><p class="a">При 1 человеке доля на человека равна итоговой сумме со чаевыми — удобно, если вы платите один и хотите узнать итоговую сумму.</p></div>
+    <h2>Другие калькуляторы</h2><div class="related"><a href="../../ru/age/">Возраст</a><a href="../../ru/dday/">Обратный отсчёт</a><a href="../../ru/discount/">Скидка</a><a href="../../ru/unit/">Единицы</a><a href="../../ru/bmi/">ИМТ</a><a href="../../ru/percent/">Проценты</a><a href="../../ru/percentchange/">Изменение %</a><a href="../../ru/datediff/">Разница дат</a><a href="../../ru/time/">Калькулятор времени</a><a href="../../ru/speed/">Скорость/Расстояние/Время</a><a href="../../ru/splitbill/">Разделить счёт</a><a href="../../ru/fuel/">Расход топлива</a><a href="../../ru/agediff/">Разница в возрасте</a></div>
+  </article>
+</div>
+<footer>
+  На этом сайте нет регистрации, комментариев, чата или персональной поддержки — только бесплатные калькуляторы, которыми может сразу воспользоваться любой.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

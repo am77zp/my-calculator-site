@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>割り勘計算機 - 合計金額を人数で均等に分ける</title>
+<meta name="description" content="合計金額と人数を入力すると、1人あたりの支払額がすぐに分かります。追加費用や割引がある場合は任意で入力できます。">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/ja/splitbill/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/splitbill/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/splitbill/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/splitbill/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/splitbill/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/splitbill/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/splitbill/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/splitbill/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/splitbill/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/splitbill/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/splitbill/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/splitbill/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/splitbill/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/splitbill/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/splitbill/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/splitbill/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/splitbill/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/splitbill/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/splitbill/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"splitbill_alert":"合計金額と人数を正しく入力してください(人数は1人以上、追加費用と割引は0以上)。","splitbill_per_tpl":"1人あたり({people}人で計算)","splitbill_total_tpl":"分割する金額: {adjusted}","splitbill_detail_tpl":"(合計{total} + 追加費用{extra} − 割引{discount})"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../ja/">オールインワン生活計算機</a></h1>
+  <p>登録不要ですぐ使える無料の計算ツール</p>
+</header>
+<nav class="main-nav"><a href="../../ja/" class="">ホーム</a><a href="../../ja/age/" class="">年齢</a><a href="../../ja/dday/" class="">D-Day</a><a href="../../ja/discount/" class="">割引</a><a href="../../ja/unit/" class="">単位変換</a><a href="../../ja/bmi/" class="">BMI</a><a href="../../ja/percent/" class="">パーセント</a><a href="../../ja/percentchange/" class="">増減率</a><a href="../../ja/datediff/" class="">日付差</a><a href="../../ja/time/" class="">時間計算</a><a href="../../ja/speed/" class="">速度・距離・時間</a><a href="../../ja/tip/" class="">チップ計算機</a><a href="../../ja/splitbill/" class="active">割り勘計算機</a><a href="../../ja/fuel/" class="">燃費変換機</a><a href="../../ja/agediff/" class="">年齢差</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../splitbill/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/splitbill/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/splitbill/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/splitbill/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/splitbill/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/splitbill/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/splitbill/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/splitbill/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item current" href="../../ja/splitbill/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/splitbill/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/splitbill/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/splitbill/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/splitbill/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/splitbill/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/splitbill/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/splitbill/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/splitbill/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/splitbill/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../ja/">ホーム</a> &gt; 割り勘計算機</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>割り勘計算機</h2>
+    <p class="desc">合計金額と人数を入力してください。追加費用や割引の入力は任意です。</p>
+    <div class="row"><div class="field"><label>合計金額</label><input type="number" id="split-total" min="0"></div><div class="field"><label>人数</label><input type="number" id="split-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>追加費用(任意)</label><input type="number" id="split-extra" min="0"></div><div class="field"><label>割引額(任意)</label><input type="number" id="split-discount" min="0"></div></div>
+    <button onclick="calcSplitBillGlobal()">計算する</button>
+    <div class="result" id="split-result"></div>
+  </div>
+  <article class="content">
+    <h2>使い方</h2><ol><li>支払う合計金額を入力します。</li><li>割り勘する人数を入力します。</li><li>サービス料などの追加費用や割引があれば任意で入力し、「計算する」を押します。</li></ol>
+    <h2>計算方法</h2><p>分割する金額は、合計金額に追加費用を足し、割引を引いた金額です。この調整後の金額を人数で均等に割ったものが1人あたりの金額です。</p>
+    <h2>計算例</h2><div class="example">例1 — 合計120、3人、追加費用・割引なしの場合: 1人あたり40です。</div><div class="example">例2 — 合計200にサービス料10が加わり割引20がある場合、5人で割ると: 調整後の金額は190、1人あたり38です。</div>
+    <h2>よくある質問</h2><div class="faq-item"><div class="q">「追加費用」には何を入力すればいいですか?</div><p class="a">配送料やサービス料など、元の金額に上乗せされる費用を入力します。なければ空欄または0のままで構いません。</p></div><div class="faq-item"><div class="q">割引が合計金額より大きい場合はどうなりますか?</div><p class="a">調整後の金額は0未満にはならないため、割引が合計金額と追加費用の合計を超える場合は0として計算されます。</p></div><div class="faq-item"><div class="q">1人だけ多く注文した場合も均等に分けますか?</div><p class="a">この計算機は常に人数で均等に分けます。人によって金額が違う場合は、各自の注文分を別々に合計してください。</p></div>
+    <h2>ほかの計算機</h2><div class="related"><a href="../../ja/age/">年齢</a><a href="../../ja/dday/">D-Day</a><a href="../../ja/discount/">割引</a><a href="../../ja/unit/">単位変換</a><a href="../../ja/bmi/">BMI</a><a href="../../ja/percent/">パーセント</a><a href="../../ja/percentchange/">増減率</a><a href="../../ja/datediff/">日付差</a><a href="../../ja/time/">時間計算</a><a href="../../ja/speed/">速度・距離・時間</a><a href="../../ja/tip/">チップ計算機</a><a href="../../ja/fuel/">燃費変換機</a><a href="../../ja/agediff/">年齢差</a></div>
+  </article>
+</div>
+<footer>
+  このサイトは会員登録・コメント・チャット・個別お問い合わせを行っていません。誰でもすぐに使える無料の計算ツール集です。
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

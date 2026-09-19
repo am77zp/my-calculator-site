@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Altersunterschied-Rechner - Exakte Jahre, Monate und Tage zwischen zwei Geburtsdaten</title>
+<meta name="description" content="Zwei Geburtsdaten eingeben, um den exakten Altersunterschied in Jahren, Monaten und Tagen zu berechnen — nicht nur eine einfache Subtraktion der Geburtsjahre.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/de/agediff/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/agediff/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/agediff/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/agediff/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/agediff/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/agediff/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/agediff/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/agediff/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/agediff/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/agediff/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/agediff/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/agediff/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/agediff/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/agediff/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/agediff/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/agediff/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/agediff/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/agediff/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/agediff/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/agediff/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/agediff/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"agediff_alert":"Bitte beide Geburtsdaten eingeben.","agediff_alert_future":"Ein Geburtsdatum kann nicht später als heute liegen.","agediff_diff_tpl":"{y} Jahr(e) {m} Monat(e) {d} Tag(e) Unterschied","agediff_a_older_tpl":"Person A ist älter.","agediff_b_older_tpl":"Person B ist älter.","agediff_same_tpl":"Beide Personen haben dasselbe Geburtsdatum — kein Altersunterschied.","agediff_total_days_tpl":"{days} Tag(e) insgesamt"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../de/">Alltagsrechner</a></h1>
+  <p>Kostenlose Rechner, sofort nutzbar — keine Anmeldung nötig</p>
+</header>
+<nav class="main-nav"><a href="../../de/" class="">Start</a><a href="../../de/age/" class="">Alter</a><a href="../../de/dday/" class="">Countdown</a><a href="../../de/discount/" class="">Rabatt</a><a href="../../de/unit/" class="">Einheiten</a><a href="../../de/bmi/" class="">BMI</a><a href="../../de/percent/" class="">Prozent</a><a href="../../de/percentchange/" class="">Prozentuale Änderung</a><a href="../../de/datediff/" class="">Datumsdifferenz</a><a href="../../de/time/" class="">Zeitrechner</a><a href="../../de/speed/" class="">Geschwindigkeit/Strecke/Zeit</a><a href="../../de/tip/" class="">Trinkgeldrechner</a><a href="../../de/splitbill/" class="">Rechnung teilen</a><a href="../../de/fuel/" class="">Kraftstoffverbrauch</a><a href="../../de/agediff/" class="active">Altersunterschied</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../agediff/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/agediff/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/agediff/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/agediff/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/agediff/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/agediff/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/agediff/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/agediff/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/agediff/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/agediff/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/agediff/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/agediff/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/agediff/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/agediff/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item current" href="../../de/agediff/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/agediff/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/agediff/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/agediff/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/agediff/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/agediff/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/agediff/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../de/">Start</a> &gt; Altersunterschied-Rechner</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Altersunterschied-Rechner</h2>
+    <p class="desc">Beide Geburtsdaten eingeben, um genau zu berechnen, wie viel älter eine Person als die andere ist.</p>
+    <div class="row"><div class="field"><label>Geburtsdatum von Person A</label><input type="date" id="ad-a"></div><div class="field"><label>Geburtsdatum von Person B</label><input type="date" id="ad-b"></div></div>
+    <button onclick="calcAgeDiffGlobal()">Berechnen</button>
+    <div class="result" id="ad-result"></div>
+  </div>
+  <article class="content">
+    <h2>So funktioniert es</h2><ol><li>Geburtsdatum von Person A eingeben.</li><li>Geburtsdatum von Person B eingeben.</li><li>Auf "Berechnen" klicken, um den exakten Unterschied in Jahren, Monaten und Tagen zu sehen.</li></ol>
+    <h2>Berechnungsmethode</h2><p>Der Rechner ermittelt, welches Geburtsdatum früher liegt, und subtrahiert dann Jahr, Monat und Tag separat — er leiht sich einen Monat, wenn der Tag zu knapp ist, und ein Jahr, wenn der Monat zu knapp ist — sodass das Ergebnis der echte Kalenderunterschied ist, nicht nur eine Subtraktion der Geburtsjahre.</p>
+    <h2>Beispiele</h2><div class="example">Beispiel 1 — Person A geboren am 15.03.1990, Person B geboren am 02.11.1993: Person A ist 3 Jahre, 7 Monate und 18 Tage älter.</div><div class="example">Beispiel 2 — Person A geboren am 01.06.2010, Person B geboren am 20.01.2010: Person B ist 4 Monate und 12 Tage älter.</div>
+    <h2>Häufige Fragen</h2><div class="faq-item"><div class="q">Warum ist das nicht einfach die Differenz der Geburtsjahre?</div><p class="a">Nur die Geburtsjahre zu subtrahieren kann um bis zu ein Jahr abweichen, je nachdem, ob der Geburtstag jeder Person dieses Jahr schon war. Dieser Rechner verwendet die tatsächlichen Kalenderdaten für ein exaktes Ergebnis.</p></div><div class="faq-item"><div class="q">Was passiert, wenn ich ein zukünftiges Geburtsdatum eingebe?</div><p class="a">Der Rechner zeigt eine Meldung an und bittet Sie, ein Geburtsdatum einzugeben, das nicht später als heute liegt, da ein Geburtsdatum nicht in der Zukunft liegen kann.</p></div><div class="faq-item"><div class="q">Was, wenn beide Personen dasselbe Geburtsdatum haben?</div><p class="a">Der Rechner zeigt an, dass zwischen den beiden Personen kein Altersunterschied besteht.</p></div>
+    <h2>Weitere Rechner</h2><div class="related"><a href="../../de/age/">Alter</a><a href="../../de/dday/">Countdown</a><a href="../../de/discount/">Rabatt</a><a href="../../de/unit/">Einheiten</a><a href="../../de/bmi/">BMI</a><a href="../../de/percent/">Prozent</a><a href="../../de/percentchange/">Prozentuale Änderung</a><a href="../../de/datediff/">Datumsdifferenz</a><a href="../../de/time/">Zeitrechner</a><a href="../../de/speed/">Geschwindigkeit/Strecke/Zeit</a><a href="../../de/tip/">Trinkgeldrechner</a><a href="../../de/splitbill/">Rechnung teilen</a><a href="../../de/fuel/">Kraftstoffverbrauch</a></div>
+  </article>
+</div>
+<footer>
+  Diese Website bietet keine Kontoerstellung, Kommentare, Chat oder persönlichen Support — nur kostenlose Rechner, die jeder sofort nutzen kann.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

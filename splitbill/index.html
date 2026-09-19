@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>더치페이 계산기 - 영수증 1/N 나누기, 1인당 금액 계산</title>
+<meta name="description" content="총 금액과 인원 수를 입력하면 1인당 부담 금액을 바로 계산합니다. 추가 비용이나 할인이 있다면 선택적으로 반영할 수 있습니다.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/splitbill/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/splitbill/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/splitbill/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/splitbill/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/splitbill/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/splitbill/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/splitbill/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/splitbill/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/splitbill/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/splitbill/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/splitbill/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/splitbill/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/splitbill/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/splitbill/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/splitbill/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/splitbill/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/splitbill/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/splitbill/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/splitbill/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="stylesheet" href="../assets/style.css?v=20260919-3">
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../">올인원 생활계산기</a></h1>
+  <p>가입 없이 바로 사용하는 무료 생활 계산기</p>
+</header>
+<nav class="main-nav"><a href="../" class="">홈</a><a href="../age/" class="">만 나이</a><a href="../dday/" class="">D-Day</a><a href="../discount/" class="">할인율</a><a href="../unit/" class="">단위변환</a><a href="../bmi/" class="">BMI</a><a href="../percent/" class="">퍼센트</a><a href="../percentchange/" class="">증감율</a><a href="../datediff/" class="">날짜 차이</a><a href="../time/" class="">시간 계산</a><a href="../speed/" class="">속도·거리·시간</a><a href="../tip/" class="">팁 계산기</a><a href="../splitbill/" class="active">더치페이</a><a href="../fuel/" class="">연비 변환</a><a href="../agediff/" class="">나이 차이</a><a href="../about/" class="">소개</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item current" href="../splitbill/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../zh-cn/splitbill/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../hi/splitbill/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../en/splitbill/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../id/splitbill/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../pt-br/splitbill/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../ru/splitbill/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../ur/splitbill/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../es/splitbill/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../ja/splitbill/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../en/splitbill/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../tl/splitbill/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../ar/splitbill/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../vi/splitbill/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../de/splitbill/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../bn/splitbill/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../tr/splitbill/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../fa/splitbill/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../en/splitbill/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../th/splitbill/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../fr/splitbill/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../">홈</a> &gt; 더치페이 계산기</div><div class="container">
+  <div class="ad-slot">광고 영역 (AdSense 승인 후 삽입 예정)</div>
+  <div class="card">
+    <h2>더치페이 계산기</h2>
+    <p class="desc">총 금액과 인원 수를 입력하세요. 추가 비용이나 할인은 선택 항목입니다.</p>
+    <div class="row"><div class="field"><label>총 금액</label><input type="number" id="split-total" min="0"></div><div class="field"><label>인원 수</label><input type="number" id="split-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>추가 비용 (선택)</label><input type="number" id="split-extra" min="0"></div><div class="field"><label>할인 금액 (선택)</label><input type="number" id="split-discount" min="0"></div></div>
+    <button onclick="calcSplitBill()">계산하기</button>
+    <div class="result" id="split-result"></div>
+  </div>
+  <article class="content">
+    <h2>사용법</h2><ol><li>결제할 총 금액을 입력합니다.</li><li>함께 나눌 인원 수를 입력합니다.</li><li>봉사료 같은 추가 비용이나 할인이 있다면 선택적으로 입력하고 "계산하기"를 누릅니다.</li></ol>
+    <h2>계산 방식</h2><p>나눌 금액은 총 금액에 추가 비용을 더하고 할인을 뺀 값입니다. 이 조정된 금액을 인원 수로 똑같이 나누어 1인당 금액을 구합니다.</p>
+    <h2>예시</h2><div class="example">예시 1 — 총 금액 120,000원, 3명, 추가 비용·할인 없음: 1인당 40,000원입니다.</div><div class="example">예시 2 — 총 금액 200,000원에 봉사료 10,000원 추가, 할인 20,000원, 5명이 나눌 때: 정산 금액은 190,000원, 1인당 38,000원입니다.</div>
+    <h2>자주 묻는 질문 (FAQ)</h2><div class="faq-item"><div class="q">"추가 비용"에는 무엇을 넣나요?</div><p class="a">배달비 또는 봉사료처럼 원래 금액 위에 더 붙는 비용을 넣으면 됩니다. 없다면 비워두거나 0으로 두세요.</p></div><div class="faq-item"><div class="q">할인 금액이 총 금액보다 크면 어떻게 되나요?</div><p class="a">정산 금액은 0보다 작아질 수 없으므로, 할인이 총 금액과 추가 비용의 합보다 크더라도 정산 금액은 0으로 처리됩니다.</p></div><div class="faq-item"><div class="q">한 명이 더 많이 주문했을 때도 똑같이 나누나요?</div><p class="a">이 계산기는 항상 인원 수로 균등하게 나눕니다. 사람마다 주문한 금액이 다르다면 각자 주문한 금액을 따로 더해서 계산하세요.</p></div>
+    <h2>다른 계산기</h2><div class="related"><a href="../age/">만 나이</a><a href="../dday/">D-Day</a><a href="../discount/">할인율</a><a href="../unit/">단위변환</a><a href="../bmi/">BMI</a><a href="../percent/">퍼센트</a><a href="../percentchange/">증감율</a><a href="../datediff/">날짜 차이</a><a href="../time/">시간 계산</a><a href="../speed/">속도·거리·시간</a><a href="../tip/">팁 계산기</a><a href="../fuel/">연비 변환</a><a href="../agediff/">나이 차이</a></div>
+  </article>
+</div>
+<footer>
+  이 사이트는 회원가입, 댓글, 채팅, 1:1 문의 없이 누구나 바로 사용할 수 있는 무료 생활 계산기 모음입니다.<br>
+  <a href="../about/">소개</a> · <a href="../privacy/">개인정보처리방침</a>
+</footer>
+<script src="../assets/calculators.js?v=20260919-3"></script>
+<script src="../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

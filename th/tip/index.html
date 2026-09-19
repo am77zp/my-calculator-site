@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เครื่องคำนวณทิป - คำนวณจำนวนทิปและส่วนแบ่งต่อคน</title>
+<meta name="description" content="กรอกยอดบิล เปอร์เซ็นต์ทิป และจำนวนคน เพื่อคำนวณจำนวนทิป ยอดรวม และส่วนที่แต่ละคนต้องจ่ายได้ทันที">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/th/tip/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/tip/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/tip/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/tip/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/tip/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/tip/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/tip/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/tip/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/tip/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/tip/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/tip/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/tip/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/tip/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/tip/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/tip/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/tip/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/tip/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/tip/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/tip/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"tip_alert":"กรุณากรอกยอดบิล เปอร์เซ็นต์ทิป และจำนวนคนให้ถูกต้อง (อย่างน้อย 1 คน)","tip_per_tpl":"ต่อคน ({people} คน)","tip_tip_tpl":"จำนวนทิป: {tip} (ทิป {percent}%)","tip_total_tpl":"ยอดรวมพร้อมทิป: {total}"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../th/">เครื่องคำนวณอเนกประสงค์ในชีวิตประจำวัน</a></h1>
+  <p>เครื่องคำนวณฟรี ใช้งานได้ทันที ไม่ต้องสมัครสมาชิก</p>
+</header>
+<nav class="main-nav"><a href="../../th/" class="">หน้าแรก</a><a href="../../th/age/" class="">อายุ</a><a href="../../th/dday/" class="">นับถอยหลัง</a><a href="../../th/discount/" class="">ส่วนลด</a><a href="../../th/unit/" class="">หน่วย</a><a href="../../th/bmi/" class="">BMI</a><a href="../../th/percent/" class="">เปอร์เซ็นต์</a><a href="../../th/percentchange/" class="">อัตราเปลี่ยนแปลง %</a><a href="../../th/datediff/" class="">ส่วนต่างวันที่</a><a href="../../th/time/" class="">เครื่องคำนวณเวลา</a><a href="../../th/speed/" class="">ความเร็ว/ระยะทาง/เวลา</a><a href="../../th/tip/" class="active">เครื่องคำนวณทิป</a><a href="../../th/splitbill/" class="">หารบิล</a><a href="../../th/fuel/" class="">อัตราสิ้นเปลืองน้ำมัน</a><a href="../../th/agediff/" class="">ผลต่างอายุ</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../tip/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/tip/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/tip/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/tip/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/tip/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/tip/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/tip/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/tip/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/tip/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/tip/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/tip/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/tip/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/tip/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/tip/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/tip/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/tip/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item current" href="../../th/tip/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/tip/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../th/">หน้าแรก</a> &gt; เครื่องคำนวณทิป</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>เครื่องคำนวณทิป</h2>
+    <p class="desc">กรอกยอดบิล เลือกหรือพิมพ์เปอร์เซ็นต์ทิปเอง แล้วกรอกจำนวนคนเพื่อคำนวณทันที</p>
+    <div class="row"><div class="field"><label>ยอดบิล</label><input type="number" id="tip-bill" min="0"></div><div class="field"><label>จำนวนคน</label><input type="number" id="tip-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>เปอร์เซ็นต์ทิป (%)</label><input type="number" id="tip-percent" min="0" step="0.1"></div></div><div class="row"><div class="field"><label>เลือกด่วน</label><div class="preset-row"><button type="button" class="preset-btn" onclick="tipSetPreset(10)">10%</button><button type="button" class="preset-btn" onclick="tipSetPreset(15)">15%</button><button type="button" class="preset-btn" onclick="tipSetPreset(18)">18%</button><button type="button" class="preset-btn" onclick="tipSetPreset(20)">20%</button></div></div></div>
+    <button onclick="calcTipGlobal()">คำนวณ</button>
+    <div class="result" id="tip-result"></div>
+  </div>
+  <article class="content">
+    <h2>วิธีใช้งาน</h2><ol><li>กรอกยอดบิลก่อนรวมทิป</li><li>พิมพ์เปอร์เซ็นต์ทิปเอง หรือกดปุ่มเปอร์เซ็นต์ที่ใช้บ่อย (10%, 15%, 18%, 20%)</li><li>กรอกจำนวนคนที่จะหารบิลแล้วกด "คำนวณ"</li></ol>
+    <h2>วิธีการคำนวณ</h2><p>จำนวนทิปคือยอดบิลคูณด้วยเปอร์เซ็นต์ทิป ยอดรวมคือบิลบวกทิป และส่วนแบ่งต่อคนคือยอดรวมนั้นหารเท่า ๆ กันตามจำนวนคน</p>
+    <h2>ตัวอย่าง</h2><div class="example">ตัวอย่าง 1 — บิล 80 ทิป 18% 1 คน: ทิปคือ 14.4 และยอดรวมคือ 94.4</div><div class="example">ตัวอย่าง 2 — บิล 150 ทิป 20% หาร 4 คน: ทิปคือ 30 ยอดรวมคือ 180 แต่ละคนจ่าย 45</div>
+    <h2>คำถามที่พบบ่อย</h2><div class="faq-item"><div class="q">ถ้าเปอร์เซ็นต์ที่ต้องการไม่มีในปุ่มลัดล่ะ?</div><p class="a">สามารถพิมพ์ตัวเลขใดก็ได้ลงในช่องเปอร์เซ็นต์ทิปโดยตรง ปุ่มลัดเป็นเพียงทางลัดสำหรับค่าที่ใช้บ่อยเท่านั้น</p></div><div class="faq-item"><div class="q">ถ้าแต่ละคนสั่งอาหารไม่เท่ากัน ทิปยังหารเท่ากันไหม?</div><p class="a">เครื่องคำนวณนี้จะหารยอดรวมเท่า ๆ กันเสมอ หากต้องการคิดแยกตามรายการที่แต่ละคนสั่ง ให้คำนวณแยกทีละคน</p></div><div class="faq-item"><div class="q">ถ้าใส่จำนวนคนเป็น 1 จะเป็นอย่างไร?</div><p class="a">เมื่อมี 1 คน ส่วนแบ่งต่อคนจะเท่ากับยอดรวมที่รวมทิปแล้ว เหมาะสำหรับตอนจ่ายคนเดียวและต้องการรู้ยอดสุดท้าย</p></div>
+    <h2>เครื่องคำนวณอื่นๆ</h2><div class="related"><a href="../../th/age/">อายุ</a><a href="../../th/dday/">นับถอยหลัง</a><a href="../../th/discount/">ส่วนลด</a><a href="../../th/unit/">หน่วย</a><a href="../../th/bmi/">BMI</a><a href="../../th/percent/">เปอร์เซ็นต์</a><a href="../../th/percentchange/">อัตราเปลี่ยนแปลง %</a><a href="../../th/datediff/">ส่วนต่างวันที่</a><a href="../../th/time/">เครื่องคำนวณเวลา</a><a href="../../th/speed/">ความเร็ว/ระยะทาง/เวลา</a><a href="../../th/splitbill/">หารบิล</a><a href="../../th/fuel/">อัตราสิ้นเปลืองน้ำมัน</a><a href="../../th/agediff/">ผลต่างอายุ</a></div>
+  </article>
+</div>
+<footer>
+  เว็บไซต์นี้ไม่มีการสมัครสมาชิก ไม่มีคอมเมนต์ แชท หรือฝ่ายสนับสนุนรายบุคคล มีเพียงเครื่องคำนวณฟรีที่ทุกคนใช้งานได้ทันที
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

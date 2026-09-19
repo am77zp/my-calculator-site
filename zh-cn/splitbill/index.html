@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AA制分账计算器 - 均摊账单,计算人均金额</title>
+<meta name="description" content="输入总金额和人数,即可立即计算人均应付金额;还可以选择性地加入额外费用或折扣。">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/zh-cn/splitbill/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/splitbill/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/splitbill/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/splitbill/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/splitbill/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/splitbill/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/splitbill/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/splitbill/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/splitbill/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/splitbill/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/splitbill/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/splitbill/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/splitbill/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/splitbill/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/splitbill/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/splitbill/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/splitbill/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/splitbill/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/splitbill/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"splitbill_alert":"请正确输入总金额和人数(人数至少为1,额外费用和折扣不能小于0)。","splitbill_per_tpl":"人均金额(按{people}人计算)","splitbill_total_tpl":"应分摊金额: {adjusted}","splitbill_detail_tpl":"(总额{total} + 额外费用{extra} − 折扣{discount})"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../zh-cn/">全能生活计算器</a></h1>
+  <p>无需注册,立即免费使用的计算工具</p>
+</header>
+<nav class="main-nav"><a href="../../zh-cn/" class="">首页</a><a href="../../zh-cn/age/" class="">年龄</a><a href="../../zh-cn/dday/" class="">倒数日</a><a href="../../zh-cn/discount/" class="">折扣</a><a href="../../zh-cn/unit/" class="">单位换算</a><a href="../../zh-cn/bmi/" class="">BMI</a><a href="../../zh-cn/percent/" class="">百分比</a><a href="../../zh-cn/percentchange/" class="">增减率</a><a href="../../zh-cn/datediff/" class="">日期差</a><a href="../../zh-cn/time/" class="">时间计算</a><a href="../../zh-cn/speed/" class="">速度距离时间</a><a href="../../zh-cn/tip/" class="">小费计算器</a><a href="../../zh-cn/splitbill/" class="active">AA制分账</a><a href="../../zh-cn/fuel/" class="">油耗换算</a><a href="../../zh-cn/agediff/" class="">年龄差</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../splitbill/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item current" href="../../zh-cn/splitbill/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/splitbill/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/splitbill/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/splitbill/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/splitbill/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/splitbill/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/splitbill/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/splitbill/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/splitbill/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/splitbill/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/splitbill/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/splitbill/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/splitbill/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/splitbill/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/splitbill/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/splitbill/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/splitbill/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../zh-cn/">首页</a> &gt; AA制分账计算器</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>AA制分账计算器</h2>
+    <p class="desc">输入总金额和人数,额外费用或折扣为可选项。</p>
+    <div class="row"><div class="field"><label>总金额</label><input type="number" id="split-total" min="0"></div><div class="field"><label>人数</label><input type="number" id="split-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>额外费用(可选)</label><input type="number" id="split-extra" min="0"></div><div class="field"><label>折扣金额(可选)</label><input type="number" id="split-discount" min="0"></div></div>
+    <button onclick="calcSplitBillGlobal()">计算</button>
+    <div class="result" id="split-result"></div>
+  </div>
+  <article class="content">
+    <h2>使用方法</h2><ol><li>输入需要支付的总金额。</li><li>输入一起分摊的人数。</li><li>如有服务费等额外费用或折扣,可选择性输入,然后点击“计算”。</li></ol>
+    <h2>计算方式</h2><p>应分摊金额等于总金额加上额外费用,再减去折扣。将这个调整后的金额平均分给所有人,即为人均金额。</p>
+    <h2>示例</h2><div class="example">示例1 — 总金额120,3人分摊,没有额外费用或折扣: 人均40。</div><div class="example">示例2 — 总金额200,另加服务费10,折扣20,5人分摊: 应分摊金额为190,人均38。</div>
+    <h2>常见问题</h2><div class="faq-item"><div class="q">“额外费用”应该填什么?</div><p class="a">可以填写配送费、服务费等在原价之外额外收取的费用。如果没有,留空或填0即可。</p></div><div class="faq-item"><div class="q">如果折扣金额比总金额还大会怎样?</div><p class="a">应分摊金额不会低于0,因此即使折扣超过总金额加额外费用之和,应分摊金额也会按0计算。</p></div><div class="faq-item"><div class="q">如果有人点得比较多,还是平均分摊吗?</div><p class="a">本计算器始终按人数平均分摊。如果每个人的消费金额不同,请分别累加各自的金额后再计算。</p></div>
+    <h2>其他计算器</h2><div class="related"><a href="../../zh-cn/age/">年龄</a><a href="../../zh-cn/dday/">倒数日</a><a href="../../zh-cn/discount/">折扣</a><a href="../../zh-cn/unit/">单位换算</a><a href="../../zh-cn/bmi/">BMI</a><a href="../../zh-cn/percent/">百分比</a><a href="../../zh-cn/percentchange/">增减率</a><a href="../../zh-cn/datediff/">日期差</a><a href="../../zh-cn/time/">时间计算</a><a href="../../zh-cn/speed/">速度距离时间</a><a href="../../zh-cn/tip/">小费计算器</a><a href="../../zh-cn/fuel/">油耗换算</a><a href="../../zh-cn/agediff/">年龄差</a></div>
+  </article>
+</div>
+<footer>
+  本网站不提供账号注册、评论、聊天或人工客服,只是一组任何人都能立即使用的免费计算工具。
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

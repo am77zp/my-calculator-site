@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>小费计算器 - 计算小费金额和人均应付金额</title>
+<meta name="description" content="输入账单金额、小费比例和人数,即可一次性算出小费金额、含小费总额和人均应付金额。">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/zh-cn/tip/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/tip/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/tip/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/tip/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/tip/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/tip/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/tip/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/tip/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/tip/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/tip/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/tip/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/tip/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/tip/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/tip/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/tip/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/tip/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/tip/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/tip/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/tip/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"tip_alert":"请正确输入账单金额、小费比例和人数(人数至少为1)。","tip_per_tpl":"人均金额(按{people}人计算)","tip_tip_tpl":"小费金额: {tip}(小费{percent}%)","tip_total_tpl":"含小费总额: {total}"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../zh-cn/">全能生活计算器</a></h1>
+  <p>无需注册,立即免费使用的计算工具</p>
+</header>
+<nav class="main-nav"><a href="../../zh-cn/" class="">首页</a><a href="../../zh-cn/age/" class="">年龄</a><a href="../../zh-cn/dday/" class="">倒数日</a><a href="../../zh-cn/discount/" class="">折扣</a><a href="../../zh-cn/unit/" class="">单位换算</a><a href="../../zh-cn/bmi/" class="">BMI</a><a href="../../zh-cn/percent/" class="">百分比</a><a href="../../zh-cn/percentchange/" class="">增减率</a><a href="../../zh-cn/datediff/" class="">日期差</a><a href="../../zh-cn/time/" class="">时间计算</a><a href="../../zh-cn/speed/" class="">速度距离时间</a><a href="../../zh-cn/tip/" class="active">小费计算器</a><a href="../../zh-cn/splitbill/" class="">AA制分账</a><a href="../../zh-cn/fuel/" class="">油耗换算</a><a href="../../zh-cn/agediff/" class="">年龄差</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../tip/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item current" href="../../zh-cn/tip/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/tip/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/tip/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/tip/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/tip/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/tip/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/tip/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/tip/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/tip/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/tip/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/tip/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/tip/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/tip/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/tip/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/tip/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/tip/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/tip/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../zh-cn/">首页</a> &gt; 小费计算器</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>小费计算器</h2>
+    <p class="desc">输入账单金额,选择或直接输入小费比例,再输入人数即可立即计算。</p>
+    <div class="row"><div class="field"><label>账单金额</label><input type="number" id="tip-bill" min="0"></div><div class="field"><label>人数</label><input type="number" id="tip-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>小费比例 (%)</label><input type="number" id="tip-percent" min="0" step="0.1"></div></div><div class="row"><div class="field"><label>快速选择</label><div class="preset-row"><button type="button" class="preset-btn" onclick="tipSetPreset(10)">10%</button><button type="button" class="preset-btn" onclick="tipSetPreset(15)">15%</button><button type="button" class="preset-btn" onclick="tipSetPreset(18)">18%</button><button type="button" class="preset-btn" onclick="tipSetPreset(20)">20%</button></div></div></div>
+    <button onclick="calcTipGlobal()">计算</button>
+    <div class="result" id="tip-result"></div>
+  </div>
+  <article class="content">
+    <h2>使用方法</h2><ol><li>输入未含小费的账单金额。</li><li>直接输入小费比例,或点击常用比例按钮(10%、15%、18%、20%)。</li><li>输入一起分摊的人数,然后点击“计算”。</li></ol>
+    <h2>计算方式</h2><p>小费金额等于账单金额乘以小费比例。总额是账单金额加上小费金额,人均金额则是把总额平均分给所有人。</p>
+    <h2>示例</h2><div class="example">示例1 — 账单80,小费18%,1人: 小费为14.4,总额为94.4。</div><div class="example">示例2 — 账单150,小费20%,4人平摊: 小费为30,总额为180,每人应付45。</div>
+    <h2>常见问题</h2><div class="faq-item"><div class="q">常用比例按钮里没有我想要的比例怎么办?</div><p class="a">可以直接在小费比例栏输入任意数字,常用比例按钮只是快速填入常见数值的快捷方式。</p></div><div class="faq-item"><div class="q">每个人吃的分量不同,小费也是平均分摊吗?</div><p class="a">本计算器默认将总金额平均分给所有人。如果需要按各自点的餐分别计算,请为每个人单独使用本计算器。</p></div><div class="faq-item"><div class="q">人数填1会怎样?</div><p class="a">人数为1时,人均金额就等于含小费总额,适合一个人结账时快速确认最终金额。</p></div>
+    <h2>其他计算器</h2><div class="related"><a href="../../zh-cn/age/">年龄</a><a href="../../zh-cn/dday/">倒数日</a><a href="../../zh-cn/discount/">折扣</a><a href="../../zh-cn/unit/">单位换算</a><a href="../../zh-cn/bmi/">BMI</a><a href="../../zh-cn/percent/">百分比</a><a href="../../zh-cn/percentchange/">增减率</a><a href="../../zh-cn/datediff/">日期差</a><a href="../../zh-cn/time/">时间计算</a><a href="../../zh-cn/speed/">速度距离时间</a><a href="../../zh-cn/splitbill/">AA制分账</a><a href="../../zh-cn/fuel/">油耗换算</a><a href="../../zh-cn/agediff/">年龄差</a></div>
+  </article>
+</div>
+<footer>
+  本网站不提供账号注册、评论、聊天或人工客服,只是一组任何人都能立即使用的免费计算工具。
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

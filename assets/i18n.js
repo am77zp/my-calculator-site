@@ -116,7 +116,7 @@
     fab.addEventListener('click', function(){ openModal(); });
 
     // 언어를 실제로 선택한 경우: 체크 여부와 관계없이 항상 저장 (다음 방문부터 자동 미표시)
-    var CALC_SLUGS = {age:1, dday:1, discount:1, unit:1, bmi:1, about:1, privacy:1, percent:1, percentchange:1, datediff:1, time:1, speed:1};
+    var CALC_SLUGS = {age:1, dday:1, discount:1, unit:1, bmi:1, about:1, privacy:1, percent:1, percentchange:1, datediff:1, time:1, speed:1, tip:1, splitbill:1, fuel:1, agediff:1};
     function codeFromHref(href){
       var parts = href.split('/').filter(function(p){ return p && p !== '..'; });
       var first = parts[0];

@@ -557,3 +557,230 @@ function calcSpeedGlobal(){
     el.innerHTML = '<div class="line big">' + result + ' km/h</div><div class="line">' + line + '</div>';
   }
 }
+
+/* ======================================================================
+   아래는 4개의 신규 계산기(팁, 더치페이, 연비 변환, 나이 차이)의 함수다.
+   기존 10개 계산기 함수(위쪽 전부)는 전혀 수정하지 않았다. 여기서도 동일한
+   이중 구조(한국어 하드코딩 함수 + window.I18N을 사용하는 *Global 함수)를
+   따른다.
+   ====================================================================== */
+
+// ---------- 팁 계산기 ----------
+function tipSetPreset(p){
+  var input = document.getElementById('tip-percent');
+  if(input){ input.value = p; }
+}
+function tipSetPresetGlobal(p){ tipSetPreset(p); }
+function calcTip(){
+  var bill = parseFloat(document.getElementById('tip-bill').value);
+  var percent = parseFloat(document.getElementById('tip-percent').value);
+  var people = parseInt(document.getElementById('tip-people').value, 10);
+  if(isNaN(bill) || bill < 0 || isNaN(percent) || percent < 0 || isNaN(people) || people < 1){
+    alert('음식값, 팁 비율, 인원 수를 정확히 입력해 주세요 (인원 수는 1명 이상).');
+    return;
+  }
+  var tipAmount = Math.round(bill * percent / 100);
+  var total = bill + tipAmount;
+  var perPerson = Math.round(total / people);
+  var el = document.getElementById('tip-result');
+  el.className = 'result show';
+  el.innerHTML =
+    '<div class="line big">' + perPerson.toLocaleString() + '원</div>' +
+    '<div class="line">1인당 금액 (' + people + '명 기준)</div>' +
+    '<div class="line">팁 금액: ' + tipAmount.toLocaleString() + '원 (팁 ' + percent + '%)</div>' +
+    '<div class="line">팁 포함 총액: ' + Math.round(total).toLocaleString() + '원</div>';
+}
+function calcTipGlobal(){
+  var t = window.I18N || {};
+  var bill = parseFloat(document.getElementById('tip-bill').value);
+  var percent = parseFloat(document.getElementById('tip-percent').value);
+  var people = parseInt(document.getElementById('tip-people').value, 10);
+  if(isNaN(bill) || bill < 0 || isNaN(percent) || percent < 0 || isNaN(people) || people < 1){
+    alert(t.tip_alert || 'Please enter a valid bill amount, tip percentage, and number of people (at least 1).');
+    return;
+  }
+  var tipAmount = pctRound2(bill * percent / 100);
+  var total = pctRound2(bill + tipAmount);
+  var perPerson = pctRound2(total / people);
+  var el = document.getElementById('tip-result');
+  el.className = 'result show';
+  var perLine = (t.tip_per_tpl || 'Per person ({people} people)').split('{people}').join(people);
+  var tipLine = (t.tip_tip_tpl || 'Tip amount: {tip} ({percent}% tip)').split('{tip}').join(tipAmount.toLocaleString()).split('{percent}').join(percent);
+  var totalLine = (t.tip_total_tpl || 'Total with tip: {total}').split('{total}').join(total.toLocaleString());
+  el.innerHTML =
+    '<div class="line big">' + perPerson.toLocaleString() + '</div>' +
+    '<div class="line">' + perLine + '</div>' +
+    '<div class="line">' + tipLine + '</div>' +
+    '<div class="line">' + totalLine + '</div>';
+}
+
+// ---------- 더치페이 계산기 ----------
+function calcSplitBill(){
+  var total = parseFloat(document.getElementById('split-total').value);
+  var people = parseInt(document.getElementById('split-people').value, 10);
+  var extraRaw = document.getElementById('split-extra').value;
+  var discRaw = document.getElementById('split-discount').value;
+  var extra = extraRaw === '' ? 0 : parseFloat(extraRaw);
+  var disc = discRaw === '' ? 0 : parseFloat(discRaw);
+  if(isNaN(total) || total < 0 || isNaN(people) || people < 1 || isNaN(extra) || extra < 0 || isNaN(disc) || disc < 0){
+    alert('총 금액과 인원 수를 정확히 입력해 주세요 (인원 수는 1명 이상, 추가 비용·할인은 0 이상).');
+    return;
+  }
+  var adjusted = total + extra - disc;
+  if(adjusted < 0){ adjusted = 0; }
+  var perPerson = Math.round(adjusted / people);
+  var el = document.getElementById('split-result');
+  el.className = 'result show';
+  var detail = (extra > 0 || disc > 0)
+    ? ' (총액 ' + Math.round(total).toLocaleString() + '원 + 추가비용 ' + Math.round(extra).toLocaleString() + '원 − 할인 ' + Math.round(disc).toLocaleString() + '원)'
+    : '';
+  el.innerHTML =
+    '<div class="line big">' + perPerson.toLocaleString() + '원</div>' +
+    '<div class="line">1인당 금액 (' + people + '명 기준)</div>' +
+    '<div class="line">정산 금액: ' + Math.round(adjusted).toLocaleString() + '원' + detail + '</div>';
+}
+function calcSplitBillGlobal(){
+  var t = window.I18N || {};
+  var total = parseFloat(document.getElementById('split-total').value);
+  var people = parseInt(document.getElementById('split-people').value, 10);
+  var extraRaw = document.getElementById('split-extra').value;
+  var discRaw = document.getElementById('split-discount').value;
+  var extra = extraRaw === '' ? 0 : parseFloat(extraRaw);
+  var disc = discRaw === '' ? 0 : parseFloat(discRaw);
+  if(isNaN(total) || total < 0 || isNaN(people) || people < 1 || isNaN(extra) || extra < 0 || isNaN(disc) || disc < 0){
+    alert(t.splitbill_alert || 'Please enter a valid total and number of people (at least 1); extra charge and discount must be 0 or more.');
+    return;
+  }
+  var adjusted = pctRound2(total + extra - disc);
+  if(adjusted < 0){ adjusted = 0; }
+  var perPerson = pctRound2(adjusted / people);
+  var el = document.getElementById('split-result');
+  el.className = 'result show';
+  var perLine = (t.splitbill_per_tpl || 'Per person ({people} people)').split('{people}').join(people);
+  var totalLine = (t.splitbill_total_tpl || 'Amount to split: {adjusted}').split('{adjusted}').join(adjusted.toLocaleString());
+  var detail = '';
+  if(extra > 0 || disc > 0){
+    detail = ' ' + (t.splitbill_detail_tpl || '({total} total + {extra} extra − {discount} discount)')
+      .split('{total}').join(total.toLocaleString())
+      .split('{extra}').join(extra.toLocaleString())
+      .split('{discount}').join(disc.toLocaleString());
+  }
+  el.innerHTML =
+    '<div class="line big">' + perPerson.toLocaleString() + '</div>' +
+    '<div class="line">' + perLine + '</div>' +
+    '<div class="line">' + totalLine + detail + '</div>';
+}
+
+// ---------- 연비 변환기 (km/L, L/100km, US mpg, UK mpg 상호 변환) ----------
+var FUEL_MPG_US = 2.3521458329; // 1 km/L = 2.3521458329 US mpg
+var FUEL_MPG_UK = 2.8248094476; // 1 km/L = 2.8248094476 UK (Imperial) mpg
+function fuelToKml(unit, v){
+  if(unit === 'kml'){ return v; }
+  if(unit === 'l100km'){ return 100 / v; }
+  if(unit === 'mpgus'){ return v / FUEL_MPG_US; }
+  return v / FUEL_MPG_UK; // mpguk
+}
+function calcFuel(){
+  var unit = document.getElementById('fuel-unit').value;
+  var v = parseFloat(document.getElementById('fuel-value').value);
+  if(isNaN(v) || v <= 0){ alert('변환할 값을 0보다 크게 입력해 주세요.'); return; }
+  var kml = fuelToKml(unit, v);
+  var l100km = 100 / kml;
+  var mpgUs = kml * FUEL_MPG_US;
+  var mpgUk = kml * FUEL_MPG_UK;
+  var el = document.getElementById('fuel-result');
+  el.className = 'result show';
+  el.innerHTML =
+    '<div class="line big">' + spRound2(kml) + ' km/L</div>' +
+    '<div class="line">L/100km: ' + spRound2(l100km) + '</div>' +
+    '<div class="line">US mpg: ' + spRound2(mpgUs) + '</div>' +
+    '<div class="line">UK mpg: ' + spRound2(mpgUk) + '</div>';
+}
+function calcFuelGlobal(){
+  var t = window.I18N || {};
+  var unit = document.getElementById('fuel-unit').value;
+  var v = parseFloat(document.getElementById('fuel-value').value);
+  if(isNaN(v) || v <= 0){ alert(t.fuel_alert || 'Please enter a value greater than 0.'); return; }
+  var kml = fuelToKml(unit, v);
+  var l100km = 100 / kml;
+  var mpgUs = kml * FUEL_MPG_US;
+  var mpgUk = kml * FUEL_MPG_UK;
+  var el = document.getElementById('fuel-result');
+  el.className = 'result show';
+  el.innerHTML =
+    '<div class="line big">' + spRound2(kml) + ' km/L</div>' +
+    '<div class="line">L/100km: ' + spRound2(l100km) + '</div>' +
+    '<div class="line">US mpg: ' + spRound2(mpgUs) + '</div>' +
+    '<div class="line">UK mpg: ' + spRound2(mpgUk) + '</div>';
+}
+
+// ---------- 나이 차이 계산기 (단순 연도 차이가 아닌 실제 날짜 기준 계산) ----------
+function adYmd(earlier, later){
+  var y = later.getFullYear() - earlier.getFullYear();
+  var m = later.getMonth() - earlier.getMonth();
+  var d = later.getDate() - earlier.getDate();
+  if(d < 0){
+    m -= 1;
+    var prevMonth = new Date(later.getFullYear(), later.getMonth(), 0);
+    d += prevMonth.getDate();
+  }
+  if(m < 0){ y -= 1; m += 12; }
+  return {y:y, m:m, d:d};
+}
+function calcAgeDiff(){
+  var aStr = document.getElementById('ad-a').value;
+  var bStr = document.getElementById('ad-b').value;
+  if(!aStr || !bStr){ alert('두 사람의 생년월일을 모두 입력해 주세요.'); return; }
+  var a = new Date(aStr + 'T00:00:00');
+  var b = new Date(bStr + 'T00:00:00');
+  if(isNaN(a.getTime()) || isNaN(b.getTime())){ alert('두 사람의 생년월일을 모두 입력해 주세요.'); return; }
+  var today = new Date(); today.setHours(0,0,0,0);
+  if(a > today || b > today){ alert('생년월일은 오늘보다 미래일 수 없습니다.'); return; }
+  var el = document.getElementById('ad-result');
+  el.className = 'result show';
+  if(a.getTime() === b.getTime()){
+    el.innerHTML = '<div class="line big">나이 차이 없음</div><div class="line">두 사람은 생년월일이 같습니다 (나이 차이 없음).</div>';
+    return;
+  }
+  var aOlder = a < b;
+  var earlier = aOlder ? a : b;
+  var later = aOlder ? b : a;
+  var totalDays = Math.round((later - earlier) / (1000*60*60*24));
+  var ymd = adYmd(earlier, later);
+  var who = aOlder ? '사람 A가 더 나이가 많습니다.' : '사람 B가 더 나이가 많습니다.';
+  el.innerHTML =
+    '<div class="line big">' + ymd.y + '년 ' + ymd.m + '개월 ' + ymd.d + '일 차이</div>' +
+    '<div class="line">' + who + '</div>' +
+    '<div class="line">총 ' + totalDays.toLocaleString() + '일 차이</div>';
+}
+function calcAgeDiffGlobal(){
+  var t = window.I18N || {};
+  var aStr = document.getElementById('ad-a').value;
+  var bStr = document.getElementById('ad-b').value;
+  if(!aStr || !bStr){ alert(t.agediff_alert || 'Please enter both birth dates.'); return; }
+  var a = new Date(aStr + 'T00:00:00');
+  var b = new Date(bStr + 'T00:00:00');
+  if(isNaN(a.getTime()) || isNaN(b.getTime())){ alert(t.agediff_alert || 'Please enter both birth dates.'); return; }
+  var today = new Date(); today.setHours(0,0,0,0);
+  if(a > today || b > today){ alert(t.agediff_alert_future || 'A birth date cannot be later than today.'); return; }
+  var el = document.getElementById('ad-result');
+  el.className = 'result show';
+  if(a.getTime() === b.getTime()){
+    var same = t.agediff_same_tpl || 'Both people share the same birth date — no age difference.';
+    el.innerHTML = '<div class="line big">0</div><div class="line">' + same + '</div>';
+    return;
+  }
+  var aOlder = a < b;
+  var earlier = aOlder ? a : b;
+  var later = aOlder ? b : a;
+  var totalDays = Math.round((later - earlier) / (1000*60*60*24));
+  var ymd = adYmd(earlier, later);
+  var diffLine = (t.agediff_diff_tpl || '{y} year(s) {m} month(s) {d} day(s) apart')
+    .split('{y}').join(ymd.y).split('{m}').join(ymd.m).split('{d}').join(ymd.d);
+  var whoLine = aOlder ? (t.agediff_a_older_tpl || 'Person A is older.') : (t.agediff_b_older_tpl || 'Person B is older.');
+  var totalLine = (t.agediff_total_days_tpl || '{days} day(s) total').split('{days}').join(totalDays.toLocaleString());
+  el.innerHTML =
+    '<div class="line big">' + diffLine + '</div>' +
+    '<div class="line">' + whoLine + '</div>' +
+    '<div class="line">' + totalLine + '</div>';
+}

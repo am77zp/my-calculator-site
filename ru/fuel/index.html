@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Конвертер расхода топлива - км/л, л/100км, US mpg, UK mpg</title>
+<meta name="description" content="Введите значение расхода топлива в км/л, л/100км, US mpg или UK mpg, чтобы мгновенно получить его в остальных трёх единицах.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/ru/fuel/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/fuel/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/fuel/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/fuel/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/fuel/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/fuel/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/fuel/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/fuel/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/fuel/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/fuel/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/fuel/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/fuel/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/fuel/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/fuel/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/fuel/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/fuel/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/fuel/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/fuel/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/fuel/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/fuel/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/fuel/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"fuel_alert":"Пожалуйста, введите значение больше 0."};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../ru/">Универсальные Бытовые Калькуляторы</a></h1>
+  <p>Бесплатные калькуляторы — без регистрации, сразу готовы к использованию</p>
+</header>
+<nav class="main-nav"><a href="../../ru/" class="">Главная</a><a href="../../ru/age/" class="">Возраст</a><a href="../../ru/dday/" class="">Обратный отсчёт</a><a href="../../ru/discount/" class="">Скидка</a><a href="../../ru/unit/" class="">Единицы</a><a href="../../ru/bmi/" class="">ИМТ</a><a href="../../ru/percent/" class="">Проценты</a><a href="../../ru/percentchange/" class="">Изменение %</a><a href="../../ru/datediff/" class="">Разница дат</a><a href="../../ru/time/" class="">Калькулятор времени</a><a href="../../ru/speed/" class="">Скорость/Расстояние/Время</a><a href="../../ru/tip/" class="">Чаевые</a><a href="../../ru/splitbill/" class="">Разделить счёт</a><a href="../../ru/fuel/" class="active">Расход топлива</a><a href="../../ru/agediff/" class="">Разница в возрасте</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../fuel/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/fuel/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/fuel/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/fuel/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/fuel/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/fuel/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item current" href="../../ru/fuel/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/fuel/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/fuel/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/fuel/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/fuel/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/fuel/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/fuel/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/fuel/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/fuel/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/fuel/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/fuel/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/fuel/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/fuel/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/fuel/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/fuel/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../ru/">Главная</a> &gt; Конвертер расхода топлива</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Конвертер расхода топлива</h2>
+    <p class="desc">Выберите единицу вашего значения, введите его и сразу увидите пересчёт в остальные три единицы.</p>
+    <div class="row"><div class="field"><label>Единица ввода</label><select id="fuel-unit"><option value="kml">km/L</option><option value="l100km">L/100km</option><option value="mpgus">US mpg</option><option value="mpguk">UK mpg</option></select></div><div class="field"><label>Значение</label><input type="number" id="fuel-value" step="any"></div></div>
+    <button onclick="calcFuelGlobal()">Рассчитать</button>
+    <div class="result" id="fuel-result"></div>
+  </div>
+  <article class="content">
+    <h2>Как пользоваться</h2><ol><li>Выберите, в какой единице указано ваше значение (км/л, л/100км, US mpg или UK mpg).</li><li>Введите значение.</li><li>Нажмите «Рассчитать», чтобы увидеть пересчёт сразу во все четыре единицы.</li></ol>
+    <h2>Как это работает</h2><p>Все значения пересчитываются через км/л как общую базу. Л/100км — это обратная величина км/л, умноженная на 100. US mpg рассчитывается исходя из того, что 1 американский галлон = 3,785411784 литра, а 1 миля = 1,609344 км, тогда как UK mpg использует больший имперский галлон (4,54609 литра), поэтому при одинаковом значении км/л UK mpg получается выше, чем US mpg.</p>
+    <h2>Примеры</h2><div class="example">Пример 1 — 15 км/л соответствует примерно 6,67 л/100км, 35,28 US mpg и 42,37 UK mpg.</div><div class="example">Пример 2 — 8 л/100км (12,5 км/л) соответствует примерно 29,40 US mpg и 35,31 UK mpg.</div>
+    <h2>Частые вопросы</h2><div class="faq-item"><div class="q">Почему US mpg и UK mpg отличаются для одной и той же машины?</div><p class="a">Американский галлон (3,785 литра) меньше британского имперского галлона (4,546 литра), поэтому при одинаковом расходе топлива значение UK mpg получается выше, чем US mpg.</p></div><div class="faq-item"><div class="q">Почему меньшее значение л/100км означает лучшую экономичность?</div><p class="a">Л/100км показывает, сколько литров тратится на фиксированное расстояние (100 км), поэтому чем меньше литров, тем экономичнее автомобиль — это противоположно км/л, US mpg и UK mpg, где большее число означает лучшую экономичность.</p></div><div class="faq-item"><div class="q">Какую единицу измерения использовать?</div><p class="a">Используйте ту, что принята в вашей стране или указана в руководстве автомобиля: км/л или л/100км распространены в большинстве стран мира, а mpg — стандарт в США и Великобритании (с разными размерами галлона).</p></div>
+    <h2>Другие калькуляторы</h2><div class="related"><a href="../../ru/age/">Возраст</a><a href="../../ru/dday/">Обратный отсчёт</a><a href="../../ru/discount/">Скидка</a><a href="../../ru/unit/">Единицы</a><a href="../../ru/bmi/">ИМТ</a><a href="../../ru/percent/">Проценты</a><a href="../../ru/percentchange/">Изменение %</a><a href="../../ru/datediff/">Разница дат</a><a href="../../ru/time/">Калькулятор времени</a><a href="../../ru/speed/">Скорость/Расстояние/Время</a><a href="../../ru/tip/">Чаевые</a><a href="../../ru/splitbill/">Разделить счёт</a><a href="../../ru/agediff/">Разница в возрасте</a></div>
+  </article>
+</div>
+<footer>
+  На этом сайте нет регистрации, комментариев, чата или персональной поддержки — только бесплатные калькуляторы, которыми может сразу воспользоваться любой.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

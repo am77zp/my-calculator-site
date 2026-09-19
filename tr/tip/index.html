@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bahşiş Hesaplayıcı - Bahşiş Tutarını ve Kişi Başı Payı Hesaplayın</title>
+<meta name="description" content="Hesap tutarını, bahşiş yüzdesini ve kişi sayısını girerek bahşiş tutarını, toplam tutarı ve kişi başı payı anında hesaplayın.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/tr/tip/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/tip/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/tip/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/tip/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/tip/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/tip/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/tip/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/tip/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/tip/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/tip/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/tip/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/tip/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/tip/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/tip/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/tip/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/tip/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/tip/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/tip/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/tip/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"tip_alert":"Lütfen hesap tutarını, bahşiş yüzdesini ve kişi sayısını doğru girin (en az 1 kişi).","tip_per_tpl":"Kişi başı ({people} kişi)","tip_tip_tpl":"Bahşiş tutarı: {tip} (%{percent} bahşiş)","tip_total_tpl":"Bahşiş dahil toplam: {total}"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../tr/">Hepsi Bir Arada Günlük Hesaplayıcılar</a></h1>
+  <p>Ücretsiz, anında kullanılabilir hesaplayıcılar — kayıt gerekmez</p>
+</header>
+<nav class="main-nav"><a href="../../tr/" class="">Ana Sayfa</a><a href="../../tr/age/" class="">Yaş</a><a href="../../tr/dday/" class="">Geri Sayım</a><a href="../../tr/discount/" class="">İndirim</a><a href="../../tr/unit/" class="">Birim</a><a href="../../tr/bmi/" class="">VKİ</a><a href="../../tr/percent/" class="">Yüzde</a><a href="../../tr/percentchange/" class="">Yüzde Değişim</a><a href="../../tr/datediff/" class="">Tarih Farkı</a><a href="../../tr/time/" class="">Zaman Hesaplayıcı</a><a href="../../tr/speed/" class="">Hız/Mesafe/Zaman</a><a href="../../tr/tip/" class="active">Bahşiş Hesaplayıcı</a><a href="../../tr/splitbill/" class="">Hesap Bölüştür</a><a href="../../tr/fuel/" class="">Yakıt Verimliliği</a><a href="../../tr/agediff/" class="">Yaş Farkı</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../tip/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/tip/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/tip/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/tip/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/tip/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/tip/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/tip/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/tip/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/tip/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/tip/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/tip/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/tip/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/tip/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/tip/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item current" href="../../tr/tip/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/tip/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/tip/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/tip/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../tr/">Ana Sayfa</a> &gt; Bahşiş Hesaplayıcı</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Bahşiş Hesaplayıcı</h2>
+    <p class="desc">Hesap tutarını girin, bahşiş yüzdesini seçin veya yazın, ardından kişi sayısını girerek anında hesaplayın.</p>
+    <div class="row"><div class="field"><label>Hesap tutarı</label><input type="number" id="tip-bill" min="0"></div><div class="field"><label>Kişi sayısı</label><input type="number" id="tip-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>Bahşiş yüzdesi (%)</label><input type="number" id="tip-percent" min="0" step="0.1"></div></div><div class="row"><div class="field"><label>Hızlı seçim</label><div class="preset-row"><button type="button" class="preset-btn" onclick="tipSetPreset(10)">10%</button><button type="button" class="preset-btn" onclick="tipSetPreset(15)">15%</button><button type="button" class="preset-btn" onclick="tipSetPreset(18)">18%</button><button type="button" class="preset-btn" onclick="tipSetPreset(20)">20%</button></div></div></div>
+    <button onclick="calcTipGlobal()">Hesapla</button>
+    <div class="result" id="tip-result"></div>
+  </div>
+  <article class="content">
+    <h2>Nasıl kullanılır</h2><ol><li>Bahşiş eklenmeden önceki hesap tutarını girin.</li><li>Bahşiş yüzdesini yazın veya hızlı seçim düğmelerinden birine (%10, %15, %18, %20) basın.</li><li>Hesabı paylaşan kişi sayısını girip "Hesapla"ya tıklayın.</li></ol>
+    <h2>Nasıl çalışır</h2><p>Bahşiş tutarı, hesabın bahşiş yüzdesiyle çarpılmasıyla bulunur. Toplam, hesap artı bahşiştir; kişi başı pay ise bu toplamın kişi sayısına eşit olarak bölünmesiyle bulunur.</p>
+    <h2>Örnekler</h2><div class="example">Örnek 1 — Hesap 80, bahşiş %18, 1 kişi: bahşiş 14,4 ve toplam 94,4 olur.</div><div class="example">Örnek 2 — Hesap 150, bahşiş %20, 4 kişiye bölünürse: bahşiş 30, toplam 180 ve kişi başı 45 öder.</div>
+    <h2>Sıkça sorulan sorular</h2><div class="faq-item"><div class="q">İstediğim yüzde hızlı seçim düğmelerinde yoksa ne yapmalıyım?</div><p class="a">Bahşiş yüzdesi kutusuna doğrudan istediğiniz sayıyı yazabilirsiniz; düğmeler yalnızca sık kullanılan değerler için bir kısayoldur.</p></div><div class="faq-item"><div class="q">Herkes farklı miktarda sipariş verse bile bahşiş eşit mi bölünür?</div><p class="a">Bu hesaplayıcı toplam tutarı her zaman herkese eşit böler. Sipariş bazında ayrı hesaplama için her kişi için ayrı ayrı kullanın.</p></div><div class="faq-item"><div class="q">Kişi sayısını 1 bırakırsam ne olur?</div><p class="a">1 kişiyle, kişi başı tutar bahşiş dahil toplam tutara eşit olur; tek başınıza öderken son tutarı görmek için kullanışlıdır.</p></div>
+    <h2>Diğer hesaplayıcılar</h2><div class="related"><a href="../../tr/age/">Yaş</a><a href="../../tr/dday/">Geri Sayım</a><a href="../../tr/discount/">İndirim</a><a href="../../tr/unit/">Birim</a><a href="../../tr/bmi/">VKİ</a><a href="../../tr/percent/">Yüzde</a><a href="../../tr/percentchange/">Yüzde Değişim</a><a href="../../tr/datediff/">Tarih Farkı</a><a href="../../tr/time/">Zaman Hesaplayıcı</a><a href="../../tr/speed/">Hız/Mesafe/Zaman</a><a href="../../tr/splitbill/">Hesap Bölüştür</a><a href="../../tr/fuel/">Yakıt Verimliliği</a><a href="../../tr/agediff/">Yaş Farkı</a></div>
+  </article>
+</div>
+<footer>
+  Bu sitede hesap kaydı, yorum, sohbet veya birebir destek bulunmuyor — sadece herkesin hemen kullanabileceği ücretsiz hesaplayıcılar var.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

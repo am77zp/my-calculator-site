@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Divisão de Conta - Divida a Conta Igualmente Entre Todos</title>
+<meta name="description" content="Informe o valor total, o número de pessoas e eventuais taxas extras ou descontos para ver exatamente quanto cada pessoa deve pagar.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/pt-br/splitbill/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/splitbill/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/splitbill/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/splitbill/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/splitbill/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/splitbill/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/splitbill/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/splitbill/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/splitbill/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/splitbill/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/splitbill/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/splitbill/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/splitbill/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/splitbill/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/splitbill/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/splitbill/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/splitbill/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/splitbill/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/splitbill/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"splitbill_alert":"Informe corretamente o total e o número de pessoas (no mínimo 1); a taxa extra e o desconto devem ser 0 ou mais.","splitbill_per_tpl":"Por pessoa ({people} pessoas)","splitbill_total_tpl":"Valor a dividir: {adjusted}","splitbill_detail_tpl":"({total} total + {extra} extra − {discount} desconto)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../pt-br/">Calculadoras do Dia a Dia Tudo em Um</a></h1>
+  <p>Calculadoras gratuitas, uso instantâneo — sem necessidade de cadastro</p>
+</header>
+<nav class="main-nav"><a href="../../pt-br/" class="">Início</a><a href="../../pt-br/age/" class="">Idade</a><a href="../../pt-br/dday/" class="">Contagem regressiva</a><a href="../../pt-br/discount/" class="">Desconto</a><a href="../../pt-br/unit/" class="">Unidades</a><a href="../../pt-br/bmi/" class="">IMC</a><a href="../../pt-br/percent/" class="">Porcentagem</a><a href="../../pt-br/percentchange/" class="">Variação %</a><a href="../../pt-br/datediff/" class="">Diferença de Datas</a><a href="../../pt-br/time/" class="">Calculadora de Tempo</a><a href="../../pt-br/speed/" class="">Velocidade/Distância/Tempo</a><a href="../../pt-br/tip/" class="">Calculadora de Gorjeta</a><a href="../../pt-br/splitbill/" class="active">Dividir Conta</a><a href="../../pt-br/fuel/" class="">Consumo de Combustível</a><a href="../../pt-br/agediff/" class="">Diferença de Idade</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../splitbill/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/splitbill/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/splitbill/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/splitbill/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item current" href="../../pt-br/splitbill/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/splitbill/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/splitbill/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/splitbill/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/splitbill/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/splitbill/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/splitbill/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/splitbill/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/splitbill/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/splitbill/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/splitbill/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/splitbill/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/splitbill/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/splitbill/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../pt-br/">Início</a> &gt; Calculadora de Divisão de Conta</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Calculadora de Divisão de Conta</h2>
+    <p class="desc">Informe o valor total e o número de pessoas. Taxas extras ou descontos são opcionais.</p>
+    <div class="row"><div class="field"><label>Valor total</label><input type="number" id="split-total" min="0"></div><div class="field"><label>Número de pessoas</label><input type="number" id="split-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>Taxa extra (opcional)</label><input type="number" id="split-extra" min="0"></div><div class="field"><label>Desconto (opcional)</label><input type="number" id="split-discount" min="0"></div></div>
+    <button onclick="calcSplitBillGlobal()">Calcular</button>
+    <div class="result" id="split-result"></div>
+  </div>
+  <article class="content">
+    <h2>Como usar</h2><ol><li>Informe o valor total da conta.</li><li>Informe o número de pessoas dividindo a conta.</li><li>Se houver, informe uma taxa extra (como taxa de serviço) ou desconto, depois clique em "Calcular".</li></ol>
+    <h2>Como funciona</h2><p>O valor a dividir é o total da conta mais qualquer taxa extra, menos qualquer desconto. Esse total ajustado é então dividido igualmente pelo número de pessoas.</p>
+    <h2>Exemplos</h2><div class="example">Exemplo 1 — Total de 120 dividido entre 3 pessoas, sem taxa extra ou desconto: cada pessoa paga 40.</div><div class="example">Exemplo 2 — Total de 200 com taxa de serviço de 10 e desconto de 20, dividido entre 5 pessoas: o total ajustado é 190, então cada pessoa paga 38.</div>
+    <h2>Perguntas frequentes</h2><div class="faq-item"><div class="q">O que conta como "taxa extra"?</div><p class="a">Qualquer valor adicionado à conta, como taxa de entrega ou taxa de serviço. Deixe em branco ou 0 se não houver.</p></div><div class="faq-item"><div class="q">Posso colocar um desconto maior que a conta?</div><p class="a">Não — o total ajustado não pode ficar abaixo de 0, então um desconto maior que a conta mais a taxa extra é limitado a 0.</p></div><div class="faq-item"><div class="q">Isso divide de forma desigual, como quando uma pessoa pede mais?</div><p class="a">Não, esta calculadora sempre divide igualmente. Para valores diferentes por pessoa, some os itens de cada um separadamente.</p></div>
+    <h2>Outras calculadoras</h2><div class="related"><a href="../../pt-br/age/">Idade</a><a href="../../pt-br/dday/">Contagem regressiva</a><a href="../../pt-br/discount/">Desconto</a><a href="../../pt-br/unit/">Unidades</a><a href="../../pt-br/bmi/">IMC</a><a href="../../pt-br/percent/">Porcentagem</a><a href="../../pt-br/percentchange/">Variação %</a><a href="../../pt-br/datediff/">Diferença de Datas</a><a href="../../pt-br/time/">Calculadora de Tempo</a><a href="../../pt-br/speed/">Velocidade/Distância/Tempo</a><a href="../../pt-br/tip/">Calculadora de Gorjeta</a><a href="../../pt-br/fuel/">Consumo de Combustível</a><a href="../../pt-br/agediff/">Diferença de Idade</a></div>
+  </article>
+</div>
+<footer>
+  Este site não possui cadastro de conta, comentários, chat ou suporte individual — apenas calculadoras gratuitas que qualquer pessoa pode usar na hora.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

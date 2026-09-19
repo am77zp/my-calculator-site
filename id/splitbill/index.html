@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kalkulator Patungan - Bagi Rata Tagihan untuk Semua Orang</title>
+<meta name="description" content="Masukkan total tagihan, jumlah orang, serta biaya tambahan atau diskon (jika ada) untuk mengetahui berapa yang harus dibayar tiap orang.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/id/splitbill/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/splitbill/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/splitbill/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/splitbill/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/splitbill/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/splitbill/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/splitbill/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/splitbill/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/splitbill/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/splitbill/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/splitbill/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/splitbill/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/splitbill/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/splitbill/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/splitbill/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/splitbill/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/splitbill/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/splitbill/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/splitbill/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/splitbill/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"splitbill_alert":"Masukkan total dan jumlah orang dengan benar (minimal 1 orang; biaya tambahan dan diskon harus 0 atau lebih).","splitbill_per_tpl":"Per orang ({people} orang)","splitbill_total_tpl":"Jumlah yang dibagi: {adjusted}","splitbill_detail_tpl":"(total {total} + tambahan {extra} − diskon {discount})"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../id/">Kalkulator Serbaguna Sehari-hari</a></h1>
+  <p>Kalkulator gratis, langsung pakai — tanpa perlu daftar</p>
+</header>
+<nav class="main-nav"><a href="../../id/" class="">Beranda</a><a href="../../id/age/" class="">Usia</a><a href="../../id/dday/" class="">Hitung Mundur</a><a href="../../id/discount/" class="">Diskon</a><a href="../../id/unit/" class="">Satuan</a><a href="../../id/bmi/" class="">BMI</a><a href="../../id/percent/" class="">Persen</a><a href="../../id/percentchange/" class="">Persentase Perubahan</a><a href="../../id/datediff/" class="">Selisih Tanggal</a><a href="../../id/time/" class="">Kalkulator Waktu</a><a href="../../id/speed/" class="">Kecepatan/Jarak/Waktu</a><a href="../../id/tip/" class="">Kalkulator Tip</a><a href="../../id/splitbill/" class="active">Kalkulator Patungan</a><a href="../../id/fuel/" class="">Efisiensi Bahan Bakar</a><a href="../../id/agediff/" class="">Selisih Usia</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../splitbill/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/splitbill/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/splitbill/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item current" href="../../id/splitbill/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/splitbill/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/splitbill/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/splitbill/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/splitbill/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/splitbill/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/splitbill/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/splitbill/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/splitbill/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/splitbill/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/splitbill/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/splitbill/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/splitbill/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/splitbill/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/splitbill/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/splitbill/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../id/">Beranda</a> &gt; Kalkulator Patungan</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Kalkulator Patungan</h2>
+    <p class="desc">Masukkan total tagihan dan jumlah orang. Biaya tambahan atau diskon bersifat opsional.</p>
+    <div class="row"><div class="field"><label>Total tagihan</label><input type="number" id="split-total" min="0"></div><div class="field"><label>Jumlah orang</label><input type="number" id="split-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>Biaya tambahan (opsional)</label><input type="number" id="split-extra" min="0"></div><div class="field"><label>Diskon (opsional)</label><input type="number" id="split-discount" min="0"></div></div>
+    <button onclick="calcSplitBillGlobal()">Hitung</button>
+    <div class="result" id="split-result"></div>
+  </div>
+  <article class="content">
+    <h2>Cara pakai</h2><ol><li>Masukkan total tagihan yang harus dibayar.</li><li>Masukkan jumlah orang yang patungan.</li><li>Jika ada biaya tambahan (seperti biaya layanan) atau diskon, masukkan secara opsional, lalu klik "Hitung".</li></ol>
+    <h2>Cara kerjanya</h2><p>Jumlah yang dibagi adalah total tagihan ditambah biaya tambahan, dikurangi diskon. Total yang sudah disesuaikan ini kemudian dibagi rata sesuai jumlah orang.</p>
+    <h2>Contoh</h2><div class="example">Contoh 1 — Total 120 dibagi 3 orang tanpa biaya tambahan atau diskon: tiap orang membayar 40.</div><div class="example">Contoh 2 — Total 200 dengan biaya layanan 10 dan diskon 20, dibagi 5 orang: total yang disesuaikan adalah 190, jadi tiap orang membayar 38.</div>
+    <h2>Pertanyaan umum</h2><div class="faq-item"><div class="q">Apa saja yang termasuk "biaya tambahan"?</div><p class="a">Segala biaya yang ditambahkan di atas tagihan, seperti biaya antar atau biaya layanan. Kosongkan atau isi 0 jika tidak ada.</p></div><div class="faq-item"><div class="q">Bagaimana jika diskon lebih besar dari tagihan?</div><p class="a">Total yang disesuaikan tidak bisa kurang dari 0, jadi diskon yang lebih besar dari tagihan ditambah biaya tambahan akan dibatasi hingga 0.</p></div><div class="faq-item"><div class="q">Apakah ini bisa membagi tidak rata, misalnya ada yang pesan lebih banyak?</div><p class="a">Tidak, kalkulator ini selalu membagi rata. Untuk jumlah yang berbeda tiap orang, jumlahkan pesanan masing-masing secara terpisah.</p></div>
+    <h2>Kalkulator lainnya</h2><div class="related"><a href="../../id/age/">Usia</a><a href="../../id/dday/">Hitung Mundur</a><a href="../../id/discount/">Diskon</a><a href="../../id/unit/">Satuan</a><a href="../../id/bmi/">BMI</a><a href="../../id/percent/">Persen</a><a href="../../id/percentchange/">Persentase Perubahan</a><a href="../../id/datediff/">Selisih Tanggal</a><a href="../../id/time/">Kalkulator Waktu</a><a href="../../id/speed/">Kecepatan/Jarak/Waktu</a><a href="../../id/tip/">Kalkulator Tip</a><a href="../../id/fuel/">Efisiensi Bahan Bakar</a><a href="../../id/agediff/">Selisih Usia</a></div>
+  </article>
+</div>
+<footer>
+  Situs ini tidak memiliki pendaftaran akun, kolom komentar, chat, atau dukungan pribadi — hanya kalkulator gratis yang bisa langsung digunakan siapa saja.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

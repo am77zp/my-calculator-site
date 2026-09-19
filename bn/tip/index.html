@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>টিপ ক্যালকুলেটর - টিপের পরিমাণ ও জনপ্রতি ভাগ হিসাব করুন</title>
+<meta name="description" content="বিলের পরিমাণ, টিপের হার ও লোকসংখ্যা দিন, সঙ্গে সঙ্গে টিপের পরিমাণ, মোট বিল ও জনপ্রতি হিসাব পেয়ে যান।">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/bn/tip/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/tip/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/tip/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/tip/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/tip/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/tip/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/tip/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/tip/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/tip/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/tip/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/tip/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/tip/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/tip/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/tip/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/tip/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/tip/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/tip/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/tip/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/tip/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"tip_alert":"অনুগ্রহ করে বিলের পরিমাণ, টিপের হার ও লোকসংখ্যা সঠিকভাবে দিন (কমপক্ষে ১ জন)।","tip_per_tpl":"জনপ্রতি ({people} জন)","tip_tip_tpl":"টিপের পরিমাণ: {tip} (টিপ {percent}%)","tip_total_tpl":"টিপসহ মোট: {total}"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../bn/">অল-ইন-ওয়ান দৈনন্দিন ক্যালকুলেটর</a></h1>
+  <p>নিবন্ধন ছাড়াই তাৎক্ষণিক ব্যবহার করুন — বিনামূল্যে ক্যালকুলেটর</p>
+</header>
+<nav class="main-nav"><a href="../../bn/" class="">হোম</a><a href="../../bn/age/" class="">বয়স</a><a href="../../bn/dday/" class="">ডি-ডে</a><a href="../../bn/discount/" class="">ছাড়</a><a href="../../bn/unit/" class="">একক</a><a href="../../bn/bmi/" class="">BMI</a><a href="../../bn/percent/" class="">শতাংশ</a><a href="../../bn/percentchange/" class="">শতাংশ পরিবর্তন</a><a href="../../bn/datediff/" class="">তারিখ পার্থক্য</a><a href="../../bn/time/" class="">সময় ক্যালকুলেটর</a><a href="../../bn/speed/" class="">গতি·দূরত্ব·সময়</a><a href="../../bn/tip/" class="active">টিপ ক্যালকুলেটর</a><a href="../../bn/splitbill/" class="">বিল ভাগ করুন</a><a href="../../bn/fuel/" class="">জ্বালানি দক্ষতা</a><a href="../../bn/agediff/" class="">বয়সের পার্থক্য</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../tip/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/tip/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/tip/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/tip/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/tip/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/tip/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/tip/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/tip/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/tip/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/tip/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/tip/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/tip/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/tip/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item current" href="../../bn/tip/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/tip/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/tip/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/tip/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/tip/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../bn/">হোম</a> &gt; টিপ ক্যালকুলেটর</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>টিপ ক্যালকুলেটর</h2>
+    <p class="desc">বিলের পরিমাণ দিন, টিপের হার বেছে নিন বা নিজে লিখুন, তারপর লোকসংখ্যা দিয়ে সঙ্গে সঙ্গে হিসাব করুন।</p>
+    <div class="row"><div class="field"><label>বিলের পরিমাণ</label><input type="number" id="tip-bill" min="0"></div><div class="field"><label>লোকসংখ্যা</label><input type="number" id="tip-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>টিপের হার (%)</label><input type="number" id="tip-percent" min="0" step="0.1"></div></div><div class="row"><div class="field"><label>দ্রুত নির্বাচন</label><div class="preset-row"><button type="button" class="preset-btn" onclick="tipSetPreset(10)">10%</button><button type="button" class="preset-btn" onclick="tipSetPreset(15)">15%</button><button type="button" class="preset-btn" onclick="tipSetPreset(18)">18%</button><button type="button" class="preset-btn" onclick="tipSetPreset(20)">20%</button></div></div></div>
+    <button onclick="calcTipGlobal()">হিসাব করুন</button>
+    <div class="result" id="tip-result"></div>
+  </div>
+  <article class="content">
+    <h2>ব্যবহার পদ্ধতি</h2><ol><li>টিপ যোগ করার আগের বিলের পরিমাণ দিন।</li><li>টিপের হার নিজে লিখুন অথবা প্রচলিত হারের বোতাম (10%, 15%, 18%, 20%) চাপুন।</li><li>বিল ভাগ করে নেওয়া লোকসংখ্যা দিয়ে "হিসাব করুন" চাপুন।</li></ol>
+    <h2>কীভাবে কাজ করে</h2><p>টিপের পরিমাণ হলো বিলকে টিপের হার দিয়ে গুণ করে পাওয়া মান। মোট পরিমাণ হলো বিল ও টিপের যোগফল, আর জনপ্রতি ভাগ হলো সেই মোট পরিমাণকে সবার মধ্যে সমানভাবে ভাগ করা।</p>
+    <h2>উদাহরণ</h2><div class="example">উদাহরণ ১ — বিল ৮০, টিপ ১৮%, ১ জন: টিপ হবে ১৪.৪ এবং মোট হবে ৯৪.৪।</div><div class="example">উদাহরণ ২ — বিল ১৫০, টিপ ২০%, ৪ জনে ভাগ করলে: টিপ ৩০, মোট ১৮০, জনপ্রতি দিতে হবে ৪৫।</div>
+    <h2>সাধারণ প্রশ্ন</h2><div class="faq-item"><div class="q">আমার পছন্দের হার বোতামে না থাকলে কী করব?</div><p class="a">টিপের হারের ঘরে সরাসরি যেকোনো সংখ্যা লিখতে পারেন, বোতামগুলো শুধু প্রচলিত হার দ্রুত বসানোর জন্য।</p></div><div class="faq-item"><div class="q">সবার খাবারের পরিমাণ ভিন্ন হলেও কি টিপ সমান ভাগ হয়?</div><p class="a">এই ক্যালকুলেটর সবসময় মোট পরিমাণ সবার মধ্যে সমানভাবে ভাগ করে। আলাদাভাবে হিসাব করতে চাইলে প্রতিটি ব্যক্তির জন্য আলাদাভাবে ব্যবহার করুন।</p></div><div class="faq-item"><div class="q">লোকসংখ্যা ১ রাখলে কী হবে?</div><p class="a">১ জন হলে জনপ্রতি পরিমাণ টিপসহ মোট বিলের সমান হয়ে যায়, যা একা বিল মেটানোর সময় কাজে লাগে।</p></div>
+    <h2>অন্যান্য ক্যালকুলেটর</h2><div class="related"><a href="../../bn/age/">বয়স</a><a href="../../bn/dday/">ডি-ডে</a><a href="../../bn/discount/">ছাড়</a><a href="../../bn/unit/">একক</a><a href="../../bn/bmi/">BMI</a><a href="../../bn/percent/">শতাংশ</a><a href="../../bn/percentchange/">শতাংশ পরিবর্তন</a><a href="../../bn/datediff/">তারিখ পার্থক্য</a><a href="../../bn/time/">সময় ক্যালকুলেটর</a><a href="../../bn/speed/">গতি·দূরত্ব·সময়</a><a href="../../bn/splitbill/">বিল ভাগ করুন</a><a href="../../bn/fuel/">জ্বালানি দক্ষতা</a><a href="../../bn/agediff/">বয়সের পার্থক্য</a></div>
+  </article>
+</div>
+<footer>
+  এই ওয়েবসাইটে কোনো অ্যাকাউন্ট নিবন্ধন, মন্তব্য, চ্যাট বা ব্যক্তিগত সহায়তা নেই — শুধু বিনামূল্যে ক্যালকুলেটর যা যে কেউ তাৎক্ষণিকভাবে ব্যবহার করতে পারে।
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

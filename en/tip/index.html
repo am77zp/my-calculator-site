@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tip Calculator - Calculate Tip Amount, Total, and Per-Person Share</title>
+<meta name="description" content="Enter the bill amount, tip percentage, and number of people to instantly calculate the tip amount, the total with tip, and how much each person owes.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/tip/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/tip/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/tip/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/tip/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/tip/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/tip/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/tip/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/tip/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/tip/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/tip/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/tip/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/tip/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/tip/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/tip/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/tip/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/tip/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/tip/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/tip/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"tip_alert":"Please enter a valid bill amount, tip percentage, and number of people (at least 1).","tip_per_tpl":"Per person ({people} people)","tip_tip_tpl":"Tip amount: {tip} ({percent}% tip)","tip_total_tpl":"Total with tip: {total}"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../en/">All-in-One Daily Calculators</a></h1>
+  <p>Free calculators you can use instantly — no sign-up needed</p>
+</header>
+<nav class="main-nav"><a href="../../en/" class="">Home</a><a href="../../en/age/" class="">Age</a><a href="../../en/dday/" class="">D-Day</a><a href="../../en/discount/" class="">Discount</a><a href="../../en/unit/" class="">Unit</a><a href="../../en/bmi/" class="">BMI</a><a href="../../en/percent/" class="">Percent</a><a href="../../en/percentchange/" class="">Percent Change</a><a href="../../en/datediff/" class="">Date Difference</a><a href="../../en/time/" class="">Time Calculator</a><a href="../../en/speed/" class="">Speed/Distance/Time</a><a href="../../en/tip/" class="active">Tip</a><a href="../../en/splitbill/" class="">Split Bill</a><a href="../../en/fuel/" class="">Fuel Efficiency</a><a href="../../en/agediff/" class="">Age Difference</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../tip/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/tip/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/tip/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item current" href="../../en/tip/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/tip/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/tip/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/tip/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/tip/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/tip/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/tip/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item current" href="../../en/tip/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/tip/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/tip/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/tip/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/tip/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/tip/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/tip/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/tip/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item current" href="../../en/tip/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/tip/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/tip/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../en/">Home</a> &gt; Tip Calculator</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Tip Calculator</h2>
+    <p class="desc">Enter the bill amount, choose or type a tip percentage, and enter the number of people to calculate instantly.</p>
+    <div class="row"><div class="field"><label>Bill amount</label><input type="number" id="tip-bill" min="0"></div><div class="field"><label>Number of people</label><input type="number" id="tip-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>Tip percentage (%)</label><input type="number" id="tip-percent" min="0" step="0.1"></div></div><div class="row"><div class="field"><label>Quick picks</label><div class="preset-row"><button type="button" class="preset-btn" onclick="tipSetPreset(10)">10%</button><button type="button" class="preset-btn" onclick="tipSetPreset(15)">15%</button><button type="button" class="preset-btn" onclick="tipSetPreset(18)">18%</button><button type="button" class="preset-btn" onclick="tipSetPreset(20)">20%</button></div></div></div>
+    <button onclick="calcTipGlobal()">Calculate</button>
+    <div class="result" id="tip-result"></div>
+  </div>
+  <article class="content">
+    <h2>How to use</h2><ol><li>Enter the bill amount before tip.</li><li>Enter a tip percentage, or tap a quick preset button (10%, 15%, 18%, 20%).</li><li>Enter the number of people splitting the bill, then click "Calculate".</li></ol>
+    <h2>How it works</h2><p>The tip amount is the bill amount multiplied by the tip percentage. The total is the bill plus the tip, and the per-person share divides that total evenly by the number of people.</p>
+    <h2>Examples</h2><div class="example">Example 1 — Bill 80, 18% tip, 1 person: the tip is 14.4 and the total is 94.4.</div><div class="example">Example 2 — Bill 150, 20% tip, split between 4 people: the tip is 30, the total is 180, and each person pays 45.</div>
+    <h2>FAQ</h2><div class="faq-item"><div class="q">Can I enter a tip percentage that isn't in the presets?</div><p class="a">Yes, type any percentage directly into the tip percentage field — the preset buttons are just a shortcut for common values.</p></div><div class="faq-item"><div class="q">Does this split the tip evenly even if people didn't order the same amount?</div><p class="a">This calculator assumes an even split among everyone. For itemized splitting where each person pays for what they ordered, use it separately per person.</p></div><div class="faq-item"><div class="q">What if I leave the number of people as 1?</div><p class="a">With 1 person, the per-person amount is the same as the total bill with tip — useful when you're paying alone and just want the final amount.</p></div>
+    <h2>Other calculators</h2><div class="related"><a href="../../en/age/">Age</a><a href="../../en/dday/">D-Day</a><a href="../../en/discount/">Discount</a><a href="../../en/unit/">Unit</a><a href="../../en/bmi/">BMI</a><a href="../../en/percent/">Percent</a><a href="../../en/percentchange/">Percent Change</a><a href="../../en/datediff/">Date Difference</a><a href="../../en/time/">Time Calculator</a><a href="../../en/speed/">Speed/Distance/Time</a><a href="../../en/splitbill/">Split Bill</a><a href="../../en/fuel/">Fuel Efficiency</a><a href="../../en/agediff/">Age Difference</a></div>
+  </article>
+</div>
+<footer>
+  This site has no account sign-up, comments, chat, or 1:1 support — just free calculators anyone can use right away.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

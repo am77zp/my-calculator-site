@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Yaş Farkı Hesaplayıcı - İki Doğum Tarihi Arasındaki Tam Yıl, Ay ve Gün Farkı</title>
+<meta name="description" content="İki doğum tarihini girerek yaş farkını sadece doğum yıllarını çıkararak değil, tam olarak yıl, ay ve gün cinsinden hesaplayın.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/tr/agediff/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/agediff/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/agediff/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/agediff/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/agediff/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/agediff/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/agediff/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/agediff/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/agediff/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/agediff/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/agediff/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/agediff/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/agediff/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/agediff/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/agediff/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/agediff/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/agediff/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/agediff/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/agediff/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/agediff/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/agediff/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"agediff_alert":"Lütfen her iki doğum tarihini de girin.","agediff_alert_future":"Doğum tarihi bugünden sonra olamaz.","agediff_diff_tpl":"{y} yıl {m} ay {d} gün fark","agediff_a_older_tpl":"A Kişisi daha büyük.","agediff_b_older_tpl":"B Kişisi daha büyük.","agediff_same_tpl":"İki kişinin doğum tarihi aynı — yaş farkı yok.","agediff_total_days_tpl":"Toplam {days} gün"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../tr/">Hepsi Bir Arada Günlük Hesaplayıcılar</a></h1>
+  <p>Ücretsiz, anında kullanılabilir hesaplayıcılar — kayıt gerekmez</p>
+</header>
+<nav class="main-nav"><a href="../../tr/" class="">Ana Sayfa</a><a href="../../tr/age/" class="">Yaş</a><a href="../../tr/dday/" class="">Geri Sayım</a><a href="../../tr/discount/" class="">İndirim</a><a href="../../tr/unit/" class="">Birim</a><a href="../../tr/bmi/" class="">VKİ</a><a href="../../tr/percent/" class="">Yüzde</a><a href="../../tr/percentchange/" class="">Yüzde Değişim</a><a href="../../tr/datediff/" class="">Tarih Farkı</a><a href="../../tr/time/" class="">Zaman Hesaplayıcı</a><a href="../../tr/speed/" class="">Hız/Mesafe/Zaman</a><a href="../../tr/tip/" class="">Bahşiş Hesaplayıcı</a><a href="../../tr/splitbill/" class="">Hesap Bölüştür</a><a href="../../tr/fuel/" class="">Yakıt Verimliliği</a><a href="../../tr/agediff/" class="active">Yaş Farkı</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../agediff/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/agediff/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/agediff/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/agediff/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/agediff/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/agediff/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/agediff/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/agediff/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/agediff/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/agediff/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/agediff/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/agediff/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/agediff/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/agediff/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/agediff/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/agediff/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item current" href="../../tr/agediff/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/agediff/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/agediff/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/agediff/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/agediff/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../tr/">Ana Sayfa</a> &gt; Yaş Farkı Hesaplayıcı</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Yaş Farkı Hesaplayıcı</h2>
+    <p class="desc">Her iki doğum tarihini girerek birinin diğerinden tam olarak ne kadar büyük olduğunu hesaplayın.</p>
+    <div class="row"><div class="field"><label>A Kişisinin doğum tarihi</label><input type="date" id="ad-a"></div><div class="field"><label>B Kişisinin doğum tarihi</label><input type="date" id="ad-b"></div></div>
+    <button onclick="calcAgeDiffGlobal()">Hesapla</button>
+    <div class="result" id="ad-result"></div>
+  </div>
+  <article class="content">
+    <h2>Nasıl kullanılır</h2><ol><li>A Kişisinin doğum tarihini girin.</li><li>B Kişisinin doğum tarihini girin.</li><li>Tam farkı yıl, ay ve gün olarak görmek için "Hesapla"ya tıklayın.</li></ol>
+    <h2>Nasıl çalışır</h2><p>Hesaplayıcı önce hangi doğum tarihinin daha erken olduğunu bulur, ardından yıl, ay ve günü ayrı ayrı çıkarır — gün yetersizse bir ay, ay yetersizse bir yıl ödünç alarak — böylece sonuç, sadece doğum yıllarının çıkarılması değil, gerçek takvim farkı olur.</p>
+    <h2>Örnekler</h2><div class="example">Örnek 1 — A Kişisi 15.03.1990, B Kişisi 02.11.1993 doğumlu: A Kişisi 3 yıl 7 ay 18 gün daha büyük.</div><div class="example">Örnek 2 — A Kişisi 01.06.2010, B Kişisi 20.01.2010 doğumlu: B Kişisi 4 ay 12 gün daha büyük.</div>
+    <h2>Sıkça sorulan sorular</h2><div class="faq-item"><div class="q">Bu neden sadece doğum yılları arasındaki fark değil?</div><p class="a">Sadece doğum yıllarını çıkarmak, her kişinin doğum gününün bu yıl geçip geçmediğine bağlı olarak bir yıla kadar hatalı olabilir. Bu hesaplayıcı tam sonuç için gerçek takvim tarihlerini kullanır.</p></div><div class="faq-item"><div class="q">Gelecekteki bir doğum tarihi girersem ne olur?</div><p class="a">Doğum tarihi gelecekte olamayacağı için hesaplayıcı, bugünden sonraki olmayan bir tarih girmenizi isteyen bir uyarı gösterir.</p></div><div class="faq-item"><div class="q">Ya iki kişinin doğum tarihi aynıysa?</div><p class="a">Hesaplayıcı iki kişi arasında yaş farkı olmadığını gösterir.</p></div>
+    <h2>Diğer hesaplayıcılar</h2><div class="related"><a href="../../tr/age/">Yaş</a><a href="../../tr/dday/">Geri Sayım</a><a href="../../tr/discount/">İndirim</a><a href="../../tr/unit/">Birim</a><a href="../../tr/bmi/">VKİ</a><a href="../../tr/percent/">Yüzde</a><a href="../../tr/percentchange/">Yüzde Değişim</a><a href="../../tr/datediff/">Tarih Farkı</a><a href="../../tr/time/">Zaman Hesaplayıcı</a><a href="../../tr/speed/">Hız/Mesafe/Zaman</a><a href="../../tr/tip/">Bahşiş Hesaplayıcı</a><a href="../../tr/splitbill/">Hesap Bölüştür</a><a href="../../tr/fuel/">Yakıt Verimliliği</a></div>
+  </article>
+</div>
+<footer>
+  Bu sitede hesap kaydı, yorum, sohbet veya birebir destek bulunmuyor — sadece herkesin hemen kullanabileceği ücretsiz hesaplayıcılar var.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ماشین‌حساب انعام - محاسبه مبلغ انعام و سهم هر نفر</title>
+<meta name="description" content="مبلغ صورت‌حساب، درصد انعام و تعداد نفرات را وارد کنید تا مبلغ انعام، مبلغ کل و سهم هر نفر فوراً محاسبه شود.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/fa/tip/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/tip/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/tip/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/tip/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/tip/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/tip/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/tip/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/tip/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/tip/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/tip/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/tip/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/tip/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/tip/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/tip/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/tip/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/tip/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/tip/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/tip/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/tip/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/tip/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-3">
+<script>window.I18N = {"tip_alert":"لطفاً مبلغ صورت‌حساب، درصد انعام و تعداد نفرات را به‌درستی وارد کنید (حداقل ۱ نفر).","tip_per_tpl":"سهم هر نفر ({people} نفر)","tip_tip_tpl":"مبلغ انعام: {tip} (انعام {percent}٪)","tip_total_tpl":"مبلغ کل با انعام: {total}"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../fa/">ماشین‌حساب‌های همه‌کاره روزمره</a></h1>
+  <p>ماشین‌حساب‌های رایگان، آماده استفاده فوری — بدون نیاز به ثبت‌نام</p>
+</header>
+<nav class="main-nav"><a href="../../fa/" class="">خانه</a><a href="../../fa/age/" class="">سن</a><a href="../../fa/dday/" class="">روزشمار</a><a href="../../fa/discount/" class="">تخفیف</a><a href="../../fa/unit/" class="">واحد</a><a href="../../fa/bmi/" class="">BMI</a><a href="../../fa/percent/" class="">درصد</a><a href="../../fa/percentchange/" class="">تغییر درصد</a><a href="../../fa/datediff/" class="">اختلاف تاریخ</a><a href="../../fa/time/" class="">ماشین‌حساب زمان</a><a href="../../fa/speed/" class="">سرعت/مسافت/زمان</a><a href="../../fa/tip/" class="active">ماشین‌حساب انعام</a><a href="../../fa/splitbill/" class="">تقسیم صورت‌حساب</a><a href="../../fa/fuel/" class="">مصرف سوخت</a><a href="../../fa/agediff/" class="">اختلاف سن</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../tip/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/tip/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/tip/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/tip/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/tip/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/tip/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/tip/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/tip/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/tip/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/tip/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/tip/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/tip/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/tip/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/tip/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/tip/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item current" href="../../fa/tip/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/tip/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/tip/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/tip/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../fa/">خانه</a> &gt; ماشین‌حساب انعام</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>ماشین‌حساب انعام</h2>
+    <p class="desc">مبلغ صورت‌حساب را وارد کنید، درصد انعام را انتخاب یا تایپ کنید و با وارد کردن تعداد نفرات فوراً محاسبه کنید.</p>
+    <div class="row"><div class="field"><label>مبلغ صورت‌حساب</label><input type="number" id="tip-bill" min="0"></div><div class="field"><label>تعداد نفرات</label><input type="number" id="tip-people" min="1" step="1"></div></div><div class="row"><div class="field"><label>درصد انعام (%)</label><input type="number" id="tip-percent" min="0" step="0.1"></div></div><div class="row"><div class="field"><label>انتخاب سریع</label><div class="preset-row"><button type="button" class="preset-btn" onclick="tipSetPreset(10)">10%</button><button type="button" class="preset-btn" onclick="tipSetPreset(15)">15%</button><button type="button" class="preset-btn" onclick="tipSetPreset(18)">18%</button><button type="button" class="preset-btn" onclick="tipSetPreset(20)">20%</button></div></div></div>
+    <button onclick="calcTipGlobal()">محاسبه</button>
+    <div class="result" id="tip-result"></div>
+  </div>
+  <article class="content">
+    <h2>روش استفاده</h2><ol><li>مبلغ صورت‌حساب را پیش از افزودن انعام وارد کنید.</li><li>درصد انعام را تایپ کنید یا یکی از دکمه‌های سریع (۱۰٪، ۱۵٪، ۱۸٪، ۲۰٪) را بزنید.</li><li>تعداد نفراتی که صورت‌حساب را تقسیم می‌کنند وارد کرده و روی «محاسبه» بزنید.</li></ol>
+    <h2>نحوه محاسبه</h2><p>مبلغ انعام از ضرب صورت‌حساب در درصد انعام به دست می‌آید. مبلغ کل، صورت‌حساب به‌علاوه انعام است و سهم هر نفر از تقسیم مساوی همان مبلغ کل بر تعداد نفرات به دست می‌آید.</p>
+    <h2>مثال‌ها</h2><div class="example">مثال ۱ — صورت‌حساب ۸۰، انعام ۱۸٪، ۱ نفر: انعام ۱۴.۴ و مبلغ کل ۹۴.۴ خواهد بود.</div><div class="example">مثال ۲ — صورت‌حساب ۱۵۰، انعام ۲۰٪، تقسیم بین ۴ نفر: انعام ۳۰، مبلغ کل ۱۸۰ و سهم هر نفر ۴۵ می‌شود.</div>
+    <h2>سوالات متداول</h2><div class="faq-item"><div class="q">اگر درصد موردنظرم در دکمه‌ها نبود چه کنم؟</div><p class="a">می‌توانید هر عددی را مستقیماً در کادر درصد انعام تایپ کنید؛ دکمه‌ها فقط میان‌بری برای مقادیر رایج هستند.</p></div><div class="faq-item"><div class="q">اگر سفارش هر نفر متفاوت باشد باز هم انعام مساوی تقسیم می‌شود؟</div><p class="a">این ماشین‌حساب همیشه مبلغ کل را به‌طور مساوی بین همه تقسیم می‌کند. برای محاسبه جداگانه بر اساس سفارش هر فرد، برای هر نفر جداگانه استفاده کنید.</p></div><div class="faq-item"><div class="q">اگر تعداد نفرات را ۱ بگذارم چه می‌شود؟</div><p class="a">با ۱ نفر، سهم هر نفر برابر با مبلغ کل به همراه انعام می‌شود؛ این حالت وقتی به‌تنهایی حساب می‌کنید مفید است.</p></div>
+    <h2>سایر ماشین‌حساب‌ها</h2><div class="related"><a href="../../fa/age/">سن</a><a href="../../fa/dday/">روزشمار</a><a href="../../fa/discount/">تخفیف</a><a href="../../fa/unit/">واحد</a><a href="../../fa/bmi/">BMI</a><a href="../../fa/percent/">درصد</a><a href="../../fa/percentchange/">تغییر درصد</a><a href="../../fa/datediff/">اختلاف تاریخ</a><a href="../../fa/time/">ماشین‌حساب زمان</a><a href="../../fa/speed/">سرعت/مسافت/زمان</a><a href="../../fa/splitbill/">تقسیم صورت‌حساب</a><a href="../../fa/fuel/">مصرف سوخت</a><a href="../../fa/agediff/">اختلاف سن</a></div>
+  </article>
+</div>
+<footer>
+  این سایت هیچ ثبت‌نام حساب کاربری، نظر، گفتگو یا پشتیبانی فردی ندارد — فقط ماشین‌حساب‌های رایگانی که هر کسی می‌تواند فوراً استفاده کند.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-3"></script>
+<script src="../../assets/i18n.js?v=20260919-3"></script>
+</body>
+</html>
