@@ -138,3 +138,39 @@
     if(!done){ openModal(); }
   });
 })();
+
+// 건너뛰기 링크(Skip link) — 키보드 사용자가 nav(14개 계산기 링크)를 거치지 않고
+// 바로 계산기 영역으로 이동할 수 있게 한다. 화면에는 평소 숨겨져 있다가 Tab으로
+// 포커스를 받으면 화면 좌상단에 표시된다.
+(function(){
+  function ready(fn){
+    if(document.readyState !== 'loading'){ fn(); }
+    else{ document.addEventListener('DOMContentLoaded', fn); }
+  }
+  var SKIP_LABEL = {
+    'ko':'본문(계산기)으로 바로가기', 'en':'Skip to calculator', 'ja':'計算機に直接移動',
+    'zh-CN':'跳转到计算器', 'hi':'सीधे कैलकुलेटर पर जाएं', 'id':'Langsung ke kalkulator',
+    'pt-BR':'Pular para a calculadora', 'ru':'Перейти к калькулятору', 'ur':'براہ راست کیلکولیٹر پر جائیں',
+    'es':'Ir directamente a la calculadora', 'tl':'Diretso sa calculator', 'ar':'الانتقال إلى الآلة الحاسبة مباشرة',
+    'vi':'Chuyển thẳng đến máy tính', 'de':'Direkt zum Rechner springen', 'bn':'সরাসরি ক্যালকুলেটরে যান',
+    'tr':'Doğrudan hesaplayıcıya git', 'fa':'رفتن مستقیم به ماشین‌حساب', 'th':'ไปยังเครื่องคำนวณโดยตรง',
+    'fr':'Aller directement au calculateur'
+  };
+  ready(function(){
+    var target = document.querySelector('.container');
+    if(!target) return;
+    var htmlLang = document.documentElement.getAttribute('lang') || 'en';
+    var label = SKIP_LABEL[htmlLang] || SKIP_LABEL['en'];
+    if(!target.hasAttribute('tabindex')){ target.setAttribute('tabindex', '-1'); }
+    var link = document.createElement('a');
+    link.href = '#';
+    link.className = 'skip-link';
+    link.textContent = label;
+    link.addEventListener('click', function(e){
+      e.preventDefault();
+      target.focus();
+      if(target.scrollIntoView){ target.scrollIntoView({block:'start'}); }
+    });
+    document.body.insertBefore(link, document.body.firstChild);
+  });
+})();

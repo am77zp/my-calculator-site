@@ -10,7 +10,7 @@ const fs = require('fs');
 
 const ROOT = path.dirname(__dirname); // .../site
 const DOMAIN = 'https://my-calculator-site-6l0.pages.dev';
-const VERSION = '20260919-3'; // bumped: calculators.js, i18n.js, style.css all gain new content
+const VERSION = '20260919-4'; // bumped: style.css redesign + i18n.js skip-link addition
 
 const EXISTING_SLUGS = ['age', 'dday', 'discount', 'unit', 'bmi', 'percent', 'percentchange', 'datediff', 'time', 'speed'];
 const NEW_SLUGS = ['tip', 'splitbill', 'fuel', 'agediff'];
