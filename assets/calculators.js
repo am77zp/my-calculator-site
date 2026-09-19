@@ -243,3 +243,317 @@ function calcBmiGlobal(){
   var note = t.bmi_standard_note || '(WHO international standard)';
   el.innerHTML = '<div class="line big">BMI ' + bmi.toFixed(1) + '</div><div class="line">' + prefix + ': ' + category + ' ' + note + '</div>';
 }
+
+/* ======================================================================
+   아래는 새로 추가된 5개 계산기(퍼센트, 퍼센트 증감, 날짜 차이, 시간, 속도)의
+   함수다. 기존 5개 계산기 함수(calcAge, calcDday, calcDiscount, calcUnit,
+   calcBmi 및 각 *Global 버전)는 위쪽에 그대로 유지되며 전혀 수정하지 않았다.
+   여기서도 동일한 이중 구조(한국어 하드코딩 함수 + window.I18N을 사용하는
+   *Global 함수)를 따른다. 모드 전환(pcToggleMode 등)은 언어와 무관한 순수
+   UI 토글이라 한국어/다국어 페이지가 함께 사용한다.
+   ====================================================================== */
+
+// ---------- 공통 숫자 포맷 헬퍼(신규) ----------
+function pctRound2(n){ return Math.round(n*100)/100; }
+function spRound2(n){ return Math.round(n*100)/100; }
+function spFormatHM(hours){
+  var totalMin = Math.round(hours*60);
+  var h = Math.floor(totalMin/60), m = totalMin%60;
+  return h+':'+(m<10?'0':'')+m;
+}
+function spParseTimeInput(str){
+  str = (str||'').trim();
+  if(str.indexOf(':') > -1){
+    var p = str.split(':');
+    return parseFloat(p[0]) + (parseFloat(p[1])||0)/60;
+  }
+  return parseFloat(str);
+}
+
+// ---------- 퍼센트 계산기 ----------
+function calcPercent(){
+  var mode = document.getElementById('percent-mode').value;
+  var a = parseFloat(document.getElementById('percent-a').value);
+  var b = parseFloat(document.getElementById('percent-b').value);
+  if(isNaN(a) || isNaN(b)){ alert('값 A와 값 B를 모두 입력해 주세요.'); return; }
+  var el = document.getElementById('percent-result');
+  el.className = 'result show';
+  var result, html;
+  if(mode === '1'){
+    result = pctRound2(b * a / 100);
+    html = '<div class="line big">' + result + '</div><div class="line">' + b + '의 ' + a + '%는 ' + result + '입니다.</div>';
+  } else if(mode === '2'){
+    result = pctRound2(a / (b / 100));
+    html = '<div class="line big">' + result + '</div><div class="line">' + a + '가 ' + b + '%일 때 전체 값은 ' + result + '입니다.</div>';
+  } else {
+    result = pctRound2(a / b * 100);
+    html = '<div class="line big">' + result + '%</div><div class="line">' + a + '는 ' + b + '의 ' + result + '%입니다.</div>';
+  }
+  el.innerHTML = html;
+}
+function calcPercentGlobal(){
+  var t = window.I18N || {};
+  var mode = document.getElementById('percent-mode').value;
+  var a = parseFloat(document.getElementById('percent-a').value);
+  var b = parseFloat(document.getElementById('percent-b').value);
+  if(isNaN(a) || isNaN(b)){ alert(t.percent_alert || 'Please enter both Value A and Value B.'); return; }
+  var el = document.getElementById('percent-result');
+  el.className = 'result show';
+  var tpl = t.percent_result_tpl || ['{a} is {result}% of {b}.', '{a}% of {b} is {result}.', 'If {a} is {b}% of a number, that number is {result}.'];
+  var result, idx;
+  if(mode === '1'){ result = pctRound2(b * a / 100); idx = 1; }
+  else if(mode === '2'){ result = pctRound2(a / (b / 100)); idx = 2; }
+  else { result = pctRound2(a / b * 100); idx = 0; }
+  var line = (tpl[idx] || '{result}').split('{a}').join(a).split('{b}').join(b).split('{result}').join(result);
+  el.innerHTML = '<div class="line big">' + result + '</div><div class="line">' + line + '</div>';
+}
+
+// ---------- 퍼센트 증가/감소 계산기 ----------
+function pcToggleMode(){
+  var mode = document.getElementById('pc-mode');
+  if(!mode) return;
+  var d = document.getElementById('pc-group-diff');
+  var a = document.getElementById('pc-group-apply');
+  if(!d || !a) return;
+  if(mode.value === 'apply'){ d.hidden = true; a.hidden = false; }
+  else { d.hidden = false; a.hidden = true; }
+}
+function calcPercentChange(){
+  var mode = document.getElementById('pc-mode').value;
+  var el = document.getElementById('pc-result');
+  el.className = 'result show';
+  if(mode === 'apply'){
+    var base = parseFloat(document.getElementById('pc-base').value);
+    var pct = parseFloat(document.getElementById('pc-percent').value);
+    if(isNaN(base) || isNaN(pct)){ alert('필요한 값을 모두 입력해 주세요.'); return; }
+    var result = pctRound2(base * (1 + pct/100));
+    el.innerHTML = '<div class="line big">' + result + '</div><div class="line">' + base + '에서 ' + pct + '%를 적용하면 ' + result + '입니다.</div>';
+  } else {
+    var before = parseFloat(document.getElementById('pc-before').value);
+    var after = parseFloat(document.getElementById('pc-after').value);
+    if(isNaN(before) || isNaN(after) || before === 0){ alert('필요한 값을 모두 입력해 주세요.'); return; }
+    var result = pctRound2((after - before) / before * 100);
+    var dir = result > 0 ? '증가' : (result < 0 ? '감소' : '변화 없음');
+    el.innerHTML = '<div class="line big">' + result + '%</div><div class="line">변화율은 ' + result + '%입니다 (' + dir + ').</div>';
+  }
+}
+function pcToggleModeGlobal(){ pcToggleMode(); }
+function calcPercentChangeGlobal(){
+  var t = window.I18N || {};
+  var mode = document.getElementById('pc-mode').value;
+  var el = document.getElementById('pc-result');
+  el.className = 'result show';
+  var tpl = t.percentchange_result_tpl || ['The percent change is {result}% ({dir}).', 'Applying {percent}% to {base} gives {result}.'];
+  if(mode === 'apply'){
+    var base = parseFloat(document.getElementById('pc-base').value);
+    var pct = parseFloat(document.getElementById('pc-percent').value);
+    if(isNaN(base) || isNaN(pct)){ alert(t.percentchange_alert || 'Please enter all required values.'); return; }
+    var result = pctRound2(base * (1 + pct/100));
+    var line = (tpl[1] || '{result}').split('{base}').join(base).split('{percent}').join(pct).split('{result}').join(result);
+    el.innerHTML = '<div class="line big">' + result + '</div><div class="line">' + line + '</div>';
+  } else {
+    var before = parseFloat(document.getElementById('pc-before').value);
+    var after = parseFloat(document.getElementById('pc-after').value);
+    if(isNaN(before) || isNaN(after) || before === 0){ alert(t.percentchange_alert || 'Please enter all required values.'); return; }
+    var result = pctRound2((after - before) / before * 100);
+    var dir = result > 0 ? (t.percentchange_dir_up || 'increase') : (result < 0 ? (t.percentchange_dir_down || 'decrease') : (t.percentchange_dir_same || 'no change'));
+    var line = (tpl[0] || '{result}').split('{result}').join(result).split('{dir}').join(dir);
+    el.innerHTML = '<div class="line big">' + result + '%</div><div class="line">' + line + '</div>';
+  }
+}
+
+// ---------- 날짜 차이 계산기 ----------
+function calcDateDiff(){
+  var sVal = document.getElementById('dd-start').value;
+  var eVal = document.getElementById('dd-end').value;
+  if(!sVal || !eVal){ alert('시작일과 종료일을 모두 입력해 주세요.'); return; }
+  var d1 = new Date(sVal + 'T00:00:00');
+  var d2 = new Date(eVal + 'T00:00:00');
+  if(d1 > d2){ var tmp = d1; d1 = d2; d2 = tmp; }
+  var totalDays = Math.round((d2 - d1) / (1000*60*60*24));
+  var el = document.getElementById('dd-result');
+  el.className = 'result show';
+  if(totalDays === 0){ el.innerHTML = '<div class="line big">두 날짜가 같습니다 (0일)</div>'; return; }
+  var weeks = Math.floor(totalDays/7), restdays = totalDays % 7;
+  var y = d2.getFullYear() - d1.getFullYear();
+  var m = d2.getMonth() - d1.getMonth();
+  var dd = d2.getDate() - d1.getDate();
+  if(dd < 0){ m -= 1; var prevMonth = new Date(d2.getFullYear(), d2.getMonth(), 0); dd += prevMonth.getDate(); }
+  if(m < 0){ y -= 1; m += 12; }
+  el.innerHTML =
+    '<div class="line big">총 ' + totalDays + '일 차이</div>' +
+    '<div class="line">' + weeks + '주 ' + restdays + '일</div>' +
+    '<div class="line">' + y + '년 ' + m + '개월 ' + dd + '일 차이</div>';
+}
+function calcDateDiffGlobal(){
+  var t = window.I18N || {};
+  var sVal = document.getElementById('dd-start').value;
+  var eVal = document.getElementById('dd-end').value;
+  if(!sVal || !eVal){ alert(t.datediff_alert || 'Please enter both the start date and the end date.'); return; }
+  var d1 = new Date(sVal + 'T00:00:00');
+  var d2 = new Date(eVal + 'T00:00:00');
+  if(d1 > d2){ var tmp = d1; d1 = d2; d2 = tmp; }
+  var totalDays = Math.round((d2 - d1) / (1000*60*60*24));
+  var el = document.getElementById('dd-result');
+  el.className = 'result show';
+  if(totalDays === 0){ el.innerHTML = '<div class="line big">' + (t.datediff_same || 'The two dates are the same (0 days)') + '</div>'; return; }
+  var weeks = Math.floor(totalDays/7), restdays = totalDays % 7;
+  var y = d2.getFullYear() - d1.getFullYear();
+  var m = d2.getMonth() - d1.getMonth();
+  var dd = d2.getDate() - d1.getDate();
+  if(dd < 0){ m -= 1; var prevMonth = new Date(d2.getFullYear(), d2.getMonth(), 0); dd += prevMonth.getDate(); }
+  if(m < 0){ y -= 1; m += 12; }
+  var daysLine = (t.datediff_days_tpl || '{days} day(s) total').split('{days}').join(totalDays);
+  var weeksLine = (t.datediff_weeks_tpl || '{weeks} week(s) {restdays} day(s)').split('{weeks}').join(weeks).split('{restdays}').join(restdays);
+  var ymdLine = (t.datediff_ymd_tpl || '{y} year(s) {m} month(s) {d} day(s)').split('{y}').join(y).split('{m}').join(m).split('{d}').join(dd);
+  el.innerHTML = '<div class="line big">' + daysLine + '</div><div class="line">' + weeksLine + '</div><div class="line">' + ymdLine + '</div>';
+}
+
+// ---------- 시간 계산기 ----------
+function timeToggleMode(){
+  var mode = document.getElementById('tm-mode');
+  if(!mode) return;
+  var g1 = document.getElementById('tm-group-elapsed');
+  var g2 = document.getElementById('tm-group-addsub');
+  if(!g1 || !g2) return;
+  if(mode.value === 'addsub'){ g1.hidden = true; g2.hidden = false; }
+  else { g1.hidden = false; g2.hidden = true; }
+}
+function timeToggleModeGlobal(){ timeToggleMode(); }
+function calcTime(){
+  var mode = document.getElementById('tm-mode').value;
+  var el = document.getElementById('tm-result');
+  el.className = 'result show';
+  if(mode === 'addsub'){
+    var base = document.getElementById('tm-base').value;
+    var durH = parseFloat(document.getElementById('tm-dur-h').value) || 0;
+    var durM = parseFloat(document.getElementById('tm-dur-m').value) || 0;
+    var op = document.getElementById('tm-op').value;
+    if(!base){ alert('필요한 값을 모두 입력해 주세요.'); return; }
+    var bp = base.split(':');
+    var baseMin = parseInt(bp[0],10) * 60 + parseInt(bp[1],10);
+    var durMin = durH * 60 + durM;
+    var totalMin = (op === 'sub') ? (baseMin - durMin) : (baseMin + durMin);
+    var dayOffset = 0;
+    while(totalMin >= 1440){ totalMin -= 1440; dayOffset += 1; }
+    while(totalMin < 0){ totalMin += 1440; dayOffset -= 1; }
+    var hh = Math.floor(totalMin/60), mm = totalMin % 60;
+    var timeStr = (hh<10?'0':'')+hh + ':' + (mm<10?'0':'')+mm;
+    var suffix = dayOffset > 0 ? ' (다음 날)' : (dayOffset < 0 ? ' (전날)' : '');
+    el.innerHTML = '<div class="line big">' + timeStr + '</div><div class="line">결과 시각: ' + timeStr + suffix + '</div>';
+  } else {
+    var sVal = document.getElementById('tm-start').value;
+    var eVal = document.getElementById('tm-end').value;
+    if(!sVal || !eVal){ alert('필요한 값을 모두 입력해 주세요.'); return; }
+    var sp = sVal.split(':'), ep = eVal.split(':');
+    var sMin = parseInt(sp[0],10)*60 + parseInt(sp[1],10);
+    var eMin = parseInt(ep[0],10)*60 + parseInt(ep[1],10);
+    var diff = eMin - sMin;
+    var crossed = false;
+    if(diff < 0){ diff += 1440; crossed = true; }
+    var h = Math.floor(diff/60), m = diff % 60;
+    el.innerHTML = '<div class="line big">' + h + '시간 ' + m + '분</div><div class="line">경과 시간: ' + h + '시간 ' + m + '분' + (crossed ? ' (자정을 넘김)' : '') + '</div>';
+  }
+}
+function calcTimeGlobal(){
+  var t = window.I18N || {};
+  var mode = document.getElementById('tm-mode').value;
+  var el = document.getElementById('tm-result');
+  el.className = 'result show';
+  if(mode === 'addsub'){
+    var base = document.getElementById('tm-base').value;
+    var durH = parseFloat(document.getElementById('tm-dur-h').value) || 0;
+    var durM = parseFloat(document.getElementById('tm-dur-m').value) || 0;
+    var op = document.getElementById('tm-op').value;
+    if(!base){ alert(t.time_alert || 'Please enter all required values.'); return; }
+    var bp = base.split(':');
+    var baseMin = parseInt(bp[0],10) * 60 + parseInt(bp[1],10);
+    var durMin = durH * 60 + durM;
+    var totalMin = (op === 'sub') ? (baseMin - durMin) : (baseMin + durMin);
+    var dayOffset = 0;
+    while(totalMin >= 1440){ totalMin -= 1440; dayOffset += 1; }
+    while(totalMin < 0){ totalMin += 1440; dayOffset -= 1; }
+    var hh = Math.floor(totalMin/60), mm = totalMin % 60;
+    var timeStr = (hh<10?'0':'')+hh + ':' + (mm<10?'0':'')+mm;
+    var tplKey = dayOffset > 0 ? 'time_addsub_next_tpl' : (dayOffset < 0 ? 'time_addsub_prev_tpl' : 'time_addsub_tpl');
+    var tpl = t[tplKey] || 'Resulting time: {time}';
+    el.innerHTML = '<div class="line big">' + timeStr + '</div><div class="line">' + tpl.split('{time}').join(timeStr) + '</div>';
+  } else {
+    var sVal = document.getElementById('tm-start').value;
+    var eVal = document.getElementById('tm-end').value;
+    if(!sVal || !eVal){ alert(t.time_alert || 'Please enter all required values.'); return; }
+    var sp = sVal.split(':'), ep = eVal.split(':');
+    var sMin = parseInt(sp[0],10)*60 + parseInt(sp[1],10);
+    var eMin = parseInt(ep[0],10)*60 + parseInt(ep[1],10);
+    var diff = eMin - sMin;
+    var crossed = false;
+    if(diff < 0){ diff += 1440; crossed = true; }
+    var h = Math.floor(diff/60), m = diff % 60;
+    var tpl = crossed ? (t.time_elapsed_next_tpl || 'Elapsed time: {h}h {m}m (crosses midnight)') : (t.time_elapsed_tpl || 'Elapsed time: {h}h {m}m');
+    var line = tpl.split('{h}').join(h).split('{m}').join(m);
+    el.innerHTML = '<div class="line big">' + h + ':' + (m<10?'0':'')+m + '</div><div class="line">' + line + '</div>';
+  }
+}
+
+// ---------- 속도·거리·시간 계산기 ----------
+function spToggleMode(){
+  var mode = document.getElementById('sp-mode');
+  if(!mode) return;
+  var fd = document.getElementById('sp-field-distance');
+  var ft = document.getElementById('sp-field-time');
+  var fs = document.getElementById('sp-field-speed');
+  if(!fd || !ft || !fs) return;
+  fd.hidden = (mode.value === 'distance');
+  ft.hidden = (mode.value === 'time');
+  fs.hidden = (mode.value === 'speed');
+}
+function spToggleModeGlobal(){ spToggleMode(); }
+function calcSpeed(){
+  var mode = document.getElementById('sp-mode').value;
+  var d = parseFloat(document.getElementById('sp-distance').value);
+  var tval = spParseTimeInput(document.getElementById('sp-time').value);
+  var s = parseFloat(document.getElementById('sp-speed').value);
+  var el = document.getElementById('sp-result');
+  el.className = 'result show';
+  if(mode === 'distance'){
+    if(isNaN(s) || isNaN(tval)){ alert('필요한 값을 모두 정확히 입력해 주세요.'); return; }
+    var result = spRound2(s * tval);
+    el.innerHTML = '<div class="line big">' + result + ' km</div><div class="line">거리는 ' + result + ' km입니다.</div>';
+  } else if(mode === 'time'){
+    if(isNaN(d) || isNaN(s) || s === 0){ alert('필요한 값을 모두 정확히 입력해 주세요.'); return; }
+    var result = spRound2(d / s);
+    var hm = spFormatHM(result);
+    el.innerHTML = '<div class="line big">' + result + '시간</div><div class="line">걸리는 시간은 ' + result + '시간 (' + hm + ')입니다.</div>';
+  } else {
+    if(isNaN(d) || isNaN(tval) || tval === 0){ alert('필요한 값을 모두 정확히 입력해 주세요.'); return; }
+    var result = spRound2(d / tval);
+    el.innerHTML = '<div class="line big">' + result + ' km/h</div><div class="line">속도는 ' + result + ' km/h입니다.</div>';
+  }
+}
+function calcSpeedGlobal(){
+  var t = window.I18N || {};
+  var mode = document.getElementById('sp-mode').value;
+  var d = parseFloat(document.getElementById('sp-distance').value);
+  var tval = spParseTimeInput(document.getElementById('sp-time').value);
+  var s = parseFloat(document.getElementById('sp-speed').value);
+  var el = document.getElementById('sp-result');
+  el.className = 'result show';
+  var tpl = t.speed_result_tpl || ['The speed is {result} km/h.', 'The distance is {result} km.', 'The time needed is {result} hours ({hm}).'];
+  if(mode === 'distance'){
+    if(isNaN(s) || isNaN(tval)){ alert(t.speed_alert || 'Please enter both required values correctly.'); return; }
+    var result = spRound2(s * tval);
+    var line = (tpl[1] || '{result}').split('{result}').join(result);
+    el.innerHTML = '<div class="line big">' + result + ' km</div><div class="line">' + line + '</div>';
+  } else if(mode === 'time'){
+    if(isNaN(d) || isNaN(s) || s === 0){ alert(t.speed_alert || 'Please enter both required values correctly.'); return; }
+    var result = spRound2(d / s);
+    var hm = spFormatHM(result);
+    var line = (tpl[2] || '{result}').split('{result}').join(result).split('{hm}').join(hm);
+    el.innerHTML = '<div class="line big">' + result + '</div><div class="line">' + line + '</div>';
+  } else {
+    if(isNaN(d) || isNaN(tval) || tval === 0){ alert(t.speed_alert || 'Please enter both required values correctly.'); return; }
+    var result = spRound2(d / tval);
+    var line = (tpl[0] || '{result}').split('{result}').join(result);
+    el.innerHTML = '<div class="line big">' + result + ' km/h</div><div class="line">' + line + '</div>';
+  }
+}

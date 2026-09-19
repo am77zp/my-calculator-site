@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>حاسبة الوقت - الوقت المنقضي وجمع/طرح الوقت</title>
+<meta name="description" content="احسب الوقت المنقضي بين وقتين، أو أضف أو اطرح مدة من وقت معين للحصول على الوقت الناتج فوراً.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/time/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/time/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/time/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/time/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/time/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/time/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/time/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/time/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"time_alert": "الرجاء إدخال جميع القيم المطلوبة.", "time_elapsed_tpl": "الوقت المنقضي: {h} س {m} د", "time_elapsed_next_tpl": "الوقت المنقضي: {h} س {m} د (يعبر منتصف الليل)", "time_addsub_tpl": "الوقت الناتج: {time}", "time_addsub_next_tpl": "الوقت الناتج: {time} (اليوم التالي)", "time_addsub_prev_tpl": "الوقت الناتج: {time} (اليوم السابق)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../ar/">الحاسبات اليومية الشاملة</a></h1>
+  <p>حاسبات مجانية جاهزة للاستخدام فورًا — بدون تسجيل</p>
+</header>
+<nav class="main-nav"><a href="../../ar/" class="">الرئيسية</a><a href="../../ar/age/" class="">العمر</a><a href="../../ar/dday/" class="">العد التنازلي</a><a href="../../ar/discount/" class="">الخصم</a><a href="../../ar/unit/" class="">الوحدات</a><a href="../../ar/bmi/" class="">مؤشر كتلة الجسم</a><a href="../../ar/percent/" class="">النسبة المئوية</a><a href="../../ar/percentchange/" class="">نسبة التغير</a><a href="../../ar/datediff/" class="">الفرق بين تاريخين</a><a href="../../ar/time/" class="active">حاسبة الوقت</a><a href="../../ar/speed/" class="">السرعة/المسافة/الزمن</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../time/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/time/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/time/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/time/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/time/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/time/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/time/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/time/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/time/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/time/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item current" href="../../ar/time/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/time/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/time/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/time/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/time/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/time/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/time/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/time/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../ar/">الرئيسية</a> &gt; حاسبة الوقت</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>حاسبة الوقت</h2>
+    <p class="desc">اختر الوضع وأدخل الأوقات للحصول على الوقت المنقضي أو الوقت الناتج فوراً.</p>
+    <div class="row"><div class="field"><label>طريقة الحساب</label><select id="tm-mode" onchange="timeToggleMode()"><option value="elapsed">إيجاد الوقت المنقضي (البداية → النهاية)</option><option value="addsub">جمع/طرح الوقت (أساسي + مدة)</option></select></div></div><div class="row" id="tm-group-elapsed"><div class="field"><label>وقت البداية</label><input type="time" id="tm-start"></div><div class="field"><label>وقت النهاية</label><input type="time" id="tm-end"></div></div><div class="row" id="tm-group-addsub" hidden><div class="field"><label>الوقت الأساسي</label><input type="time" id="tm-base"></div><div class="field"><label>المدة (س:د)</label><input type="number" id="tm-dur-h" min="0" style="width:47%;display:inline-block"> : <input type="number" id="tm-dur-m" min="0" max="59" style="width:47%;display:inline-block"></div><div class="field"><label>العملية</label><select id="tm-op"><option value="add">جمع</option><option value="sub">طرح</option></select></div></div>
+    <button onclick="calcTimeGlobal()">احسب</button>
+    <div class="result" id="tm-result"></div>
+  </div>
+  <article class="content">
+    <h2>طريقة الاستخدام</h2><ol><li>اختر الوضع (إيجاد الوقت المنقضي أو جمع/طرح الوقت).</li><li>في "الوقت المنقضي" أدخل وقت البداية والنهاية. في "جمع/طرح الوقت" أدخل الوقت الأساسي والمدة (ساعة:دقيقة) واختر الجمع أو الطرح.</li><li>اضغط "احسب" لتظهر النتيجة فوراً.</li></ol>
+    <h2>كيف يعمل</h2><p>الوقت المنقضي = وقت النهاية − وقت البداية؛ إذا كان وقت النهاية أبكر، يُعتبر ذلك عبوراً لمنتصف الليل وتُضاف 24 ساعة. جمع/طرح الوقت يحوّل المدة إلى دقائق، يضيفها أو يطرحها من الوقت الأساسي، ثم يعيد النتيجة ضمن دورة 24 ساعة (1440 دقيقة).</p>
+    <h2>أمثلة</h2><div class="example">مثال 1 — في وضع "الوقت المنقضي" مع بداية=09:15 ونهاية=17:45، الوقت المنقضي 8 ساعات و30 دقيقة.</div><div class="example">مثال 2 — في وضع "جمع/طرح الوقت"، إضافة ساعتين و30 دقيقة إلى وقت أساسي 23:10 تعطي 01:40 في اليوم التالي.</div>
+    <h2>الأسئلة الشائعة</h2><div class="faq-item"><div class="q">هل يتعامل مع الأوقات التي تعبر منتصف الليل؟</div><p class="a">نعم — في وضع الوقت المنقضي، إذا كان وقت النهاية أبكر من وقت البداية، يُعتبر تلقائياً اليوم التالي. وفي وضع الجمع/الطرح، تجاوز 24:00 أو النزول قبل 00:00 يُشار إليه باليوم التالي أو السابق.</p></div><div class="faq-item"><div class="q">هل يمكنها الحساب حتى الثواني؟</div><p class="a">تعمل هذه الحاسبة بالساعات والدقائق. للدقة على مستوى الثواني، حوّل القيمة بشكل منفصل.</p></div>
+    <h2>حاسبات أخرى</h2><div class="related"><a href="../../ar/age/">العمر</a><a href="../../ar/dday/">العد التنازلي</a><a href="../../ar/discount/">الخصم</a><a href="../../ar/unit/">الوحدات</a><a href="../../ar/bmi/">مؤشر كتلة الجسم</a><a href="../../ar/percent/">النسبة المئوية</a><a href="../../ar/percentchange/">نسبة التغير</a><a href="../../ar/datediff/">الفرق بين تاريخين</a><a href="../../ar/speed/">السرعة/المسافة/الزمن</a></div>
+  </article>
+</div>
+<footer>
+  هذا الموقع لا يحتوي على تسجيل حساب أو تعليقات أو دردشة أو دعم فردي — فقط حاسبات مجانية يمكن لأي شخص استخدامها فورًا.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

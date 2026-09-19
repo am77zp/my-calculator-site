@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>শতাংশ পরিবর্তন ক্যালকুলেটর - বৃদ্ধি বা হ্রাসের হার নির্ণয়</title>
+<meta name="description" content="আগের ও পরের মান দিন এবং জানুন কত শতাংশ বৃদ্ধি বা হ্রাস হয়েছে, অথবা কোনো মূল মানের ওপর একটি শতাংশ প্রয়োগ করে ফলাফল বের করুন।">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/bn/percentchange/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/percentchange/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/percentchange/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/percentchange/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/percentchange/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/percentchange/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/percentchange/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/percentchange/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/percentchange/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/percentchange/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/percentchange/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/percentchange/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/percentchange/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/percentchange/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/percentchange/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/percentchange/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/percentchange/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/percentchange/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/percentchange/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/percentchange/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/percentchange/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"percentchange_alert": "অনুগ্রহ করে প্রয়োজনীয় সব মান দিন।", "percentchange_result_tpl": ["শতাংশ পরিবর্তন {result}% ({dir})।", "{base}-এ {percent}% প্রয়োগ করলে ফলাফল {result}।"], "percentchange_dir_up": "বৃদ্ধি", "percentchange_dir_down": "হ্রাস", "percentchange_dir_same": "কোনো পরিবর্তন নেই"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../bn/">অল-ইন-ওয়ান দৈনন্দিন ক্যালকুলেটর</a></h1>
+  <p>নিবন্ধন ছাড়াই তাৎক্ষণিক ব্যবহার করুন — বিনামূল্যে ক্যালকুলেটর</p>
+</header>
+<nav class="main-nav"><a href="../../bn/" class="">হোম</a><a href="../../bn/age/" class="">বয়স</a><a href="../../bn/dday/" class="">ডি-ডে</a><a href="../../bn/discount/" class="">ছাড়</a><a href="../../bn/unit/" class="">একক</a><a href="../../bn/bmi/" class="">BMI</a><a href="../../bn/percent/" class="">শতাংশ</a><a href="../../bn/percentchange/" class="active">শতাংশ পরিবর্তন</a><a href="../../bn/datediff/" class="">তারিখ পার্থক্য</a><a href="../../bn/time/" class="">সময় ক্যালকুলেটর</a><a href="../../bn/speed/" class="">গতি·দূরত্ব·সময়</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../percentchange/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/percentchange/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/percentchange/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/percentchange/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/percentchange/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/percentchange/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/percentchange/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/percentchange/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/percentchange/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/percentchange/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/percentchange/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/percentchange/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/percentchange/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/percentchange/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/percentchange/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item current" href="../../bn/percentchange/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/percentchange/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/percentchange/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/percentchange/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/percentchange/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/percentchange/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../bn/">হোম</a> &gt; শতাংশ পরিবর্তন ক্যালকুলেটর</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>শতাংশ পরিবর্তন ক্যালকুলেটর</h2>
+    <p class="desc">পদ্ধতি বেছে নিন এবং মান দিন, শতাংশ পরিবর্তন বা ফলাফল সাথে সাথে দেখতে পাবেন।</p>
+    <div class="row"><div class="field"><label>হিসাবের পদ্ধতি</label><select id="pc-mode" onchange="pcToggleMode()"><option value="diff">শতাংশ পরিবর্তন নির্ণয় (আগে → পরে)</option><option value="apply">শতাংশ প্রয়োগ (মূল মান + শতাংশ)</option></select></div></div><div class="row" id="pc-group-diff"><div class="field"><label>আগের মান</label><input type="number" id="pc-before"></div><div class="field"><label>পরের মান</label><input type="number" id="pc-after"></div></div><div class="row" id="pc-group-apply" hidden><div class="field"><label>মূল মান</label><input type="number" id="pc-base"></div><div class="field"><label>শতাংশ (%)</label><input type="number" id="pc-percent"></div></div>
+    <button onclick="calcPercentChangeGlobal()">হিসাব করুন</button>
+    <div class="result" id="pc-result"></div>
+  </div>
+  <article class="content">
+    <h2>ব্যবহার পদ্ধতি</h2><ol><li>পদ্ধতি বেছে নিন (শতাংশ পরিবর্তন নির্ণয় / শতাংশ প্রয়োগ করুন)।</li><li>"পরিবর্তন নির্ণয়"-এ আগের ও পরের মান দিন; "শতাংশ প্রয়োগ"-এ মূল মান ও শতাংশ দিন।</li><li>"হিসাব করুন" চাপলে ফলাফল সাথে সাথে দেখা যাবে।</li></ol>
+    <h2>কীভাবে কাজ করে</h2><p>শতাংশ পরিবর্তন = (পরের মান − আগের মান) ÷ আগের মান × ১০০। শতাংশ প্রয়োগের পর ফলাফল = মূল মান × (১ + শতাংশ ÷ ১০০); ঋণাত্মক শতাংশ মানে হ্রাস।</p>
+    <h2>উদাহরণ</h2><div class="example">উদাহরণ ১ — "পরিবর্তন নির্ণয়" মোডে আগের ২০০, পরের ২৫০ হলে ফলাফল +২৫% (২৫% বৃদ্ধি)।</div><div class="example">উদাহরণ ২ — "শতাংশ প্রয়োগ" মোডে মূল মান ২০০, শতাংশ −১৫% হলে ফলাফল ১৭০।</div>
+    <h2>সাধারণ প্রশ্ন</h2><div class="faq-item"><div class="q">বৃদ্ধি ও হ্রাস কীভাবে বুঝব?</div><p class="a">ধনাত্মক ফলাফল বৃদ্ধি বোঝায়, ঋণাত্মক ফলাফল হ্রাস বোঝায়। "শতাংশ প্রয়োগ"-এ ঋণাত্মক শতাংশ দিলে হ্রাস হিসাব হবে।</p></div><div class="faq-item"><div class="q">এটি ডিসকাউন্ট ক্যালকুলেটর থেকে কীভাবে আলাদা?</div><p class="a">ডিসকাউন্ট ক্যালকুলেটর শুধু দামের ছাড়ের জন্য, কিন্তু এই ক্যালকুলেটর বিক্রয়, জনসংখ্যা, স্কোরের মতো যেকোনো দুটি মানের পরিবর্তন বা যেকোনো শতাংশ প্রয়োগে ব্যবহার করা যায়।</p></div>
+    <h2>অন্যান্য ক্যালকুলেটর</h2><div class="related"><a href="../../bn/age/">বয়স</a><a href="../../bn/dday/">ডি-ডে</a><a href="../../bn/discount/">ছাড়</a><a href="../../bn/unit/">একক</a><a href="../../bn/bmi/">BMI</a><a href="../../bn/percent/">শতাংশ</a><a href="../../bn/datediff/">তারিখ পার্থক্য</a><a href="../../bn/time/">সময় ক্যালকুলেটর</a><a href="../../bn/speed/">গতি·দূরত্ব·সময়</a></div>
+  </article>
+</div>
+<footer>
+  এই ওয়েবসাইটে কোনো অ্যাকাউন্ট নিবন্ধন, মন্তব্য, চ্যাট বা ব্যক্তিগত সহায়তা নেই — শুধু বিনামূল্যে ক্যালকুলেটর যা যে কেউ তাৎক্ষণিকভাবে ব্যবহার করতে পারে।
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

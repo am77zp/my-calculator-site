@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeitrechner - Verstrichene Zeit und Zeit addieren/subtrahieren</title>
+<meta name="description" content="Berechne die verstrichene Zeit zwischen zwei Uhrzeiten, oder addiere bzw. subtrahiere eine Dauer zu einer Uhrzeit für ein sofortiges Ergebnis.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/time/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/time/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/time/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/time/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/time/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/time/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/time/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/time/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"time_alert": "Bitte gib alle erforderlichen Werte ein.", "time_elapsed_tpl": "Verstrichene Zeit: {h} Std {m} Min", "time_elapsed_next_tpl": "Verstrichene Zeit: {h} Std {m} Min (über Mitternacht)", "time_addsub_tpl": "Ergebniszeit: {time}", "time_addsub_next_tpl": "Ergebniszeit: {time} (nächster Tag)", "time_addsub_prev_tpl": "Ergebniszeit: {time} (vorheriger Tag)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../de/">Alltagsrechner</a></h1>
+  <p>Kostenlose Rechner, sofort nutzbar — keine Anmeldung nötig</p>
+</header>
+<nav class="main-nav"><a href="../../de/" class="">Start</a><a href="../../de/age/" class="">Alter</a><a href="../../de/dday/" class="">Countdown</a><a href="../../de/discount/" class="">Rabatt</a><a href="../../de/unit/" class="">Einheiten</a><a href="../../de/bmi/" class="">BMI</a><a href="../../de/percent/" class="">Prozent</a><a href="../../de/percentchange/" class="">Prozentuale Änderung</a><a href="../../de/datediff/" class="">Datumsdifferenz</a><a href="../../de/time/" class="active">Zeitrechner</a><a href="../../de/speed/" class="">Geschwindigkeit/Strecke/Zeit</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../time/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/time/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/time/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/time/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/time/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/time/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/time/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/time/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/time/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/time/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/time/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/time/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item current" href="../../de/time/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/time/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/time/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/time/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/time/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/time/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../de/">Start</a> &gt; Zeitrechner</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Zeitrechner</h2>
+    <p class="desc">Wähle einen Modus und gib die Zeiten ein, um sofort die verstrichene Zeit oder die Ergebniszeit zu erhalten.</p>
+    <div class="row"><div class="field"><label>Rechenmodus</label><select id="tm-mode" onchange="timeToggleMode()"><option value="elapsed">Verstrichene Zeit finden (Start → Ende)</option><option value="addsub">Zeit addieren/subtrahieren (Basis + Dauer)</option></select></div></div><div class="row" id="tm-group-elapsed"><div class="field"><label>Startzeit</label><input type="time" id="tm-start"></div><div class="field"><label>Endzeit</label><input type="time" id="tm-end"></div></div><div class="row" id="tm-group-addsub" hidden><div class="field"><label>Basiszeit</label><input type="time" id="tm-base"></div><div class="field"><label>Dauer (Std:Min)</label><input type="number" id="tm-dur-h" min="0" style="width:47%;display:inline-block"> : <input type="number" id="tm-dur-m" min="0" max="59" style="width:47%;display:inline-block"></div><div class="field"><label>Operation</label><select id="tm-op"><option value="add">Addieren</option><option value="sub">Subtrahieren</option></select></div></div>
+    <button onclick="calcTimeGlobal()">Berechnen</button>
+    <div class="result" id="tm-result"></div>
+  </div>
+  <article class="content">
+    <h2>So funktioniert es</h2><ol><li>Wähle den Modus (verstrichene Zeit finden oder Zeit addieren/subtrahieren).</li><li>Bei "verstrichene Zeit" gib die Start- und Endzeit ein. Bei "addieren/subtrahieren" gib die Basiszeit, die Dauer (Stunden:Minuten) und die Operation ein.</li><li>Klicke auf "Berechnen", um das Ergebnis sofort zu sehen.</li></ol>
+    <h2>Berechnungsmethode</h2><p>Die verstrichene Zeit ist Endzeit minus Startzeit; ist die Endzeit früher, wird angenommen, dass Mitternacht überschritten wurde, und 24 Stunden werden addiert. Beim Addieren/Subtrahieren wird die Dauer in Minuten umgerechnet, zur Basiszeit addiert oder von ihr subtrahiert und innerhalb eines 24-Stunden-Zyklus (1440 Minuten) normalisiert.</p>
+    <h2>Beispiele</h2><div class="example">Beispiel 1 — Im Modus "verstrichene Zeit" ergibt Start=09:15 und Ende=17:45 eine verstrichene Zeit von 8 Stunden 30 Minuten.</div><div class="example">Beispiel 2 — Im Modus "addieren/subtrahieren" ergibt das Addieren von 2 Stunden 30 Minuten zur Basiszeit 23:10 den Wert 01:40 am nächsten Tag.</div>
+    <h2>Häufige Fragen</h2><div class="faq-item"><div class="q">Funktioniert es auch über Mitternacht hinweg?</div><p class="a">Ja — im Modus "verstrichene Zeit" wird, wenn die Endzeit früher als die Startzeit liegt, automatisch der nächste Tag angenommen. Im Modus "addieren/subtrahieren" wird ein Wert über 24:00 oder unter 00:00 als nächster bzw. vorheriger Tag markiert.</p></div><div class="faq-item"><div class="q">Kann es auf die Sekunde genau rechnen?</div><p class="a">Dieser Rechner arbeitet in Stunden und Minuten. Für Sekundenpräzision rechne separat um.</p></div>
+    <h2>Weitere Rechner</h2><div class="related"><a href="../../de/age/">Alter</a><a href="../../de/dday/">Countdown</a><a href="../../de/discount/">Rabatt</a><a href="../../de/unit/">Einheiten</a><a href="../../de/bmi/">BMI</a><a href="../../de/percent/">Prozent</a><a href="../../de/percentchange/">Prozentuale Änderung</a><a href="../../de/datediff/">Datumsdifferenz</a><a href="../../de/speed/">Geschwindigkeit/Strecke/Zeit</a></div>
+  </article>
+</div>
+<footer>
+  Diese Website bietet keine Kontoerstellung, Kommentare, Chat oder persönlichen Support — nur kostenlose Rechner, die jeder sofort nutzen kann.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>
