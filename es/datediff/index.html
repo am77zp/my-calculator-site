@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculadora de Diferencia de Fechas - Días, Semanas y Meses</title>
+<meta name="description" content="Introduce la fecha de inicio y de fin para calcular el total de días, semanas y la diferencia en años/meses/días entre ambas.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/es/datediff/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/datediff/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/datediff/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/datediff/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/datediff/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/datediff/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/datediff/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/datediff/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/datediff/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/datediff/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/datediff/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/datediff/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/datediff/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/datediff/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/datediff/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/datediff/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/datediff/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/datediff/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/datediff/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/datediff/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/datediff/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"datediff_alert": "Introduce la fecha de inicio y la fecha de fin.", "datediff_days_tpl": "{days} día(s) en total", "datediff_weeks_tpl": "{weeks} semana(s) y {restdays} día(s)", "datediff_ymd_tpl": "{y} año(s) {m} mes(es) {d} día(s)", "datediff_same": "Las dos fechas son iguales (0 días)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../es/">Calculadoras Cotidianas Todo en Uno</a></h1>
+  <p>Calculadoras gratuitas que puedes usar al instante, sin registro</p>
+</header>
+<nav class="main-nav"><a href="../../es/" class="">Inicio</a><a href="../../es/age/" class="">Edad</a><a href="../../es/dday/" class="">Cuenta regresiva</a><a href="../../es/discount/" class="">Descuento</a><a href="../../es/unit/" class="">Unidades</a><a href="../../es/bmi/" class="">IMC</a><a href="../../es/percent/" class="">Porcentaje</a><a href="../../es/percentchange/" class="">Cambio %</a><a href="../../es/datediff/" class="active">Diferencia de Fechas</a><a href="../../es/time/" class="">Calculadora de Tiempo</a><a href="../../es/speed/" class="">Velocidad/Distancia/Tiempo</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../datediff/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/datediff/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/datediff/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/datediff/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/datediff/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/datediff/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/datediff/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/datediff/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item current" href="../../es/datediff/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/datediff/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/datediff/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/datediff/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/datediff/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/datediff/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/datediff/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/datediff/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/datediff/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/datediff/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/datediff/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/datediff/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/datediff/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../es/">Inicio</a> &gt; Calculadora de Diferencia de Fechas</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Calculadora de Diferencia de Fechas</h2>
+    <p class="desc">Introduce la fecha de inicio y la fecha de fin para calcular la diferencia entre ambas al instante.</p>
+    <div class="row"><div class="field"><label>Fecha de inicio</label><input type="date" id="dd-start"></div><div class="field"><label>Fecha de fin</label><input type="date" id="dd-end"></div></div>
+    <button onclick="calcDateDiffGlobal()">Calcular</button>
+    <div class="result" id="dd-result"></div>
+  </div>
+  <article class="content">
+    <h2>Cómo usarla</h2><ol><li>Selecciona la fecha de inicio.</li><li>Selecciona la fecha de fin (también puede ser anterior a la de inicio).</li><li>Pulsa "Calcular" para ver el total de días y el desglose en años/meses/días al instante.</li></ol>
+    <h2>Cómo funciona</h2><p>El total de días es la diferencia exacta entre ambas fechas en días. El desglose de calendario resta año, mes y día por separado, tomando prestado un mes cuando faltan días y un año cuando faltan meses.</p>
+    <h2>Ejemplos</h2><div class="example">Ejemplo 1 — Inicio 2024-01-01, fin 2024-12-31 da 365 días en total, con un desglose de 0 años, 11 meses y 30 días.</div><div class="example">Ejemplo 2 — Inicio 2025-03-10, fin 2026-09-19 da 558 días en total (79 semanas y 5 días), con un desglose de 1 año, 6 meses y 9 días.</div>
+    <h2>Preguntas frecuentes</h2><div class="faq-item"><div class="q">¿Funciona si la fecha de inicio es posterior a la de fin?</div><p class="a">Sí, la calculadora detecta automáticamente cuál fecha es anterior y siempre muestra una diferencia positiva.</p></div><div class="faq-item"><div class="q">¿Por qué el total de días y el desglose en años/meses/días se sienten distintos?</div><p class="a">El total de días cuenta la diferencia exacta día a día, mientras que el desglose sigue el calendario, por lo que puede sentirse distinto según la duración de cada mes (de 28 a 31 días).</p></div>
+    <h2>Otras calculadoras</h2><div class="related"><a href="../../es/age/">Edad</a><a href="../../es/dday/">Cuenta regresiva</a><a href="../../es/discount/">Descuento</a><a href="../../es/unit/">Unidades</a><a href="../../es/bmi/">IMC</a><a href="../../es/percent/">Porcentaje</a><a href="../../es/percentchange/">Cambio %</a><a href="../../es/time/">Calculadora de Tiempo</a><a href="../../es/speed/">Velocidad/Distancia/Tiempo</a></div>
+  </article>
+</div>
+<footer>
+  Este sitio no tiene registro de cuenta, comentarios, chat ni soporte 1 a 1 — solo calculadoras gratuitas que cualquiera puede usar de inmediato.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

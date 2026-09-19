@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculatrice de Temps - Temps Écoulé et Addition/Soustraction d'Heures</title>
+<meta name="description" content="Calculez le temps écoulé entre deux heures, ou ajoutez/soustrayez une durée à une heure pour obtenir le résultat instantanément.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/time/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/time/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/time/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/time/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/time/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/time/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/time/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/time/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"time_alert": "Veuillez entrer toutes les valeurs nécessaires.", "time_elapsed_tpl": "Temps écoulé : {h} h {m} min", "time_elapsed_next_tpl": "Temps écoulé : {h} h {m} min (passe minuit)", "time_addsub_tpl": "Heure résultante : {time}", "time_addsub_next_tpl": "Heure résultante : {time} (jour suivant)", "time_addsub_prev_tpl": "Heure résultante : {time} (jour précédent)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../fr/">Calculatrices du Quotidien Tout-en-Un</a></h1>
+  <p>Calculatrices gratuites, utilisables instantanément — aucune inscription requise</p>
+</header>
+<nav class="main-nav"><a href="../../fr/" class="">Accueil</a><a href="../../fr/age/" class="">Âge</a><a href="../../fr/dday/" class="">Compte à rebours</a><a href="../../fr/discount/" class="">Réduction</a><a href="../../fr/unit/" class="">Unités</a><a href="../../fr/bmi/" class="">IMC</a><a href="../../fr/percent/" class="">Pourcentage</a><a href="../../fr/percentchange/" class="">Variation %</a><a href="../../fr/datediff/" class="">Différence de Dates</a><a href="../../fr/time/" class="active">Calculatrice de Temps</a><a href="../../fr/speed/" class="">Vitesse/Distance/Temps</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../time/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/time/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/time/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/time/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/time/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/time/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/time/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/time/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/time/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/time/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/time/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/time/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/time/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/time/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/time/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/time/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/time/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item current" href="../../fr/time/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../fr/">Accueil</a> &gt; Calculatrice de Temps</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Calculatrice de Temps</h2>
+    <p class="desc">Choisissez un mode et entrez les heures pour obtenir instantanément le temps écoulé ou l'heure résultante.</p>
+    <div class="row"><div class="field"><label>Mode de calcul</label><select id="tm-mode" onchange="timeToggleMode()"><option value="elapsed">Trouver le temps écoulé (début → fin)</option><option value="addsub">Ajouter/soustraire une durée (base + durée)</option></select></div></div><div class="row" id="tm-group-elapsed"><div class="field"><label>Heure de début</label><input type="time" id="tm-start"></div><div class="field"><label>Heure de fin</label><input type="time" id="tm-end"></div></div><div class="row" id="tm-group-addsub" hidden><div class="field"><label>Heure de base</label><input type="time" id="tm-base"></div><div class="field"><label>Durée (h:min)</label><input type="number" id="tm-dur-h" min="0" style="width:47%;display:inline-block"> : <input type="number" id="tm-dur-m" min="0" max="59" style="width:47%;display:inline-block"></div><div class="field"><label>Opération</label><select id="tm-op"><option value="add">Ajouter</option><option value="sub">Soustraire</option></select></div></div>
+    <button onclick="calcTimeGlobal()">Calculer</button>
+    <div class="result" id="tm-result"></div>
+  </div>
+  <article class="content">
+    <h2>Comment l'utiliser</h2><ol><li>Choisissez le mode (trouver le temps écoulé ou ajouter/soustraire une durée).</li><li>Dans "temps écoulé", entrez l'heure de début et de fin. Dans "ajouter/soustraire", entrez l'heure de base, la durée (heures:minutes) et l'opération.</li><li>Cliquez sur "Calculer" pour voir le résultat instantanément.</li></ol>
+    <h2>Comment ça marche</h2><p>Le temps écoulé est l'heure de fin moins l'heure de début ; si l'heure de fin est antérieure, on considère qu'elle passe minuit et on ajoute 24 heures. Ajouter/soustraire convertit la durée en minutes, l'ajoute ou la soustrait de l'heure de base, puis ramène le résultat dans un cycle de 24 heures (1440 minutes).</p>
+    <h2>Exemples</h2><div class="example">Exemple 1 — En mode "temps écoulé", début=09:15 et fin=17:45 donnent un temps écoulé de 8 heures 30 minutes.</div><div class="example">Exemple 2 — En mode "ajouter/soustraire", ajouter 2 heures 30 minutes à une heure de base de 23:10 donne 01:40 le lendemain.</div>
+    <h2>Questions fréquentes</h2><div class="faq-item"><div class="q">Gère-t-elle les heures qui passent minuit ?</div><p class="a">Oui — en mode temps écoulé, si l'heure de fin est antérieure à l'heure de début, le lendemain est automatiquement pris en compte. En mode ajouter/soustraire, dépasser 24:00 ou descendre sous 00:00 est signalé comme le jour suivant ou précédent.</p></div><div class="faq-item"><div class="q">Peut-elle calculer à la seconde près ?</div><p class="a">Cette calculatrice fonctionne en heures et minutes. Pour une précision à la seconde, convertissez séparément.</p></div>
+    <h2>Autres calculatrices</h2><div class="related"><a href="../../fr/age/">Âge</a><a href="../../fr/dday/">Compte à rebours</a><a href="../../fr/discount/">Réduction</a><a href="../../fr/unit/">Unités</a><a href="../../fr/bmi/">IMC</a><a href="../../fr/percent/">Pourcentage</a><a href="../../fr/percentchange/">Variation %</a><a href="../../fr/datediff/">Différence de Dates</a><a href="../../fr/speed/">Vitesse/Distance/Temps</a></div>
+  </article>
+</div>
+<footer>
+  Ce site ne propose ni création de compte, ni commentaires, ni chat, ni support individuel — seulement des calculatrices gratuites que tout le monde peut utiliser immédiatement.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

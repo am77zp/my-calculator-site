@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>समय कैलकुलेटर - बीता हुआ समय और समय जोड़ना-घटाना</title>
+<meta name="description" content="दो समय के बीच बीता हुआ समय निकालें, या किसी समय में एक अवधि जोड़ें या घटाकर परिणामी समय तुरंत निकालें।">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/time/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/time/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/time/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/time/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/time/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/time/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/time/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/time/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"time_alert": "कृपया सभी ज़रूरी वैल्यू डालें।", "time_elapsed_tpl": "बीता समय: {h} घंटे {m} मिनट", "time_elapsed_next_tpl": "बीता समय: {h} घंटे {m} मिनट (आधी रात पार)", "time_addsub_tpl": "परिणामी समय: {time}", "time_addsub_next_tpl": "परिणामी समय: {time} (अगला दिन)", "time_addsub_prev_tpl": "परिणामी समय: {time} (पिछला दिन)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../hi/">ऑल-इन-वन डेली कैलकुलेटर</a></h1>
+  <p>बिना साइन-अप के तुरंत इस्तेमाल करें — मुफ्त कैलकुलेटर</p>
+</header>
+<nav class="main-nav"><a href="../../hi/" class="">होम</a><a href="../../hi/age/" class="">उम्र</a><a href="../../hi/dday/" class="">डी-डे</a><a href="../../hi/discount/" class="">छूट</a><a href="../../hi/unit/" class="">यूनिट</a><a href="../../hi/bmi/" class="">BMI</a><a href="../../hi/percent/" class="">प्रतिशत</a><a href="../../hi/percentchange/" class="">प्रतिशत परिवर्तन</a><a href="../../hi/datediff/" class="">दिनांक अंतर</a><a href="../../hi/time/" class="active">समय कैलकुलेटर</a><a href="../../hi/speed/" class="">गति·दूरी·समय</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../time/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/time/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item current" href="../../hi/time/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/time/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/time/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/time/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/time/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/time/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/time/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/time/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/time/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/time/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/time/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/time/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/time/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/time/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/time/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/time/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../hi/">होम</a> &gt; समय कैलकुलेटर</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>समय कैलकुलेटर</h2>
+    <p class="desc">तरीका चुनें और समय डालें, बीता हुआ समय या परिणामी समय तुरंत मिलेगा।</p>
+    <div class="row"><div class="field"><label>गणना का तरीका</label><select id="tm-mode" onchange="timeToggleMode()"><option value="elapsed">बीता समय निकालें (शुरू → अंत)</option><option value="addsub">समय जोड़ें-घटाएं (आधार + अवधि)</option></select></div></div><div class="row" id="tm-group-elapsed"><div class="field"><label>शुरू समय</label><input type="time" id="tm-start"></div><div class="field"><label>अंत समय</label><input type="time" id="tm-end"></div></div><div class="row" id="tm-group-addsub" hidden><div class="field"><label>आधार समय</label><input type="time" id="tm-base"></div><div class="field"><label>अवधि (घं:मि)</label><input type="number" id="tm-dur-h" min="0" style="width:47%;display:inline-block"> : <input type="number" id="tm-dur-m" min="0" max="59" style="width:47%;display:inline-block"></div><div class="field"><label>क्रिया</label><select id="tm-op"><option value="add">जोड़ें</option><option value="sub">घटाएं</option></select></div></div>
+    <button onclick="calcTimeGlobal()">गणना करें</button>
+    <div class="result" id="tm-result"></div>
+  </div>
+  <article class="content">
+    <h2>इस्तेमाल कैसे करें</h2><ol><li>तरीका चुनें (बीता समय निकालें / समय जोड़ें-घटाएं)।</li><li>"बीता समय निकालें" में शुरू और अंत का समय डालें; "समय जोड़ें-घटाएं" में आधार समय, अवधि (घंटे:मिनट) और जोड़ना/घटाना चुनें।</li><li>"गणना करें" दबाते ही नतीजा तुरंत दिखेगा।</li></ol>
+    <h2>यह कैसे काम करता है</h2><p>बीता समय = अंत समय − शुरू समय; अगर अंत समय पहले का हो तो आधी रात पार करना मानकर 24 घंटे जोड़े जाते हैं। समय जोड़ना-घटाना अवधि को मिनट में बदलकर आधार समय में जोड़ता या घटाता है और 24 घंटे (1440 मिनट) के हिसाब से वापस घंटे:मिनट में बदलता है।</p>
+    <h2>उदाहरण</h2><div class="example">उदाहरण 1 — "बीता समय निकालें" मोड में शुरू 09:15, अंत 17:45 पर बीता समय 8 घंटे 30 मिनट है।</div><div class="example">उदाहरण 2 — "समय जोड़ें-घटाएं" मोड में आधार समय 23:10 में 2 घंटे 30 मिनट जोड़ने पर अगले दिन 01:40 होता है।</div>
+    <h2>अक्सर पूछे जाने वाले सवाल</h2><div class="faq-item"><div class="q">क्या आधी रात पार करने वाला हिसाब होता है?</div><p class="a">हां, बीता समय मोड में अंत समय शुरू समय से पहले हो तो अगला दिन मानकर हिसाब होता है, और जोड़ें-घटाएं मोड में भी 24:00 पार करने या 00:00 से पहले जाने पर अगला/पिछला दिन दिखाया जाता है।</p></div><div class="faq-item"><div class="q">क्या सेकंड तक हिसाब हो सकता है?</div><p class="a">यह कैलकुलेटर घंटे:मिनट में हिसाब करता है। सेकंड की सटीकता चाहिए तो अलग से बदलें।</p></div>
+    <h2>अन्य कैलकुलेटर</h2><div class="related"><a href="../../hi/age/">उम्र</a><a href="../../hi/dday/">डी-डे</a><a href="../../hi/discount/">छूट</a><a href="../../hi/unit/">यूनिट</a><a href="../../hi/bmi/">BMI</a><a href="../../hi/percent/">प्रतिशत</a><a href="../../hi/percentchange/">प्रतिशत परिवर्तन</a><a href="../../hi/datediff/">दिनांक अंतर</a><a href="../../hi/speed/">गति·दूरी·समय</a></div>
+  </article>
+</div>
+<footer>
+  इस वेबसाइट पर कोई अकाउंट साइन-अप, कमेंट, चैट या पर्सनल सपोर्ट नहीं है — बस मुफ्त कैलकुलेटर जिन्हें कोई भी तुरंत इस्तेमाल कर सकता है।
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

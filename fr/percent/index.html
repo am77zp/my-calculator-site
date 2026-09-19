@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculatrice de Pourcentage - Ratio et Pourcentage entre Deux Valeurs</title>
+<meta name="description" content="Entrez deux valeurs pour savoir quel pourcentage A représente de B, combien vaut un pourcentage de B, ou quel est le total quand A en est un pourcentage.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/fr/percent/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/percent/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/percent/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/percent/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/percent/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/percent/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/percent/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/percent/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/percent/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/percent/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/percent/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/percent/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/percent/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/percent/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/percent/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/percent/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/percent/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/percent/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/percent/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/percent/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/percent/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"percent_alert": "Veuillez entrer la Valeur A et la Valeur B.", "percent_result_tpl": ["{a} représente {result}% de {b}.", "{a}% de {b} vaut {result}.", "Si {a} est {b}% d'un nombre, ce nombre est {result}."]};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../fr/">Calculatrices du Quotidien Tout-en-Un</a></h1>
+  <p>Calculatrices gratuites, utilisables instantanément — aucune inscription requise</p>
+</header>
+<nav class="main-nav"><a href="../../fr/" class="">Accueil</a><a href="../../fr/age/" class="">Âge</a><a href="../../fr/dday/" class="">Compte à rebours</a><a href="../../fr/discount/" class="">Réduction</a><a href="../../fr/unit/" class="">Unités</a><a href="../../fr/bmi/" class="">IMC</a><a href="../../fr/percent/" class="active">Pourcentage</a><a href="../../fr/percentchange/" class="">Variation %</a><a href="../../fr/datediff/" class="">Différence de Dates</a><a href="../../fr/time/" class="">Calculatrice de Temps</a><a href="../../fr/speed/" class="">Vitesse/Distance/Temps</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../percent/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/percent/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/percent/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/percent/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/percent/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/percent/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/percent/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/percent/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/percent/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/percent/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/percent/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/percent/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/percent/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/percent/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/percent/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/percent/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/percent/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/percent/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/percent/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/percent/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item current" href="../../fr/percent/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../fr/">Accueil</a> &gt; Calculatrice de Pourcentage</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Calculatrice de Pourcentage</h2>
+    <p class="desc">Choisissez le mode de calcul et entrez la Valeur A et la Valeur B pour obtenir le résultat en pourcentage instantanément.</p>
+    <div class="row"><div class="field"><label>Mode de calcul</label><select id="percent-mode"><option value="0">Quel % de B est A ? (A÷B×100)</option><option value="1">Combien vaut A% de B ? (B×A÷100)</option><option value="2">A est B% de quel nombre ? (A÷(B÷100))</option></select></div></div><div class="row"><div class="field"><label>Valeur A</label><input type="number" id="percent-a"></div><div class="field"><label>Valeur B</label><input type="number" id="percent-b"></div></div>
+    <button onclick="calcPercentGlobal()">Calculer</button>
+    <div class="result" id="percent-result"></div>
+  </div>
+  <article class="content">
+    <h2>Comment l'utiliser</h2><ol><li>Choisissez le mode de calcul (trouver le ratio, la partie ou le tout).</li><li>Entrez la Valeur A et la Valeur B.</li><li>Cliquez sur "Calculer" pour voir le résultat instantanément.</li></ol>
+    <h2>Comment ça marche</h2><p>Selon le mode choisi, la formule utilisée est A÷B×100 (ratio), B×A÷100 (partie) ou A÷(B÷100) (tout).</p>
+    <h2>Exemples</h2><div class="example">Exemple 1 — En mode "Quel % de B est A ?", avec A=25 et B=200, 25 est 12,5 % de 200.</div><div class="example">Exemple 2 — En mode "Combien vaut A% de B ?", avec A=20 et B=150, 20 % de 150 vaut 30.</div>
+    <h2>Questions fréquentes</h2><div class="faq-item"><div class="q">Quand utiliser chaque mode ?</div><p class="a">Utilisez le premier pour trouver un ratio, le deuxième pour trouver la valeur réelle d'un pourcentage, et le troisième pour calculer le tout à partir d'une partie et de son pourcentage.</p></div><div class="faq-item"><div class="q">Peut-on saisir des nombres négatifs ou décimaux ?</div><p class="a">Oui, la Valeur A et la Valeur B acceptent les nombres négatifs et décimaux.</p></div>
+    <h2>Autres calculatrices</h2><div class="related"><a href="../../fr/age/">Âge</a><a href="../../fr/dday/">Compte à rebours</a><a href="../../fr/discount/">Réduction</a><a href="../../fr/unit/">Unités</a><a href="../../fr/bmi/">IMC</a><a href="../../fr/percentchange/">Variation %</a><a href="../../fr/datediff/">Différence de Dates</a><a href="../../fr/time/">Calculatrice de Temps</a><a href="../../fr/speed/">Vitesse/Distance/Temps</a></div>
+  </article>
+</div>
+<footer>
+  Ce site ne propose ni création de compte, ni commentaires, ni chat, ni support individuel — seulement des calculatrices gratuites que tout le monde peut utiliser immédiatement.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Percent Change Calculator - Percentage Increase or Decrease</title>
+<meta name="description" content="Enter a before and after value to find the percent increase or decrease, or apply a percent change to a starting value to get the resulting number.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/en/percentchange/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/percentchange/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/percentchange/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/percentchange/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/percentchange/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/percentchange/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/percentchange/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/percentchange/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/percentchange/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/percentchange/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/percentchange/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/percentchange/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/percentchange/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/percentchange/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/percentchange/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/percentchange/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/percentchange/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/percentchange/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/percentchange/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/percentchange/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/percentchange/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"percentchange_alert": "Please enter all required values.", "percentchange_result_tpl": ["The percent change is {result}% ({dir}).", "Applying {percent}% to {base} gives {result}."], "percentchange_dir_up": "increase", "percentchange_dir_down": "decrease", "percentchange_dir_same": "no change"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../en/">All-in-One Daily Calculators</a></h1>
+  <p>Free calculators you can use instantly — no sign-up needed</p>
+</header>
+<nav class="main-nav"><a href="../../en/" class="">Home</a><a href="../../en/age/" class="">Age</a><a href="../../en/dday/" class="">D-Day</a><a href="../../en/discount/" class="">Discount</a><a href="../../en/unit/" class="">Unit</a><a href="../../en/bmi/" class="">BMI</a><a href="../../en/percent/" class="">Percent</a><a href="../../en/percentchange/" class="active">Percent Change</a><a href="../../en/datediff/" class="">Date Difference</a><a href="../../en/time/" class="">Time Calculator</a><a href="../../en/speed/" class="">Speed/Distance/Time</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../percentchange/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/percentchange/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/percentchange/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item current" href="../../en/percentchange/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/percentchange/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/percentchange/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/percentchange/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/percentchange/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/percentchange/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/percentchange/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item current" href="../../en/percentchange/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/percentchange/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/percentchange/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/percentchange/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/percentchange/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/percentchange/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/percentchange/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/percentchange/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item current" href="../../en/percentchange/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/percentchange/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/percentchange/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../en/">Home</a> &gt; Percent Change Calculator</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Percent Change Calculator</h2>
+    <p class="desc">Pick a mode and enter your values to get the percent change or the resulting value instantly.</p>
+    <div class="row"><div class="field"><label>Calculation mode</label><select id="pc-mode" onchange="pcToggleMode()"><option value="diff">Find percent change (before → after)</option><option value="apply">Apply percent (base + percent)</option></select></div></div><div class="row" id="pc-group-diff"><div class="field"><label>Before value</label><input type="number" id="pc-before"></div><div class="field"><label>After value</label><input type="number" id="pc-after"></div></div><div class="row" id="pc-group-apply" hidden><div class="field"><label>Base value</label><input type="number" id="pc-base"></div><div class="field"><label>Percent (%)</label><input type="number" id="pc-percent"></div></div>
+    <button onclick="calcPercentChangeGlobal()">Calculate</button>
+    <div class="result" id="pc-result"></div>
+  </div>
+  <article class="content">
+    <h2>How to use</h2><ol><li>Choose a mode (find the percent change, or apply a percent change).</li><li>For "find percent change", enter the before and after values. For "apply percent", enter the starting value and the percent.</li><li>Click "Calculate" to see the result instantly.</li></ol>
+    <h2>How it works</h2><p>Percent change is (after − before) ÷ before × 100. The resulting value after applying a percent is base × (1 + percent ÷ 100); a negative percent means a decrease.</p>
+    <h2>Examples</h2><div class="example">Example 1 — In "find percent change" mode, before=200 and after=250 gives +25% (a 25% increase).</div><div class="example">Example 2 — In "apply percent" mode, base=200 and percent=-15% gives a resulting value of 170.</div>
+    <h2>FAQ</h2><div class="faq-item"><div class="q">How do I tell an increase from a decrease?</div><p class="a">A positive result means an increase, a negative result means a decrease. In "apply percent" mode, enter a negative percent to apply a decrease.</p></div><div class="faq-item"><div class="q">How is this different from the discount calculator?</div><p class="a">The discount calculator is built specifically for price discounts, while this one works for the percent change between any two numbers — sales, population, scores — or applying any percent change.</p></div>
+    <h2>Other calculators</h2><div class="related"><a href="../../en/age/">Age</a><a href="../../en/dday/">D-Day</a><a href="../../en/discount/">Discount</a><a href="../../en/unit/">Unit</a><a href="../../en/bmi/">BMI</a><a href="../../en/percent/">Percent</a><a href="../../en/datediff/">Date Difference</a><a href="../../en/time/">Time Calculator</a><a href="../../en/speed/">Speed/Distance/Time</a></div>
+  </article>
+</div>
+<footer>
+  This site has no account sign-up, comments, chat, or 1:1 support — just free calculators anyone can use right away.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

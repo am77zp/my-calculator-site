@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>時間計算機 - 経過時間・時刻の足し算引き算</title>
+<meta name="description" content="2つの時刻の間の経過時間を計算したり、ある時刻に時間を足したり引いたりして結果の時刻をすぐに計算します。">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/time/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/time/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/time/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/time/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/time/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/time/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/time/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/time/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/time/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/time/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/time/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/time/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/time/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/time/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/time/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/time/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/time/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/time/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/time/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"time_alert": "必要な値をすべて入力してください。", "time_elapsed_tpl": "経過時間: {h}時間{m}分", "time_elapsed_next_tpl": "経過時間: {h}時間{m}分(日をまたぎます)", "time_addsub_tpl": "結果の時刻: {time}", "time_addsub_next_tpl": "結果の時刻: {time}(翌日)", "time_addsub_prev_tpl": "結果の時刻: {time}(前日)"};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../ja/">オールインワン生活計算機</a></h1>
+  <p>登録不要ですぐ使える無料の計算ツール</p>
+</header>
+<nav class="main-nav"><a href="../../ja/" class="">ホーム</a><a href="../../ja/age/" class="">年齢</a><a href="../../ja/dday/" class="">D-Day</a><a href="../../ja/discount/" class="">割引</a><a href="../../ja/unit/" class="">単位変換</a><a href="../../ja/bmi/" class="">BMI</a><a href="../../ja/percent/" class="">パーセント</a><a href="../../ja/percentchange/" class="">増減率</a><a href="../../ja/datediff/" class="">日付差</a><a href="../../ja/time/" class="active">時間計算</a><a href="../../ja/speed/" class="">速度・距離・時間</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../time/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/time/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/time/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/time/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/time/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/time/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/time/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/time/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item current" href="../../ja/time/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/time/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/time/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/time/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/time/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/time/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/time/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/time/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/time/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/time/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/time/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../ja/">ホーム</a> &gt; 時間計算機</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>時間計算機</h2>
+    <p class="desc">モードを選んで時刻を入力すると、経過時間または結果の時刻がすぐに表示されます。</p>
+    <div class="row"><div class="field"><label>計算方法</label><select id="tm-mode" onchange="timeToggleMode()"><option value="elapsed">経過時間を求める(開始→終了)</option><option value="addsub">時間を足す・引く(基準時刻+時間)</option></select></div></div><div class="row" id="tm-group-elapsed"><div class="field"><label>開始時刻</label><input type="time" id="tm-start"></div><div class="field"><label>終了時刻</label><input type="time" id="tm-end"></div></div><div class="row" id="tm-group-addsub" hidden><div class="field"><label>基準時刻</label><input type="time" id="tm-base"></div><div class="field"><label>時間 (時:分)</label><input type="number" id="tm-dur-h" min="0" style="width:47%;display:inline-block"> : <input type="number" id="tm-dur-m" min="0" max="59" style="width:47%;display:inline-block"></div><div class="field"><label>演算</label><select id="tm-op"><option value="add">足す</option><option value="sub">引く</option></select></div></div>
+    <button onclick="calcTimeGlobal()">計算する</button>
+    <div class="result" id="tm-result"></div>
+  </div>
+  <article class="content">
+    <h2>使い方</h2><ol><li>モードを選びます(経過時間を求める/時間を足す・引く)。</li><li>「経過時間を求める」では開始時刻と終了時刻を、「時間を足す・引く」では基準時刻と加減する時間(時:分)、足す/引くを入力します。</li><li>「計算する」を押すと結果がすぐに表示されます。</li></ol>
+    <h2>計算方法</h2><p>経過時間は終了時刻から開始時刻を引いて計算し、終了時刻が早い場合は日をまたいだとみなして24時間を加えます。時間の足し算・引き算は時間を分に換算して基準時刻に加減し、24時間(1440分)を基準に時:分へ戻します。</p>
+    <h2>計算例</h2><div class="example">例1 —「経過時間を求める」モードで開始09:15、終了17:45のとき、経過時間は8時間30分です。</div><div class="example">例2 —「時間を足す・引く」モードで基準時刻23:10に2時間30分を足すと、翌日01:40になります。</div>
+    <h2>よくある質問</h2><div class="faq-item"><div class="q">日をまたぐ計算もできますか?</div><p class="a">はい。経過時間モードで終了時刻が開始時刻より早い場合は自動的に翌日として計算し、足す・引くモードでも24:00を超えたり0:00より前になった場合は翌日・前日と表示します。</p></div><div class="faq-item"><div class="q">秒単位まで計算できますか?</div><p class="a">この計算機は時:分単位で計算します。秒単位の精度が必要な場合は別途換算してください。</p></div>
+    <h2>ほかの計算機</h2><div class="related"><a href="../../ja/age/">年齢</a><a href="../../ja/dday/">D-Day</a><a href="../../ja/discount/">割引</a><a href="../../ja/unit/">単位変換</a><a href="../../ja/bmi/">BMI</a><a href="../../ja/percent/">パーセント</a><a href="../../ja/percentchange/">増減率</a><a href="../../ja/datediff/">日付差</a><a href="../../ja/speed/">速度・距離・時間</a></div>
+  </article>
+</div>
+<footer>
+  このサイトは会員登録・コメント・チャット・個別お問い合わせを行っていません。誰でもすぐに使える無料の計算ツール集です。
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

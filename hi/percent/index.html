@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>प्रतिशत कैलकुलेटर - दो मानों का अनुपात और प्रतिशत निकालें</title>
+<meta name="description" content="दो मान डालें और जानें A, B का कितने प्रतिशत है, B के A% कितने होते हैं, या A किसी संख्या का B% होने पर वह संख्या क्या है।">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/hi/percent/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/percent/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/percent/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/percent/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/percent/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/percent/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/percent/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/percent/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/percent/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/percent/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/percent/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/percent/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/percent/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/percent/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/percent/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/percent/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/percent/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/percent/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/percent/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/percent/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/percent/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"percent_alert": "कृपया मान A और मान B दोनों डालें।", "percent_result_tpl": ["{a}, {b} का {result}% है।", "{b} के {a}% यानी {result} होते हैं।", "यदि {a}, किसी संख्या का {b}% है, तो वह संख्या {result} है।"]};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../hi/">ऑल-इन-वन डेली कैलकुलेटर</a></h1>
+  <p>बिना साइन-अप के तुरंत इस्तेमाल करें — मुफ्त कैलकुलेटर</p>
+</header>
+<nav class="main-nav"><a href="../../hi/" class="">होम</a><a href="../../hi/age/" class="">उम्र</a><a href="../../hi/dday/" class="">डी-डे</a><a href="../../hi/discount/" class="">छूट</a><a href="../../hi/unit/" class="">यूनिट</a><a href="../../hi/bmi/" class="">BMI</a><a href="../../hi/percent/" class="active">प्रतिशत</a><a href="../../hi/percentchange/" class="">प्रतिशत परिवर्तन</a><a href="../../hi/datediff/" class="">दिनांक अंतर</a><a href="../../hi/time/" class="">समय कैलकुलेटर</a><a href="../../hi/speed/" class="">गति·दूरी·समय</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../percent/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/percent/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item current" href="../../hi/percent/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/percent/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/percent/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/percent/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/percent/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/percent/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/percent/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/percent/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/percent/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/percent/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/percent/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/percent/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/percent/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/percent/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/percent/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/percent/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/percent/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/percent/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item" href="../../fr/percent/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../hi/">होम</a> &gt; प्रतिशत कैलकुलेटर</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>प्रतिशत कैलकुलेटर</h2>
+    <p class="desc">गणना का तरीका चुनें और मान A व मान B डालें, परिणाम तुरंत मिलेगा।</p>
+    <div class="row"><div class="field"><label>गणना का तरीका</label><select id="percent-mode"><option value="0">A, B का कितने % है? (A÷B×100)</option><option value="1">B के A% कितने हैं? (B×A÷100)</option><option value="2">A किसी संख्या का B% है, तो वह संख्या क्या है? (A÷(B÷100))</option></select></div></div><div class="row"><div class="field"><label>मान A</label><input type="number" id="percent-a"></div><div class="field"><label>मान B</label><input type="number" id="percent-b"></div></div>
+    <button onclick="calcPercentGlobal()">गणना करें</button>
+    <div class="result" id="percent-result"></div>
+  </div>
+  <article class="content">
+    <h2>इस्तेमाल कैसे करें</h2><ol><li>गणना का तरीका चुनें (अनुपात निकालें / भाग का मान निकालें / पूरा मान निकालें)।</li><li>मान A और मान B डालें।</li><li>"गणना करें" दबाते ही परिणाम तुरंत दिखेगा।</li></ol>
+    <h2>यह कैसे काम करता है</h2><p>चुने गए तरीके के अनुसार A÷B×100 (अनुपात), B×A÷100 (भाग का मान), या A÷(B÷100) (पूरा मान) सूत्र इस्तेमाल होता है।</p>
+    <h2>उदाहरण</h2><div class="example">उदाहरण 1 — "A, B का कितने % है?" मोड में A=25, B=200 होने पर 25, 200 का 12.5% है।</div><div class="example">उदाहरण 2 — "B के A% कितने हैं?" मोड में A=20, B=150 होने पर 150 के 20% यानी 30 होते हैं।</div>
+    <h2>अक्सर पूछे जाने वाले सवाल</h2><div class="faq-item"><div class="q">तीनों मोड कब इस्तेमाल करें?</div><p class="a">अनुपात जानने के लिए पहला, किसी प्रतिशत का वास्तविक मान जानने के लिए दूसरा, और भाग व प्रतिशत से पूरा मान निकालने के लिए तीसरा मोड इस्तेमाल करें।</p></div><div class="faq-item"><div class="q">क्या ऋणात्मक संख्या या दशमलव डाल सकते हैं?</div><p class="a">हां, मान A और मान B दोनों में ऋणात्मक संख्या और दशमलव डाले जा सकते हैं।</p></div>
+    <h2>अन्य कैलकुलेटर</h2><div class="related"><a href="../../hi/age/">उम्र</a><a href="../../hi/dday/">डी-डे</a><a href="../../hi/discount/">छूट</a><a href="../../hi/unit/">यूनिट</a><a href="../../hi/bmi/">BMI</a><a href="../../hi/percentchange/">प्रतिशत परिवर्तन</a><a href="../../hi/datediff/">दिनांक अंतर</a><a href="../../hi/time/">समय कैलकुलेटर</a><a href="../../hi/speed/">गति·दूरी·समय</a></div>
+  </article>
+</div>
+<footer>
+  इस वेबसाइट पर कोई अकाउंट साइन-अप, कमेंट, चैट या पर्सनल सपोर्ट नहीं है — बस मुफ्त कैलकुलेटर जिन्हें कोई भी तुरंत इस्तेमाल कर सकता है।
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>

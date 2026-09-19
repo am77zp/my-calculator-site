@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculatrice Vitesse, Distance, Temps - Résoudre v = d / t</title>
+<meta name="description" content="Avec la distance et le temps, trouvez la vitesse. Avec la vitesse et le temps, trouvez la distance. Avec la distance et la vitesse, trouvez le temps nécessaire.">
+<link rel="canonical" href="https://my-calculator-site-6l0.pages.dev/fr/speed/">
+<link rel="alternate" hreflang="ko" href="https://my-calculator-site-6l0.pages.dev/speed/">
+<link rel="alternate" hreflang="zh-CN" href="https://my-calculator-site-6l0.pages.dev/zh-cn/speed/">
+<link rel="alternate" hreflang="hi" href="https://my-calculator-site-6l0.pages.dev/hi/speed/">
+<link rel="alternate" hreflang="en" href="https://my-calculator-site-6l0.pages.dev/en/speed/">
+<link rel="alternate" hreflang="id" href="https://my-calculator-site-6l0.pages.dev/id/speed/">
+<link rel="alternate" hreflang="pt-BR" href="https://my-calculator-site-6l0.pages.dev/pt-br/speed/">
+<link rel="alternate" hreflang="ru" href="https://my-calculator-site-6l0.pages.dev/ru/speed/">
+<link rel="alternate" hreflang="ur" href="https://my-calculator-site-6l0.pages.dev/ur/speed/">
+<link rel="alternate" hreflang="es" href="https://my-calculator-site-6l0.pages.dev/es/speed/">
+<link rel="alternate" hreflang="ja" href="https://my-calculator-site-6l0.pages.dev/ja/speed/">
+<link rel="alternate" hreflang="tl" href="https://my-calculator-site-6l0.pages.dev/tl/speed/">
+<link rel="alternate" hreflang="ar" href="https://my-calculator-site-6l0.pages.dev/ar/speed/">
+<link rel="alternate" hreflang="vi" href="https://my-calculator-site-6l0.pages.dev/vi/speed/">
+<link rel="alternate" hreflang="de" href="https://my-calculator-site-6l0.pages.dev/de/speed/">
+<link rel="alternate" hreflang="bn" href="https://my-calculator-site-6l0.pages.dev/bn/speed/">
+<link rel="alternate" hreflang="tr" href="https://my-calculator-site-6l0.pages.dev/tr/speed/">
+<link rel="alternate" hreflang="fa" href="https://my-calculator-site-6l0.pages.dev/fa/speed/">
+<link rel="alternate" hreflang="th" href="https://my-calculator-site-6l0.pages.dev/th/speed/">
+<link rel="alternate" hreflang="fr" href="https://my-calculator-site-6l0.pages.dev/fr/speed/">
+<link rel="alternate" hreflang="x-default" href="https://my-calculator-site-6l0.pages.dev/en/speed/">
+<link rel="stylesheet" href="../../assets/style.css?v=20260919-2">
+<script>window.I18N = {"speed_alert": "Veuillez entrer correctement les deux valeurs requises.", "speed_result_tpl": ["La vitesse est de {result} km/h.", "La distance est de {result} km.", "Le temps nécessaire est de {result} heures ({hm})."]};</script>
+</head>
+<body>
+<header class="site-header">
+  <h1><a href="../../fr/">Calculatrices du Quotidien Tout-en-Un</a></h1>
+  <p>Calculatrices gratuites, utilisables instantanément — aucune inscription requise</p>
+</header>
+<nav class="main-nav"><a href="../../fr/" class="">Accueil</a><a href="../../fr/age/" class="">Âge</a><a href="../../fr/dday/" class="">Compte à rebours</a><a href="../../fr/discount/" class="">Réduction</a><a href="../../fr/unit/" class="">Unités</a><a href="../../fr/bmi/" class="">IMC</a><a href="../../fr/percent/" class="">Pourcentage</a><a href="../../fr/percentchange/" class="">Variation %</a><a href="../../fr/datediff/" class="">Différence de Dates</a><a href="../../fr/time/" class="">Calculatrice de Temps</a><a href="../../fr/speed/" class="active">Vitesse/Distance/Temps</a></nav><div id="lang-modal-overlay" class="lang-modal-overlay" hidden><div id="lang-modal" class="lang-modal" role="dialog" aria-modal="true" aria-labelledby="lang-modal-title" tabindex="-1"><div class="lang-modal-head"><h2 id="lang-modal-title" class="lang-modal-title"></h2><button type="button" id="lang-modal-close" class="lang-modal-close">&times;</button></div><div class="lang-grid"><a class="lang-item" href="../../speed/"><span class="flag">🇰🇷</span><span class="names"><span class="country">South Korea</span><span class="langname">한국어</span></span></a><a class="lang-item" href="../../zh-cn/speed/"><span class="flag">🇨🇳</span><span class="names"><span class="country">China</span><span class="langname">简体中文</span></span></a><a class="lang-item" href="../../hi/speed/"><span class="flag">🇮🇳</span><span class="names"><span class="country">India</span><span class="langname">हिन्दी</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇺🇸</span><span class="names"><span class="country">United States</span><span class="langname">English</span></span></a><a class="lang-item" href="../../id/speed/"><span class="flag">🇮🇩</span><span class="names"><span class="country">Indonesia</span><span class="langname">Bahasa Indonesia</span></span></a><a class="lang-item" href="../../pt-br/speed/"><span class="flag">🇧🇷</span><span class="names"><span class="country">Brazil</span><span class="langname">Português</span></span></a><a class="lang-item" href="../../ru/speed/"><span class="flag">🇷🇺</span><span class="names"><span class="country">Russia</span><span class="langname">Русский</span></span></a><a class="lang-item" href="../../ur/speed/"><span class="flag">🇵🇰</span><span class="names"><span class="country">Pakistan</span><span class="langname">اردو</span></span></a><a class="lang-item" href="../../es/speed/"><span class="flag">🇲🇽</span><span class="names"><span class="country">Mexico</span><span class="langname">Español</span></span></a><a class="lang-item" href="../../ja/speed/"><span class="flag">🇯🇵</span><span class="names"><span class="country">Japan</span><span class="langname">日本語</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇳🇬</span><span class="names"><span class="country">Nigeria</span><span class="langname">English</span></span></a><a class="lang-item" href="../../tl/speed/"><span class="flag">🇵🇭</span><span class="names"><span class="country">Philippines</span><span class="langname">Filipino</span></span></a><a class="lang-item" href="../../ar/speed/"><span class="flag">🇪🇬</span><span class="names"><span class="country">Egypt</span><span class="langname">العربية</span></span></a><a class="lang-item" href="../../vi/speed/"><span class="flag">🇻🇳</span><span class="names"><span class="country">Vietnam</span><span class="langname">Tiếng Việt</span></span></a><a class="lang-item" href="../../de/speed/"><span class="flag">🇩🇪</span><span class="names"><span class="country">Germany</span><span class="langname">Deutsch</span></span></a><a class="lang-item" href="../../bn/speed/"><span class="flag">🇧🇩</span><span class="names"><span class="country">Bangladesh</span><span class="langname">বাংলা</span></span></a><a class="lang-item" href="../../tr/speed/"><span class="flag">🇹🇷</span><span class="names"><span class="country">Turkiye</span><span class="langname">Türkçe</span></span></a><a class="lang-item" href="../../fa/speed/"><span class="flag">🇮🇷</span><span class="names"><span class="country">Iran</span><span class="langname">فارسی</span></span></a><a class="lang-item" href="../../en/speed/"><span class="flag">🇬🇧</span><span class="names"><span class="country">United Kingdom</span><span class="langname">English</span></span></a><a class="lang-item" href="../../th/speed/"><span class="flag">🇹🇭</span><span class="names"><span class="country">Thailand</span><span class="langname">ไทย</span></span></a><a class="lang-item current" href="../../fr/speed/"><span class="flag">🇫🇷</span><span class="names"><span class="country">France</span><span class="langname">Français</span></span></a></div><label class="lang-modal-dontshow"><input type="checkbox" id="lang-dontshow-checkbox"><span id="lang-dontshow-label"></span></label></div></div><button type="button" id="lang-fab" class="lang-fab">🌐 <span id="lang-fab-label"></span></button>
+<div class="breadcrumb"><a href="../../fr/">Accueil</a> &gt; Calculatrice Vitesse, Distance, Temps</div><div class="container">
+  <div class="ad-slot">Ad space</div>
+  <div class="card">
+    <h2>Calculatrice Vitesse, Distance, Temps</h2>
+    <p class="desc">Choisissez ce que vous voulez calculer et entrez les deux autres valeurs pour un résultat instantané.</p>
+    <div class="row"><div class="field"><label>Mode de calcul</label><select id="sp-mode" onchange="spToggleMode()"><option value="speed">Trouver la vitesse (distance ÷ temps)</option><option value="distance">Trouver la distance (vitesse × temps)</option><option value="time">Trouver le temps (distance ÷ vitesse)</option></select></div></div><div class="row"><div class="field" id="sp-field-distance"><label>Distance (km)</label><input type="number" id="sp-distance"></div><div class="field" id="sp-field-time"><label>Temps (heures, décimales autorisées)</label><input type="text" id="sp-time"></div><div class="field" id="sp-field-speed" hidden><label>Vitesse (km/h)</label><input type="number" id="sp-speed"></div></div>
+    <button onclick="calcSpeedGlobal()">Calculer</button>
+    <div class="result" id="sp-result"></div>
+  </div>
+  <article class="content">
+    <h2>Comment l'utiliser</h2><ol><li>Choisissez ce qu'il faut calculer (vitesse / distance / temps).</li><li>Entrez les deux autres valeurs (distance en km, temps en heures (décimales autorisées) ou h:min, vitesse en km/h).</li><li>Cliquez sur "Calculer" pour voir le résultat instantanément.</li></ol>
+    <h2>Comment ça marche</h2><p>Les trois valeurs suivent vitesse = distance ÷ temps (v = d/t). Pour la vitesse : distance ÷ temps. Pour la distance : vitesse × temps. Pour le temps : distance ÷ vitesse.</p>
+    <h2>Exemples</h2><div class="example">Exemple 1 — En mode "trouver la vitesse", distance=150 km et temps=2,5 heures (2h30) donnent une vitesse de 60 km/h.</div><div class="example">Exemple 2 — En mode "trouver le temps", distance=100 km et vitesse=40 km/h donnent un temps de 2,5 heures (2h30).</div>
+    <h2>Questions fréquentes</h2><div class="faq-item"><div class="q">Puis-je entrer le temps en heures et minutes plutôt qu'en décimal ?</div><p class="a">Oui, les deux formats sont pris en charge — heures décimales et h:min. Par exemple, 2 heures 30 minutes équivalent à 2,5 heures.</p></div><div class="faq-item"><div class="q">Puis-je utiliser des mph au lieu de km/h ?</div><p class="a">Cette calculatrice ne convertit pas les unités elle-même — elle utilise le système d'unités de distance/vitesse que vous entrez de façon cohérente. Pour travailler en mph, entrez la distance en miles et la vitesse en mph.</p></div>
+    <h2>Autres calculatrices</h2><div class="related"><a href="../../fr/age/">Âge</a><a href="../../fr/dday/">Compte à rebours</a><a href="../../fr/discount/">Réduction</a><a href="../../fr/unit/">Unités</a><a href="../../fr/bmi/">IMC</a><a href="../../fr/percent/">Pourcentage</a><a href="../../fr/percentchange/">Variation %</a><a href="../../fr/datediff/">Différence de Dates</a><a href="../../fr/time/">Calculatrice de Temps</a></div>
+  </article>
+</div>
+<footer>
+  Ce site ne propose ni création de compte, ni commentaires, ni chat, ni support individuel — seulement des calculatrices gratuites que tout le monde peut utiliser immédiatement.
+</footer>
+<script src="../../assets/calculators.js?v=20260919-2"></script>
+<script src="../../assets/i18n.js?v=20260919-2"></script>
+</body>
+</html>
