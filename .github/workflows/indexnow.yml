@@ -1,0 +1,91 @@
+﻿name: IndexNow submit
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.html'
+      - '*.html'
+
+jobs:
+  indexnow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Detect changed pages and submit to IndexNow
+        shell: bash
+        env:
+          SITE_HOST: my-calculator-site-6l0.pages.dev
+          INDEXNOW_KEY: c0b2100f07d4780b362d86bdae8b48be
+        run: |
+          set -euo pipefail
+
+          BEFORE="${{ github.event.before }}"
+          AFTER="${{ github.sha }}"
+
+          if [ "$BEFORE" = "0000000000000000000000000000000000000000" ]; then
+            FILES=$(git ls-files '*.html' | grep -E '(^|/)index\.html$' || true)
+          else
+            FILES=$(git diff --name-only --diff-filter=AM "$BEFORE" "$AFTER" -- '*.html' | grep -E '(^|/)index\.html$' || true)
+          fi
+
+          echo "Changed index pages:"
+          printf '%s\n' "$FILES"
+
+          URLS='[]'
+
+          while IFS= read -r file; do
+            [ -z "$file" ] && continue
+
+            if [ "$file" = "index.html" ]; then
+              path="/"
+            else
+              path="/${file%/index.html}/"
+            fi
+
+            URLS=$(echo "$URLS" | jq \
+              --arg url "https://${SITE_HOST}${path}" \
+              '. + [$url]')
+          done <<< "$FILES"
+
+          COUNT=$(echo "$URLS" | jq 'length')
+
+          if [ "$COUNT" -eq 0 ]; then
+            echo "No changed index.html pages. Nothing to submit."
+            exit 0
+          fi
+
+          jq -n \
+            --arg host "$SITE_HOST" \
+            --arg key "$INDEXNOW_KEY" \
+            --arg keyLocation "https://${SITE_HOST}/${INDEXNOW_KEY}.txt" \
+            --argjson urlList "$URLS" \
+            '{
+              host: $host,
+              key: $key,
+              keyLocation: $keyLocation,
+              urlList: $urlList
+            }' > payload.json
+
+          cat payload.json
+
+          HTTP_CODE=$(curl -sS \
+            -o response.txt \
+            -w '%{http_code}' \
+            -X POST "https://api.indexnow.org/indexnow" \
+            -H "Content-Type: application/json; charset=utf-8" \
+            --data-binary @payload.json)
+
+          cat response.txt || true
+          echo
+          echo "HTTP status: $HTTP_CODE"
+
+          if [ "$HTTP_CODE" -lt 200 ] || [ "$HTTP_CODE" -ge 300 ]; then
+            exit 1
+          fi
